@@ -22,6 +22,7 @@ Usage:
     python stats.py            # uses all snapshots in snapshots/, writes stats.json
 """
 
+from __future__ import annotations
 import json
 import statistics
 from pathlib import Path

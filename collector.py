@@ -17,6 +17,7 @@ NOTE: unofficial endpoint. Keep to 1 run/day, no aggressive retries; stop if
 the platform objects. Review legal considerations before commercial use.
 """
 
+from __future__ import annotations
 import json
 import sys
 import time
