@@ -56,22 +56,30 @@ python site_gen.py         # 멀티페이지 사이트 생성
 - 비공식 엔드포인트 사용. **일 1회, 저빈도 유지**, 차단·이의 제기 시 즉시 중단. 상용화 전 법률 자문 필수 (기획서 §5, §9).
 - 수집 데이터는 집계값만 노출하고 원문을 재게시하지 않는 원칙 유지.
 
-## 배포 (GitHub Pages — 무료, 자동)
+## 배포 (Cloudflare Pages — 퍼즐마루와 동일 방식)
 
-1. GitHub에 새 저장소 생성 후 이 폴더 전체를 push
-2. 저장소 Settings → Pages → Source를 **GitHub Actions**로 설정
-3. `site_gen.py`의 `BASE_URL`을 실제 주소(`https://<계정>.github.io/<저장소>`)로 수정
-4. Actions 탭에서 `collect-and-deploy` 워크플로를 수동 실행(workflow_dispatch)해 첫 배포
-
-이후 매일 03:00 KST에 자동으로: 수집 → 통계 → 사이트 빌드 → 배포 + 스냅샷 커밋.
-주의: GitHub Actions의 해외 IP에서 수집이 차단될 수 있음 — 그 경우 수집만 집/서버 PC cron으로 돌리고
-스냅샷을 저장소에 push하는 방식으로 전환 (`collect-on-actions` 단계 제거).
+1. GitHub에 빈 저장소 생성 (예: kcm0127-dotcom/sise) 후:
+   ```bash
+   cd ~/Claude/Projects/App\ Develops/sise
+   rm -f .git/HEAD.lock .git/index.lock .git/objects/maintenance.lock
+   git remote add origin https://github.com/kcm0127-dotcom/sise.git
+   git push -u origin main
+   ```
+2. Cloudflare 대시보드 → Workers & Pages → Create → Pages →
+   **Connect to Git** → sise 저장소 선택 → 빌드 설정은 모두 비움(정적 파일) → Deploy
+3. 배포 주소(`https://sise.pages.dev` 또는 프로젝트명.pages.dev)를 확인하고,
+   `site_gen.py`의 `BASE_URL`과 다르면 수정 후 다시 push
+4. 일일 자동 갱신은 cron 등록:
+   ```
+   0 3 * * * /bin/bash "$HOME/Claude/Projects/App Develops/sise/deploy.sh" >> "$HOME/sise-deploy.log" 2>&1
+   ```
+   deploy.sh가 수집 → 통계 → 빌드 → push를 하고, push되면 Cloudflare가 자동 재배포한다.
 
 ## 구글 애드센스 연결
 
 1. 사이트가 배포되고 콘텐츠(모델 페이지 + 소개/개인정보처리방침)가 충분히 쌓인 뒤
    [애드센스](https://adsense.google.com)에 사이트 등록 — 보통 도메인 연결을 권장 (커스텀 도메인 추천)
-2. 발급받은 클라이언트 ID를 `site_gen.py`의 `ADSENSE_CLIENT = "ca-pub-..."`에 입력 후 재빌드 → 전 페이지 head에 코드 삽입됨
+2. 발급받은 클라이언트 ID를 `site_gen.py`의 `ADSENSE_CLIENT`에 입력 — 퍼즐마루 퍼블리셔 ID(pub-6840959424010586)가 이미 설정·ads.txt 포함됨. 애드센스 콘솔에서 '사이트 추가'만 하면 됨 → 전 페이지 head에 코드 삽입됨
 3. 승인 후 자동 광고를 켜거나 광고 단위 코드를 페이지에 추가
 4. 승인 팁: 개인정보처리방침/소개/문의(이미 포함됨), 충분한 페이지 수(101페이지 충족),
    사이트 완성도와 자체 콘텐츠가 핵심. "수집 대기" 빈 페이지가 많으면 불리할 수 있으니
