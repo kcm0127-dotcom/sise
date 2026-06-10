@@ -15,7 +15,7 @@ from pathlib import Path
 BASE = Path(__file__).parent
 
 # ---- deployment settings ----
-BASE_URL = "https://sise.kcm0127.workers.dev"  # Cloudflare Pages 주소 (커스텀 도메인 연결 시 교체)
+BASE_URL = "https://palinga.xyz"  # Cloudflare Pages 주소 (커스텀 도메인 연결 시 교체)
 ADSENSE_CLIENT = "ca-pub-6840959424010586"  # 퍼즐마루와 동일 퍼블리셔
 SITE_NAME = "팔린가"
 
