@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://sise.pages.dev/sitemap.xml

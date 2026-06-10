@@ -1,0 +1,3320 @@
+{
+ "as_of": "2026-06-11",
+ "category_discount": {},
+ "models": {
+  "rtx-5090": {
+   "label": "RTX 5090",
+   "group": "RTX 50 시리즈",
+   "category": "gpu",
+   "series": [
+    {
+     "date": "2026-06-11",
+     "median": 6500000,
+     "n": 5
+    }
+   ],
+   "basis": "asking_low",
+   "estimate": 6300000,
+   "asking_median": 6500000,
+   "stats": {
+    "n": 5,
+    "median": 6500000,
+    "q1": 6100000,
+    "q3": 6525000,
+    "min": 5900000,
+    "max": 6550000
+   },
+   "active_count": 5,
+   "sold": [],
+   "active_sample": [
+    {
+     "pid": "413431252",
+     "model_id": "rtx-5090",
+     "category_key": "gpu",
+     "name": "MSI 5090 슈프림 미개봉새제품",
+     "price": 6300000,
+     "status": "0",
+     "category_id": "600200005",
+     "num_faved": 1,
+     "update_time": 1781119222,
+     "used": 2,
+     "proshop": false,
+     "url": "https://m.bunjang.co.kr/products/413431252",
+     "drop_reason": null,
+     "is_set": false,
+     "head_only": false
+    },
+    {
+     "pid": "413362360",
+     "model_id": "rtx-5090",
+     "category_key": "gpu",
+     "name": "기가바이트 5090 마스터 아이스 미개봉새제품",
+     "price": 6500000,
+     "status": "0",
+     "category_id": "600200005",
+     "num_faved": 0,
+     "update_time": 1781106991,
+     "used": 2,
+     "proshop": false,
+     "url": "https://m.bunjang.co.kr/products/413362360",
+     "drop_reason": null,
+     "is_set": false,
+     "head_only": false
+    },
+    {
+     "pid": "413055882",
+     "model_id": "rtx-5090",
+     "category_key": "gpu",
+     "name": "기가바이트 5090 스텔스 아이스 미개봉새제품",
+     "price": 6500000,
+     "status": "0",
+     "category_id": "600200005",
+     "num_faved": 0,
+     "update_time": 1781106987,
+     "used": 2,
+     "proshop": false,
+     "url": "https://m.bunjang.co.kr/products/413055882",
+     "drop_reason": null,
+     "is_set": false,
+     "head_only": false
+    },
+    {
+     "pid": "413055740",
+     "model_id": "rtx-5090",
+     "category_key": "gpu",
+     "name": "기가바이트 5090 마스터 아이스 미개봉새제품",
+     "price": 6550000,
+     "status": "0",
+     "category_id": "600200005",
+     "num_faved": 0,
+     "update_time": 1781106982,
+     "used": 2,
+     "proshop": false,
+     "url": "https://m.bunjang.co.kr/products/413055740",
+     "drop_reason": null,
+     "is_set": false,
+     "head_only": false
+    },
+    {
+     "pid": "393003351",
+     "model_id": "rtx-5090",
+     "category_key": "gpu",
+     "name": "rtx5090 중고 구매합니다 직접감",
+     "price": 5900000,
+     "status": "0",
+     "category_id": "600200005",
+     "num_faved": 2,
+     "update_time": 1781102928,
+     "used": 2,
+     "proshop": false,
+     "url": "https://m.bunjang.co.kr/products/393003351",
+     "drop_reason": null,
+     "is_set": false,
+     "head_only": false
+    }
+   ]
+  },
+  "rtx-5080": {
+   "label": "RTX 5080",
+   "group": "RTX 50 시리즈",
+   "category": "gpu",
+   "series": [
+    {
+     "date": "2026-06-11",
+     "median": 1965000,
+     "n": 4
+    }
+   ],
+   "basis": "asking_low",
+   "estimate": 1848750,
+   "asking_median": 1965000,
+   "stats": {
+    "n": 4,
+    "median": 1965000,
+    "q1": 1732500,
+    "q3": 2167500,
+    "min": 1700000,
+    "max": 2190000
+   },
+   "active_count": 4,
+   "sold": [],
+   "active_sample": [
+    {
+     "pid": "413539965",
+     "model_id": "rtx-5080",
+     "category_key": "gpu",
+     "name": "5080 어마 아이스 화이트 미개봉 새제품 팝니다. (직거래만)",
+     "price": 2100000,
+     "status": "0",
+     "category_id": "600200005",
+     "num_faved": 0,
+     "update_time": 1781107425,
+     "used": 2,
+     "proshop": false,
+     "url": "https://m.bunjang.co.kr/products/413539965",
+     "drop_reason": null,
+     "is_set": false,
+     "head_only": false
+    },
+    {
+     "pid": "413432625",
+     "model_id": "rtx-5080",
+     "category_key": "gpu",
+     "name": "컬러풀 iGame RTX 5080 울트라",
+     "price": 1700000,
+     "status": "0",
+     "category_id": "600200005",
+     "num_faved": 3,
+     "update_time": 1781104808,
+     "used": 1,
+     "proshop": false,
+     "url": "https://m.bunjang.co.kr/products/413432625",
+     "drop_reason": null,
+     "is_set": false,
+     "head_only": false
+    },
+    {
+     "pid": "410373054",
+     "model_id": "rtx-5080",
+     "category_key": "gpu",
+     "name": "컬러풀 지포스 RTX 5080 불칸 Vulcan OC D7 16GB 새상",
+     "price": 2190000,
+     "status": "0",
+     "category_id": "600200005",
+     "num_faved": 4,
+     "update_time": 1781103532,
+     "used": 2,
+     "proshop": false,
+     "url": "https://m.bunjang.co.kr/products/410373054",
+     "drop_reason": null,
+     "is_set": false,
+     "head_only": false
+    },
+    {
+     "pid": "411698774",
+     "model_id": "rtx-5080",
+     "category_key": "gpu",
+     "name": "지포스 RTX 5080 기가바이트 윈드포스 16GB 그래픽카드",
+     "price": 1830000,
+     "status": "0",
+     "category_id": "600200005",
+     "num_faved": 2,
+     "update_time": 1781093777,
+     "used": 1,
+     "proshop": false,
+     "url": "https://m.bunjang.co.kr/products/411698774",
+     "drop_reason": null,
+     "is_set": false,
+     "head_only": false
+    }
+   ]
+  },
+  "rtx-5070-ti": {
+   "label": "RTX 5070 Ti",
+   "group": "RTX 50 시리즈",
+   "category": "gpu",
+   "series": [
+    {
+     "date": "2026-06-11",
+     "median": 1360000,
+     "n": 3
+    }
+   ],
+   "basis": "asking_low",
+   "estimate": 1340000,
+   "asking_median": 1360000,
+   "stats": {
+    "n": 3,
+    "median": 1360000,
+    "q1": 1320000,
+    "q3": 1400000,
+    "min": 1320000,
+    "max": 1400000
+   },
+   "active_count": 3,
+   "sold": [],
+   "active_sample": [
+    {
+     "pid": "410744613",
+     "model_id": "rtx-5070-ti",
+     "category_key": "gpu",
+     "name": "ZOTAC 조텍 지포스 RTX 5070 Ti GAMING SOLID",
+     "price": 1360000,
+     "status": "0",
+     "category_id": "600200005",
+     "num_faved": 5,
+     "update_time": 1781103534,
+     "used": 2,
+     "proshop": false,
+     "url": "https://m.bunjang.co.kr/products/410744613",
+     "drop_reason": null,
+     "is_set": false,
+     "head_only": false
+    },
+    {
+     "pid": "413391234",
+     "model_id": "rtx-5070-ti",
+     "category_key": "gpu",
+     "name": "(천안) 조텍 RTX 5070 ti SOLID CORE 16GB 팝니다",
+     "price": 1320000,
+     "status": "0",
+     "category_id": "600200005",
+     "num_faved": 4,
+     "update_time": 1781096771,
+     "used": 1,
+     "proshop": false,
+     "url": "https://m.bunjang.co.kr/products/413391234",
+     "drop_reason": null,
+     "is_set": false,
+     "head_only": false
+    },
+    {
+     "pid": "413334936",
+     "model_id": "rtx-5070-ti",
+     "category_key": "gpu",
+     "name": "MSI GEFORCE RTX 5070 Ti 게이밍 트리오 OC 에디션",
+     "price": 1400000,
+     "status": "0",
+     "category_id": "600200005",
+     "num_faved": 4,
+     "update_time": 1781090791,
+     "used": 2,
+     "proshop": false,
+     "url": "https://m.bunjang.co.kr/products/413334936",
+     "drop_reason": null,
+     "is_set": false,
+     "head_only": false
+    }
+   ]
+  },
+  "rtx-5070": {
+   "label": "RTX 5070",
+   "group": "RTX 50 시리즈",
+   "category": "gpu",
+   "series": [
+    {
+     "date": "2026-06-11",
+     "median": 875000,
+     "n": 2
+    }
+   ],
+   "basis": "asking_low",
+   "estimate": 818750,
+   "asking_median": 875000,
+   "stats": {
+    "n": 2,
+    "median": 875000,
+    "q1": 762500,
+    "q3": 987500,
+    "min": 800000,
+    "max": 950000
+   },
+   "active_count": 2,
+   "sold": [],
+   "active_sample": [
+    {
+     "pid": "412966996",
+     "model_id": "rtx-5070",
+     "category_key": "gpu",
+     "name": "조텍 RTX 5070 솔리드 그래픽카드",
+     "price": 800000,
+     "status": "0",
+     "category_id": "600200005",
+     "num_faved": 9,
+     "update_time": 1781129918,
+     "used": 1,
+     "proshop": true,
+     "url": "https://m.bunjang.co.kr/products/412966996",
+     "drop_reason": null,
+     "is_set": false,
+     "head_only": false
+    },
+    {
+     "pid": "413537902",
+     "model_id": "rtx-5070",
+     "category_key": "gpu",
+     "name": "ASUS PRIME RTX 5070 WHITE 판매합니다.",
+     "price": 950000,
+     "status": "0",
+     "category_id": "600200005",
+     "num_faved": 0,
+     "update_time": 1781106052,
+     "used": 1,
+     "proshop": false,
+     "url": "https://m.bunjang.co.kr/products/413537902",
+     "drop_reason": null,
+     "is_set": false,
+     "head_only": false
+    }
+   ]
+  },
+  "rtx-5060-ti": {
+   "label": "RTX 5060 Ti",
+   "group": "RTX 50 시리즈",
+   "category": "gpu",
+   "series": [],
+   "basis": "none",
+   "estimate": null,
+   "asking_median": null,
+   "stats": null,
+   "active_count": 0,
+   "sold": [],
+   "active_sample": []
+  },
+  "rtx-5060": {
+   "label": "RTX 5060",
+   "group": "RTX 50 시리즈",
+   "category": "gpu",
+   "series": [
+    {
+     "date": "2026-06-11",
+     "median": 630000,
+     "n": 2
+    }
+   ],
+   "basis": "asking_low",
+   "estimate": 562500,
+   "asking_median": 630000,
+   "stats": {
+    "n": 2,
+    "median": 630000,
+    "q1": 495000,
+    "q3": 765000,
+    "min": 540000,
+    "max": 720000
+   },
+   "active_count": 2,
+   "sold": [],
+   "active_sample": [
+    {
+     "pid": "413112764",
+     "model_id": "rtx-5060",
+     "category_key": "gpu",
+     "name": "GEFORCE RTX 5060",
+     "price": 720000,
+     "status": "0",
+     "category_id": "600200005",
+     "num_faved": 1,
+     "update_time": 1781100577,
+     "used": 2,
+     "proshop": false,
+     "url": "https://m.bunjang.co.kr/products/413112764",
+     "drop_reason": null,
+     "is_set": false,
+     "head_only": false
+    },
+    {
+     "pid": "400471130",
+     "model_id": "rtx-5060",
+     "category_key": "gpu",
+     "name": "기가바이트 rtx5060 ud2 lp 미개봉새제품",
+     "price": 540000,
+     "status": "0",
+     "category_id": "600200005",
+     "num_faved": 10,
+     "update_time": 1781096016,
+     "used": 2,
+     "proshop": false,
+     "url": "https://m.bunjang.co.kr/products/400471130",
+     "drop_reason": null,
+     "is_set": false,
+     "head_only": false
+    }
+   ]
+  },
+  "rtx-4090": {
+   "label": "RTX 4090",
+   "group": "RTX 40 시리즈",
+   "category": "gpu",
+   "series": [],
+   "basis": "none",
+   "estimate": null,
+   "asking_median": null,
+   "stats": null,
+   "active_count": 0,
+   "sold": [],
+   "active_sample": []
+  },
+  "rtx-4080-super": {
+   "label": "RTX 4080 SUPER",
+   "group": "RTX 40 시리즈",
+   "category": "gpu",
+   "series": [
+    {
+     "date": "2026-06-11",
+     "median": 1230000,
+     "n": 1
+    }
+   ],
+   "basis": "asking_low",
+   "estimate": 1230000,
+   "asking_median": 1230000,
+   "stats": {
+    "n": 1,
+    "median": 1230000,
+    "q1": 1230000,
+    "q3": 1230000,
+    "min": 1230000,
+    "max": 1230000
+   },
+   "active_count": 1,
+   "sold": [],
+   "active_sample": [
+    {
+     "pid": "410235016",
+     "model_id": "rtx-4080-super",
+     "category_key": "gpu",
+     "name": "MSI RTX4080 SUPER 팝니다",
+     "price": 1230000,
+     "status": "0",
+     "category_id": "600200005",
+     "num_faved": 10,
+     "update_time": 1781130321,
+     "used": 1,
+     "proshop": false,
+     "url": "https://m.bunjang.co.kr/products/410235016",
+     "drop_reason": null,
+     "is_set": false,
+     "head_only": false
+    }
+   ]
+  },
+  "rtx-4080": {
+   "label": "RTX 4080",
+   "group": "RTX 40 시리즈",
+   "category": "gpu",
+   "series": [],
+   "basis": "none",
+   "estimate": null,
+   "asking_median": null,
+   "stats": null,
+   "active_count": 0,
+   "sold": [],
+   "active_sample": []
+  },
+  "rtx-4070-ti-super": {
+   "label": "RTX 4070 Ti SUPER",
+   "group": "RTX 40 시리즈",
+   "category": "gpu",
+   "series": [
+    {
+     "date": "2026-06-10",
+     "median": 985000,
+     "n": 4
+    },
+    {
+     "date": "2026-06-11",
+     "median": 985000,
+     "n": 4
+    }
+   ],
+   "basis": "asking_low",
+   "estimate": 978750,
+   "asking_median": 985000,
+   "stats": {
+    "n": 4,
+    "median": 985000,
+    "q1": 972500,
+    "q3": 997500,
+    "min": 970000,
+    "max": 1000000
+   },
+   "active_count": 4,
+   "sold": [],
+   "active_sample": [
+    {
+     "pid": "413462870",
+     "model_id": "rtx-4070-ti-super",
+     "name": "[풀박스/보증28년] ZOTAC RTX 4070 Ti SUPER 화이트",
+     "price": 990000,
+     "status": "0",
+     "category_id": "600200005",
+     "num_faved": 5,
+     "update_time": 1781076613,
+     "used": 1,
+     "proshop": true,
+     "drop_reason": null,
+     "is_set": false,
+     "head_only": false
+    },
+    {
+     "pid": "410281393",
+     "model_id": "rtx-4070-ti-super",
+     "name": "RTX 4070 Ti Super Vulcan 용에디션 판매합니다",
+     "price": 1000000,
+     "status": "0",
+     "category_id": "600200005",
+     "num_faved": 21,
+     "update_time": 1780996334,
+     "used": 1,
+     "proshop": false,
+     "drop_reason": null,
+     "is_set": false,
+     "head_only": false
+    },
+    {
+     "pid": "412138902",
+     "model_id": "rtx-4070-ti-super",
+     "name": "이엠텍 블랙스톰 지포스 RTX 4070 Ti SUPER D6X 16GB",
+     "price": 980000,
+     "status": "0",
+     "category_id": "600200005",
+     "num_faved": 3,
+     "update_time": 1780910927,
+     "used": 1,
+     "proshop": false,
+     "drop_reason": null,
+     "is_set": false,
+     "head_only": false
+    },
+    {
+     "pid": "412668864",
+     "model_id": "rtx-4070-ti-super",
+     "name": "MSI 지포스 RTX 4070TI SUPER 16GB",
+     "price": 970000,
+     "status": "0",
+     "category_id": "600200005",
+     "num_faved": 2,
+     "update_time": 1780776941,
+     "used": 1,
+     "proshop": true,
+     "drop_reason": null,
+     "is_set": false,
+     "head_only": false
+    }
+   ]
+  },
+  "rtx-4070-ti": {
+   "label": "RTX 4070 Ti",
+   "group": "RTX 40 시리즈",
+   "category": "gpu",
+   "series": [
+    {
+     "date": "2026-06-10",
+     "median": 745000,
+     "n": 2
+    },
+    {
+     "date": "2026-06-11",
+     "median": 750000,
+     "n": 1
+    }
+   ],
+   "basis": "asking_low",
+   "estimate": 750000,
+   "asking_median": 750000,
+   "stats": {
+    "n": 1,
+    "median": 750000,
+    "q1": 750000,
+    "q3": 750000,
+    "min": 750000,
+    "max": 750000
+   },
+   "active_count": 1,
+   "sold": [
+    {
+     "pid": "401662762",
+     "model_id": "rtx-4070-ti",
+     "name": "조텍 RTX 4070Ti Trinity OC 12GB",
+     "price": 740000,
+     "sold_date": "2026-06-11",
+     "is_set": false,
+     "head_only": false,
+     "num_faved": 32
+    }
+   ],
+   "active_sample": [
+    {
+     "pid": "413531074",
+     "model_id": "rtx-4070-ti",
+     "name": "갤럭시 RTX 4070Ti EX GAMER 12GB 그래픽카드",
+     "price": 750000,
+     "status": "0",
+     "category_id": "600200005",
+     "num_faved": 3,
+     "update_time": 1781102568,
+     "used": 1,
+     "proshop": false,
+     "reassigned": true,
+     "drop_reason": null,
+     "is_set": false,
+     "head_only": false
+    }
+   ]
+  },
+  "rtx-4070-super": {
+   "label": "RTX 4070 SUPER",
+   "group": "RTX 40 시리즈",
+   "category": "gpu",
+   "series": [
+    {
+     "date": "2026-06-10",
+     "median": 800000,
+     "n": 1
+    },
+    {
+     "date": "2026-06-11",
+     "median": 800000,
+     "n": 1
+    }
+   ],
+   "basis": "asking_low",
+   "estimate": 800000,
+   "asking_median": 800000,
+   "stats": {
+    "n": 1,
+    "median": 800000,
+    "q1": 800000,
+    "q3": 800000,
+    "min": 800000,
+    "max": 800000
+   },
+   "active_count": 1,
+   "sold": [],
+   "active_sample": [
+    {
+     "pid": "409981554",
+     "model_id": "rtx-4070-super",
+     "name": "[새제품] MSI 지포스 RTX 4070 SUPER 벤투스 2X OC",
+     "price": 800000,
+     "status": "0",
+     "category_id": "600200005",
+     "num_faved": 4,
+     "update_time": 1780733077,
+     "used": 1,
+     "proshop": true,
+     "drop_reason": null,
+     "is_set": false,
+     "head_only": false
+    }
+   ]
+  },
+  "rtx-4070": {
+   "label": "RTX 4070",
+   "group": "RTX 40 시리즈",
+   "category": "gpu",
+   "series": [
+    {
+     "date": "2026-06-10",
+     "median": 650000,
+     "n": 2
+    },
+    {
+     "date": "2026-06-11",
+     "median": 700000,
+     "n": 1
+    }
+   ],
+   "basis": "asking_low",
+   "estimate": 700000,
+   "asking_median": 700000,
+   "stats": {
+    "n": 1,
+    "median": 700000,
+    "q1": 700000,
+    "q3": 700000,
+    "min": 700000,
+    "max": 700000
+   },
+   "active_count": 1,
+   "sold": [
+    {
+     "pid": "411924539",
+     "model_id": "rtx-4070",
+     "name": "asus rtx 4070 dual",
+     "price": 600000,
+     "sold_date": "2026-06-11",
+     "is_set": false,
+     "head_only": false,
+     "num_faved": 10
+    }
+   ],
+   "active_sample": [
+    {
+     "pid": "413320093",
+     "model_id": "rtx-4070",
+     "name": "갤럭시 RTX 4070 EX GAMER 그래픽카드",
+     "price": 700000,
+     "status": "0",
+     "category_id": "600200005",
+     "num_faved": 2,
+     "update_time": 1781071511,
+     "used": 1,
+     "proshop": false,
+     "drop_reason": null,
+     "is_set": false,
+     "head_only": false
+    }
+   ]
+  },
+  "rtx-4060-ti": {
+   "label": "RTX 4060 Ti",
+   "group": "RTX 40 시리즈",
+   "category": "gpu",
+   "series": [
+    {
+     "date": "2026-06-11",
+     "median": 650000,
+     "n": 1
+    }
+   ],
+   "basis": "asking_low",
+   "estimate": 650000,
+   "asking_median": 650000,
+   "stats": {
+    "n": 1,
+    "median": 650000,
+    "q1": 650000,
+    "q3": 650000,
+    "min": 650000,
+    "max": 650000
+   },
+   "active_count": 1,
+   "sold": [],
+   "active_sample": [
+    {
+     "pid": "412792217",
+     "model_id": "rtx-4060-ti",
+     "category_key": "gpu",
+     "name": "4060ti 16gb",
+     "price": 650000,
+     "status": "0",
+     "category_id": "600200005",
+     "num_faved": 11,
+     "update_time": 1781105492,
+     "used": 1,
+     "proshop": false,
+     "url": "https://m.bunjang.co.kr/products/412792217",
+     "drop_reason": null,
+     "is_set": false,
+     "head_only": false
+    }
+   ]
+  },
+  "rtx-4060": {
+   "label": "RTX 4060",
+   "group": "RTX 40 시리즈",
+   "category": "gpu",
+   "series": [
+    {
+     "date": "2026-06-11",
+     "median": 420000,
+     "n": 1
+    }
+   ],
+   "basis": "asking_low",
+   "estimate": 420000,
+   "asking_median": 420000,
+   "stats": {
+    "n": 1,
+    "median": 420000,
+    "q1": 420000,
+    "q3": 420000,
+    "min": 420000,
+    "max": 420000
+   },
+   "active_count": 1,
+   "sold": [],
+   "active_sample": [
+    {
+     "pid": "413134095",
+     "model_id": "rtx-4060",
+     "category_key": "gpu",
+     "name": "RTX4060 그래픽카드 판매합니다",
+     "price": 420000,
+     "status": "0",
+     "category_id": "600200005",
+     "num_faved": 4,
+     "update_time": 1781102783,
+     "used": 1,
+     "proshop": false,
+     "url": "https://m.bunjang.co.kr/products/413134095",
+     "drop_reason": null,
+     "is_set": false,
+     "head_only": false
+    }
+   ]
+  },
+  "rtx-3090-ti": {
+   "label": "RTX 3090 Ti",
+   "group": "RTX 30 시리즈",
+   "category": "gpu",
+   "series": [],
+   "basis": "none",
+   "estimate": null,
+   "asking_median": null,
+   "stats": null,
+   "active_count": 0,
+   "sold": [],
+   "active_sample": []
+  },
+  "rtx-3090": {
+   "label": "RTX 3090",
+   "group": "RTX 30 시리즈",
+   "category": "gpu",
+   "series": [
+    {
+     "date": "2026-06-11",
+     "median": 1100000,
+     "n": 2
+    }
+   ],
+   "basis": "asking_low",
+   "estimate": 1062500,
+   "asking_median": 1100000,
+   "stats": {
+    "n": 2,
+    "median": 1100000,
+    "q1": 1025000,
+    "q3": 1175000,
+    "min": 1050000,
+    "max": 1150000
+   },
+   "active_count": 2,
+   "sold": [],
+   "active_sample": [
+    {
+     "pid": "413527038",
+     "model_id": "rtx-3090",
+     "category_key": "gpu",
+     "name": "rog strix RTX 3090 그래픽카드 삽니다!",
+     "price": 1050000,
+     "status": "0",
+     "category_id": "600200005",
+     "num_faved": 0,
+     "update_time": 1781100941,
+     "used": 1,
+     "proshop": false,
+     "url": "https://m.bunjang.co.kr/products/413527038",
+     "drop_reason": null,
+     "is_set": false,
+     "head_only": false
+    },
+    {
+     "pid": "412277661",
+     "model_id": "rtx-3090",
+     "category_key": "gpu",
+     "name": "RTX 3090 Neptune 수랭 그래픽카드",
+     "price": 1150000,
+     "status": "0",
+     "category_id": "600200005",
+     "num_faved": 19,
+     "update_time": 1781097929,
+     "used": 1,
+     "proshop": false,
+     "url": "https://m.bunjang.co.kr/products/412277661",
+     "drop_reason": null,
+     "is_set": false,
+     "head_only": false
+    }
+   ]
+  },
+  "rtx-3080-ti": {
+   "label": "RTX 3080 Ti",
+   "group": "RTX 30 시리즈",
+   "category": "gpu",
+   "series": [],
+   "basis": "none",
+   "estimate": null,
+   "asking_median": null,
+   "stats": null,
+   "active_count": 0,
+   "sold": [],
+   "active_sample": []
+  },
+  "rtx-3080": {
+   "label": "RTX 3080",
+   "group": "RTX 30 시리즈",
+   "category": "gpu",
+   "series": [
+    {
+     "date": "2026-06-10",
+     "median": 490000,
+     "n": 1
+    },
+    {
+     "date": "2026-06-11",
+     "median": 474500,
+     "n": 5
+    }
+   ],
+   "basis": "asking_low",
+   "estimate": 424750,
+   "asking_median": 474500,
+   "stats": {
+    "n": 5,
+    "median": 474500,
+    "q1": 375000,
+    "q3": 520000,
+    "min": 310000,
+    "max": 550000
+   },
+   "active_count": 5,
+   "sold": [],
+   "active_sample": [
+    {
+     "pid": "413546293",
+     "model_id": "rtx-3080",
+     "category_key": "gpu",
+     "name": "rtx3080 (고장) 판매합니다",
+     "price": 310000,
+     "status": "0",
+     "category_id": "600200005",
+     "num_faved": 3,
+     "update_time": 1781114142,
+     "used": 1,
+     "proshop": false,
+     "url": "https://m.bunjang.co.kr/products/413546293",
+     "drop_reason": null,
+     "is_set": false,
+     "head_only": false
+    },
+    {
+     "pid": "393698060",
+     "model_id": "rtx-3080",
+     "category_key": "gpu",
+     "name": "ASUS TUF RTX 3080 그래픽카드",
+     "price": 550000,
+     "status": "0",
+     "category_id": "600200005",
+     "num_faved": 21,
+     "update_time": 1781108818,
+     "used": 1,
+     "proshop": true,
+     "url": "https://m.bunjang.co.kr/products/393698060",
+     "drop_reason": null,
+     "is_set": false,
+     "head_only": false
+    },
+    {
+     "pid": "409453350",
+     "model_id": "rtx-3080",
+     "category_key": "gpu",
+     "name": "PALIT RTX 3080 GamingPro 풀박스",
+     "price": 474500,
+     "status": "0",
+     "category_id": "600200005",
+     "num_faved": 1,
+     "update_time": 1781104004,
+     "used": 1,
+     "proshop": true,
+     "url": "https://m.bunjang.co.kr/products/409453350",
+     "drop_reason": null,
+     "is_set": false,
+     "head_only": false
+    },
+    {
+     "pid": "409658867",
+     "model_id": "rtx-3080",
+     "category_key": "gpu",
+     "name": "rtx3080 그래픽카드",
+     "price": 440000,
+     "status": "0",
+     "category_id": "600200005",
+     "num_faved": 10,
+     "update_time": 1781096815,
+     "used": 1,
+     "proshop": false,
+     "url": "https://m.bunjang.co.kr/products/409658867",
+     "drop_reason": null,
+     "is_set": false,
+     "head_only": false
+    },
+    {
+     "pid": "400913094",
+     "model_id": "rtx-3080",
+     "name": "ASUS TUF RTX3080 게이밍 그래픽카드",
+     "price": 490000,
+     "status": "0",
+     "category_id": "600200005",
+     "num_faved": 12,
+     "update_time": 1780843867,
+     "used": 1,
+     "proshop": false,
+     "reassigned": true,
+     "drop_reason": null,
+     "is_set": false,
+     "head_only": false
+    }
+   ]
+  },
+  "rtx-3070-ti": {
+   "label": "RTX 3070 Ti",
+   "group": "RTX 30 시리즈",
+   "category": "gpu",
+   "series": [
+    {
+     "date": "2026-06-11",
+     "median": 360000,
+     "n": 3
+    }
+   ],
+   "basis": "asking_low",
+   "estimate": 360000,
+   "asking_median": 360000,
+   "stats": {
+    "n": 3,
+    "median": 360000,
+    "q1": 360000,
+    "q3": 394000,
+    "min": 360000,
+    "max": 394000
+   },
+   "active_count": 3,
+   "sold": [],
+   "active_sample": [
+    {
+     "pid": "413520612",
+     "model_id": "rtx-3070-ti",
+     "category_key": "gpu",
+     "name": "RTX 3070 Ti",
+     "price": 360000,
+     "status": "0",
+     "category_id": "600200005",
+     "num_faved": 5,
+     "update_time": 1781104985,
+     "used": 1,
+     "proshop": false,
+     "url": "https://m.bunjang.co.kr/products/413520612",
+     "drop_reason": null,
+     "is_set": false,
+     "head_only": false
+    },
+    {
+     "pid": "410748653",
+     "model_id": "rtx-3070-ti",
+     "category_key": "gpu",
+     "name": "중고 rtx3070ti  8g 캘럭시",
+     "price": 394000,
+     "status": "0",
+     "category_id": "600200005",
+     "num_faved": 2,
+     "update_time": 1781101274,
+     "used": 1,
+     "proshop": false,
+     "url": "https://m.bunjang.co.kr/products/410748653",
+     "drop_reason": null,
+     "is_set": false,
+     "head_only": false
+    },
+    {
+     "pid": "413506842",
+     "model_id": "rtx-3070-ti",
+     "category_key": "gpu",
+     "name": "ZOTAC GAMING 지포스 RTX 3070 Ti Trinity D6X",
+     "price": 360000,
+     "status": "0",
+     "category_id": "600200005",
+     "num_faved": 5,
+     "update_time": 1781093411,
+     "used": 1,
+     "proshop": false,
+     "url": "https://m.bunjang.co.kr/products/413506842",
+     "drop_reason": null,
+     "is_set": false,
+     "head_only": false
+    }
+   ]
+  },
+  "rtx-3070": {
+   "label": "RTX 3070",
+   "group": "RTX 30 시리즈",
+   "category": "gpu",
+   "series": [
+    {
+     "date": "2026-06-11",
+     "median": 315000,
+     "n": 2
+    }
+   ],
+   "basis": "asking_low",
+   "estimate": 311250,
+   "asking_median": 315000,
+   "stats": {
+    "n": 2,
+    "median": 315000,
+    "q1": 307500,
+    "q3": 322500,
+    "min": 310000,
+    "max": 320000
+   },
+   "active_count": 2,
+   "sold": [],
+   "active_sample": [
+    {
+     "pid": "411413846",
+     "model_id": "rtx-3070",
+     "category_key": "gpu",
+     "name": "이엠텍 RTX 3070 그래픽카드 콜오브듀티 한정판",
+     "price": 320000,
+     "status": "0",
+     "category_id": "600200005",
+     "num_faved": 10,
+     "update_time": 1781116757,
+     "used": 1,
+     "proshop": false,
+     "url": "https://m.bunjang.co.kr/products/411413846",
+     "drop_reason": null,
+     "is_set": false,
+     "head_only": false
+    },
+    {
+     "pid": "413520241",
+     "model_id": "rtx-3070",
+     "category_key": "gpu",
+     "name": "RTX 3070 기가바이트 GAMING OC 8GB 팝니다.",
+     "price": 310000,
+     "status": "0",
+     "category_id": "600200005",
+     "num_faved": 2,
+     "update_time": 1781098585,
+     "used": 1,
+     "proshop": false,
+     "url": "https://m.bunjang.co.kr/products/413520241",
+     "drop_reason": null,
+     "is_set": false,
+     "head_only": false
+    }
+   ]
+  },
+  "rtx-3060-ti": {
+   "label": "RTX 3060 Ti",
+   "group": "RTX 30 시리즈",
+   "category": "gpu",
+   "series": [
+    {
+     "date": "2026-06-11",
+     "median": 300000,
+     "n": 1
+    }
+   ],
+   "basis": "asking_low",
+   "estimate": 300000,
+   "asking_median": 300000,
+   "stats": {
+    "n": 1,
+    "median": 300000,
+    "q1": 300000,
+    "q3": 300000,
+    "min": 300000,
+    "max": 300000
+   },
+   "active_count": 1,
+   "sold": [],
+   "active_sample": [
+    {
+     "pid": "407340149",
+     "model_id": "rtx-3060-ti",
+     "category_key": "gpu",
+     "name": "rtx 3060ti 8gb LHR msi 트프",
+     "price": 300000,
+     "status": "0",
+     "category_id": "600200005",
+     "num_faved": 7,
+     "update_time": 1781127353,
+     "used": 1,
+     "proshop": false,
+     "url": "https://m.bunjang.co.kr/products/407340149",
+     "drop_reason": null,
+     "is_set": false,
+     "head_only": false
+    }
+   ]
+  },
+  "rtx-3060": {
+   "label": "RTX 3060",
+   "group": "RTX 30 시리즈",
+   "category": "gpu",
+   "series": [
+    {
+     "date": "2026-06-11",
+     "median": 325000,
+     "n": 4
+    }
+   ],
+   "basis": "asking_low",
+   "estimate": 315000,
+   "asking_median": 325000,
+   "stats": {
+    "n": 4,
+    "median": 325000,
+    "q1": 305000,
+    "q3": 345000,
+    "min": 300000,
+    "max": 350000
+   },
+   "active_count": 4,
+   "sold": [],
+   "active_sample": [
+    {
+     "pid": "413513326",
+     "model_id": "rtx-3060",
+     "category_key": "gpu",
+     "name": "택포/ COLORFUL iGame 지포스 RTX 3060 Ultra OC",
+     "price": 320000,
+     "status": "0",
+     "category_id": "600200005",
+     "num_faved": 0,
+     "update_time": 1781129864,
+     "used": 1,
+     "proshop": true,
+     "url": "https://m.bunjang.co.kr/products/413513326",
+     "drop_reason": null,
+     "is_set": false,
+     "head_only": false
+    },
+    {
+     "pid": "413537576",
+     "model_id": "rtx-3060",
+     "category_key": "gpu",
+     "name": "기가바이트 그래픽카드 RTX3060",
+     "price": 330000,
+     "status": "0",
+     "category_id": "600200005",
+     "num_faved": 1,
+     "update_time": 1781105836,
+     "used": 1,
+     "proshop": false,
+     "url": "https://m.bunjang.co.kr/products/413537576",
+     "drop_reason": null,
+     "is_set": false,
+     "head_only": false
+    },
+    {
+     "pid": "413321453",
+     "model_id": "rtx-3060",
+     "category_key": "gpu",
+     "name": "RTX3060 8G 팝니다",
+     "price": 300000,
+     "status": "0",
+     "category_id": "600200005",
+     "num_faved": 0,
+     "update_time": 1781104073,
+     "used": 1,
+     "proshop": true,
+     "url": "https://m.bunjang.co.kr/products/413321453",
+     "drop_reason": null,
+     "is_set": false,
+     "head_only": false
+    },
+    {
+     "pid": "412843425",
+     "model_id": "rtx-3060",
+     "category_key": "gpu",
+     "name": "RTX3060 12GB 기가바이트 NVIDIA GeForce그래픽카드",
+     "price": 350000,
+     "status": "0",
+     "category_id": "600200005",
+     "num_faved": 4,
+     "update_time": 1781098607,
+     "used": 1,
+     "proshop": true,
+     "url": "https://m.bunjang.co.kr/products/412843425",
+     "drop_reason": null,
+     "is_set": false,
+     "head_only": false
+    }
+   ]
+  },
+  "rtx-3050": {
+   "label": "RTX 3050",
+   "group": "RTX 30 시리즈",
+   "category": "gpu",
+   "series": [
+    {
+     "date": "2026-06-11",
+     "median": 200000,
+     "n": 1
+    }
+   ],
+   "basis": "asking_low",
+   "estimate": 200000,
+   "asking_median": 200000,
+   "stats": {
+    "n": 1,
+    "median": 200000,
+    "q1": 200000,
+    "q3": 200000,
+    "min": 200000,
+    "max": 200000
+   },
+   "active_count": 1,
+   "sold": [],
+   "active_sample": [
+    {
+     "pid": "413297018",
+     "model_id": "rtx-3050",
+     "category_key": "gpu",
+     "name": "PNY 지포스 RTX 3050 8GB",
+     "price": 200000,
+     "status": "0",
+     "category_id": "600200005",
+     "num_faved": 5,
+     "update_time": 1781110717,
+     "used": 1,
+     "proshop": false,
+     "url": "https://m.bunjang.co.kr/products/413297018",
+     "drop_reason": null,
+     "is_set": false,
+     "head_only": false
+    }
+   ]
+  },
+  "rtx-2080-ti": {
+   "label": "RTX 2080 Ti",
+   "group": "RTX 20 · GTX 16",
+   "category": "gpu",
+   "series": [
+    {
+     "date": "2026-06-11",
+     "median": 359000,
+     "n": 3
+    }
+   ],
+   "basis": "asking_low",
+   "estimate": 319500,
+   "asking_median": 359000,
+   "stats": {
+    "n": 3,
+    "median": 359000,
+    "q1": 280000,
+    "q3": 369000,
+    "min": 280000,
+    "max": 369000
+   },
+   "active_count": 3,
+   "sold": [],
+   "active_sample": [
+    {
+     "pid": "297401247",
+     "model_id": "rtx-2080-ti",
+     "category_key": "gpu",
+     "name": "갤럭시 GALAX 지포스 RTX 2080 Ti SG V2 D6 11GB",
+     "price": 359000,
+     "status": "0",
+     "category_id": "600200005",
+     "num_faved": 8,
+     "update_time": 1781130502,
+     "used": 1,
+     "proshop": true,
+     "url": "https://m.bunjang.co.kr/products/297401247",
+     "drop_reason": null,
+     "is_set": false,
+     "head_only": false
+    },
+    {
+     "pid": "232380578",
+     "model_id": "rtx-2080-ti",
+     "category_key": "gpu",
+     "name": "조텍 RTX2080 TI 11G AMP ED 판매",
+     "price": 369000,
+     "status": "0",
+     "category_id": "600200005",
+     "num_faved": 11,
+     "update_time": 1781130443,
+     "used": 1,
+     "proshop": true,
+     "url": "https://m.bunjang.co.kr/products/232380578",
+     "drop_reason": null,
+     "is_set": false,
+     "head_only": false
+    },
+    {
+     "pid": "413146147",
+     "model_id": "rtx-2080-ti",
+     "category_key": "gpu",
+     "name": "galax rtx 2080ti",
+     "price": 280000,
+     "status": "0",
+     "category_id": "600200005",
+     "num_faved": 3,
+     "update_time": 1781090420,
+     "used": 1,
+     "proshop": false,
+     "url": "https://m.bunjang.co.kr/products/413146147",
+     "drop_reason": null,
+     "is_set": false,
+     "head_only": false
+    }
+   ]
+  },
+  "rtx-2080-super": {
+   "label": "RTX 2080 SUPER",
+   "group": "RTX 20 · GTX 16",
+   "category": "gpu",
+   "series": [],
+   "basis": "none",
+   "estimate": null,
+   "asking_median": null,
+   "stats": null,
+   "active_count": 0,
+   "sold": [],
+   "active_sample": []
+  },
+  "rtx-2070-super": {
+   "label": "RTX 2070 SUPER",
+   "group": "RTX 20 · GTX 16",
+   "category": "gpu",
+   "series": [
+    {
+     "date": "2026-06-11",
+     "median": 235000,
+     "n": 2
+    }
+   ],
+   "basis": "asking_low",
+   "estimate": 223750,
+   "asking_median": 235000,
+   "stats": {
+    "n": 2,
+    "median": 235000,
+    "q1": 212500,
+    "q3": 257500,
+    "min": 220000,
+    "max": 250000
+   },
+   "active_count": 2,
+   "sold": [],
+   "active_sample": [
+    {
+     "pid": "413194996",
+     "model_id": "rtx-2070-super",
+     "category_key": "gpu",
+     "name": "기가바이트 RTX2070 SUPER 단품 판매",
+     "price": 220000,
+     "status": "0",
+     "category_id": "600200005",
+     "num_faved": 5,
+     "update_time": 1781126820,
+     "used": 1,
+     "proshop": false,
+     "url": "https://m.bunjang.co.kr/products/413194996",
+     "drop_reason": null,
+     "is_set": false,
+     "head_only": false
+    },
+    {
+     "pid": "413315118",
+     "model_id": "rtx-2070-super",
+     "category_key": "gpu",
+     "name": "ASUS ROG STRIX RTX 2070 SUPER 8GB 그래픽카드",
+     "price": 250000,
+     "status": "0",
+     "category_id": "600200005",
+     "num_faved": 2,
+     "update_time": 1781092114,
+     "used": 1,
+     "proshop": false,
+     "url": "https://m.bunjang.co.kr/products/413315118",
+     "drop_reason": null,
+     "is_set": false,
+     "head_only": false
+    }
+   ]
+  },
+  "rtx-2060-super": {
+   "label": "RTX 2060 SUPER",
+   "group": "RTX 20 · GTX 16",
+   "category": "gpu",
+   "series": [
+    {
+     "date": "2026-06-11",
+     "median": 220000,
+     "n": 1
+    }
+   ],
+   "basis": "asking_low",
+   "estimate": 220000,
+   "asking_median": 220000,
+   "stats": {
+    "n": 1,
+    "median": 220000,
+    "q1": 220000,
+    "q3": 220000,
+    "min": 220000,
+    "max": 220000
+   },
+   "active_count": 1,
+   "sold": [],
+   "active_sample": [
+    {
+     "pid": "413523966",
+     "model_id": "rtx-2060-super",
+     "category_key": "gpu",
+     "name": "GALAX RTX 2060SUPER",
+     "price": 220000,
+     "status": "0",
+     "category_id": "600200005",
+     "num_faved": 1,
+     "update_time": 1781099912,
+     "used": 1,
+     "proshop": false,
+     "url": "https://m.bunjang.co.kr/products/413523966",
+     "drop_reason": null,
+     "is_set": false,
+     "head_only": false
+    }
+   ]
+  },
+  "gtx-1660-super": {
+   "label": "GTX 1660 SUPER",
+   "group": "RTX 20 · GTX 16",
+   "category": "gpu",
+   "series": [
+    {
+     "date": "2026-06-11",
+     "median": 133000,
+     "n": 1
+    }
+   ],
+   "basis": "asking_low",
+   "estimate": 133000,
+   "asking_median": 133000,
+   "stats": {
+    "n": 1,
+    "median": 133000,
+    "q1": 133000,
+    "q3": 133000,
+    "min": 133000,
+    "max": 133000
+   },
+   "active_count": 1,
+   "sold": [],
+   "active_sample": [
+    {
+     "pid": "413388657",
+     "model_id": "gtx-1660-super",
+     "category_key": "gpu",
+     "name": "만리 GTX 1660 SUPER Gallardo",
+     "price": 133000,
+     "status": "0",
+     "category_id": "600200005",
+     "num_faved": 1,
+     "update_time": 1781128692,
+     "used": 1,
+     "proshop": false,
+     "url": "https://m.bunjang.co.kr/products/413388657",
+     "drop_reason": null,
+     "is_set": false,
+     "head_only": false
+    }
+   ]
+  },
+  "gtx-1660-ti": {
+   "label": "GTX 1660 Ti",
+   "group": "RTX 20 · GTX 16",
+   "category": "gpu",
+   "series": [],
+   "basis": "none",
+   "estimate": null,
+   "asking_median": null,
+   "stats": null,
+   "active_count": 0,
+   "sold": [],
+   "active_sample": []
+  },
+  "rx-9070-xt": {
+   "label": "RX 9070 XT",
+   "group": "라데온 RX",
+   "category": "gpu",
+   "series": [
+    {
+     "date": "2026-06-11",
+     "median": 920000,
+     "n": 2
+    }
+   ],
+   "basis": "asking_low",
+   "estimate": 860000,
+   "asking_median": 920000,
+   "stats": {
+    "n": 2,
+    "median": 920000,
+    "q1": 800000,
+    "q3": 1040000,
+    "min": 840000,
+    "max": 1000000
+   },
+   "active_count": 2,
+   "sold": [],
+   "active_sample": [
+    {
+     "pid": "413272133",
+     "model_id": "rx-9070-xt",
+     "category_key": "gpu",
+     "name": "rx9070xt 니트로",
+     "price": 1000000,
+     "status": "0",
+     "category_id": "600200005",
+     "num_faved": 4,
+     "update_time": 1781126573,
+     "used": 2,
+     "proshop": false,
+     "url": "https://m.bunjang.co.kr/products/413272133",
+     "drop_reason": null,
+     "is_set": false,
+     "head_only": false
+    },
+    {
+     "pid": "413425703",
+     "model_id": "rx-9070-xt",
+     "category_key": "gpu",
+     "name": "asus 아수스 prime 프라임 9070xt OC D6 16GB 그래픽",
+     "price": 840000,
+     "status": "0",
+     "category_id": "600200005",
+     "num_faved": 4,
+     "update_time": 1781090455,
+     "used": 1,
+     "proshop": false,
+     "url": "https://m.bunjang.co.kr/products/413425703",
+     "drop_reason": null,
+     "is_set": false,
+     "head_only": false
+    }
+   ]
+  },
+  "rx-9070": {
+   "label": "RX 9070",
+   "group": "라데온 RX",
+   "category": "gpu",
+   "series": [],
+   "basis": "none",
+   "estimate": null,
+   "asking_median": null,
+   "stats": null,
+   "active_count": 0,
+   "sold": [],
+   "active_sample": []
+  },
+  "rx-7900-xtx": {
+   "label": "RX 7900 XTX",
+   "group": "라데온 RX",
+   "category": "gpu",
+   "series": [],
+   "basis": "none",
+   "estimate": null,
+   "asking_median": null,
+   "stats": null,
+   "active_count": 0,
+   "sold": [],
+   "active_sample": []
+  },
+  "rx-7900-xt": {
+   "label": "RX 7900 XT",
+   "group": "라데온 RX",
+   "category": "gpu",
+   "series": [
+    {
+     "date": "2026-06-11",
+     "median": 719000,
+     "n": 1
+    }
+   ],
+   "basis": "asking_low",
+   "estimate": 719000,
+   "asking_median": 719000,
+   "stats": {
+    "n": 1,
+    "median": 719000,
+    "q1": 719000,
+    "q3": 719000,
+    "min": 719000,
+    "max": 719000
+   },
+   "active_count": 1,
+   "sold": [],
+   "active_sample": [
+    {
+     "pid": "412974189",
+     "model_id": "rx-7900-xt",
+     "category_key": "gpu",
+     "name": "AMD 라데온 RX7900XT 20GB",
+     "price": 719000,
+     "status": "0",
+     "category_id": "600200005",
+     "num_faved": 10,
+     "update_time": 1781091688,
+     "used": 1,
+     "proshop": false,
+     "url": "https://m.bunjang.co.kr/products/412974189",
+     "drop_reason": null,
+     "is_set": false,
+     "head_only": false
+    }
+   ]
+  },
+  "rx-7800-xt": {
+   "label": "RX 7800 XT",
+   "group": "라데온 RX",
+   "category": "gpu",
+   "series": [
+    {
+     "date": "2026-06-11",
+     "median": 395000,
+     "n": 1
+    }
+   ],
+   "basis": "asking_low",
+   "estimate": 395000,
+   "asking_median": 395000,
+   "stats": {
+    "n": 1,
+    "median": 395000,
+    "q1": 395000,
+    "q3": 395000,
+    "min": 395000,
+    "max": 395000
+   },
+   "active_count": 1,
+   "sold": [],
+   "active_sample": [
+    {
+     "pid": "413542675",
+     "model_id": "rx-7800-xt",
+     "category_key": "gpu",
+     "name": "rx7800xt 기판 ,방열판 함께 팝니다",
+     "price": 395000,
+     "status": "0",
+     "category_id": "600200005",
+     "num_faved": 2,
+     "update_time": 1781109493,
+     "used": 1,
+     "proshop": false,
+     "url": "https://m.bunjang.co.kr/products/413542675",
+     "drop_reason": null,
+     "is_set": false,
+     "head_only": false
+    }
+   ]
+  },
+  "rx-7700-xt": {
+   "label": "RX 7700 XT",
+   "group": "라데온 RX",
+   "category": "gpu",
+   "series": [],
+   "basis": "none",
+   "estimate": null,
+   "asking_median": null,
+   "stats": null,
+   "active_count": 0,
+   "sold": [],
+   "active_sample": []
+  },
+  "rx-7600": {
+   "label": "RX 7600",
+   "group": "라데온 RX",
+   "category": "gpu",
+   "series": [],
+   "basis": "none",
+   "estimate": null,
+   "asking_median": null,
+   "stats": null,
+   "active_count": 0,
+   "sold": [],
+   "active_sample": []
+  },
+  "rx-6700-xt": {
+   "label": "RX 6700 XT",
+   "group": "라데온 RX",
+   "category": "gpu",
+   "series": [],
+   "basis": "none",
+   "estimate": null,
+   "asking_median": null,
+   "stats": null,
+   "active_count": 0,
+   "sold": [],
+   "active_sample": []
+  },
+  "rx-6600": {
+   "label": "RX 6600",
+   "group": "라데온 RX",
+   "category": "gpu",
+   "series": [
+    {
+     "date": "2026-06-11",
+     "median": 310000,
+     "n": 1
+    }
+   ],
+   "basis": "asking_low",
+   "estimate": 310000,
+   "asking_median": 310000,
+   "stats": {
+    "n": 1,
+    "median": 310000,
+    "q1": 310000,
+    "q3": 310000,
+    "min": 310000,
+    "max": 310000
+   },
+   "active_count": 1,
+   "sold": [],
+   "active_sample": [
+    {
+     "pid": "413152419",
+     "model_id": "rx-6600",
+     "category_key": "gpu",
+     "name": "애즈락 라데온 RX6600 챌린져 D6 8GB 그래픽카드 미개봉",
+     "price": 310000,
+     "status": "0",
+     "category_id": "600200005",
+     "num_faved": 2,
+     "update_time": 1781102096,
+     "used": 2,
+     "proshop": false,
+     "url": "https://m.bunjang.co.kr/products/413152419",
+     "drop_reason": null,
+     "is_set": false,
+     "head_only": false
+    }
+   ]
+  },
+  "sony-a7m5": {
+   "label": "소니 A7M5",
+   "group": "소니",
+   "category": "camera",
+   "series": [],
+   "basis": "none",
+   "estimate": null,
+   "asking_median": null,
+   "stats": null,
+   "active_count": 0,
+   "sold": [],
+   "active_sample": []
+  },
+  "sony-a7m4": {
+   "label": "소니 A7M4",
+   "group": "소니",
+   "category": "camera",
+   "series": [
+    {
+     "date": "2026-06-10",
+     "median": 2030000,
+     "n": 5
+    },
+    {
+     "date": "2026-06-11",
+     "median": 2045000,
+     "n": 4
+    }
+   ],
+   "basis": "asking_low",
+   "estimate": 2002500,
+   "asking_median": 2045000,
+   "stats": {
+    "n": 4,
+    "median": 2045000,
+    "q1": 1960000,
+    "q3": 2175000,
+    "min": 1950000,
+    "max": 2200000
+   },
+   "active_count": 6,
+   "sold": [
+    {
+     "pid": "412981287",
+     "model_id": "sony-a7m4",
+     "name": "소니 A7M4 판매합니다. (SONY)",
+     "price": 1900000,
+     "sold_date": "2026-06-11",
+     "is_set": false,
+     "head_only": false,
+     "num_faved": 13
+    }
+   ],
+   "active_sample": [
+    {
+     "pid": "413488684",
+     "model_id": "sony-a7m4",
+     "name": "소니 a7m4 (세로그립 포함)",
+     "price": 1800000,
+     "status": "0",
+     "category_id": "600300001",
+     "num_faved": 1,
+     "update_time": 1781086044,
+     "used": 1,
+     "proshop": false,
+     "drop_reason": null,
+     "is_set": true,
+     "head_only": false
+    },
+    {
+     "pid": "410747817",
+     "model_id": "sony-a7m4",
+     "name": "소니 A7M4 풀셋",
+     "price": 2130000,
+     "status": "0",
+     "category_id": "600300001",
+     "num_faved": 6,
+     "update_time": 1781085316,
+     "used": 1,
+     "proshop": false,
+     "drop_reason": null,
+     "is_set": true,
+     "head_only": false
+    },
+    {
+     "pid": "413476708",
+     "model_id": "sony-a7m4",
+     "name": "소니 Sony A7m4 풀프레임 미러리스 바디판매",
+     "price": 1990000,
+     "status": "0",
+     "category_id": "600300001",
+     "num_faved": 0,
+     "update_time": 1781081428,
+     "used": 1,
+     "proshop": false,
+     "drop_reason": null,
+     "is_set": false,
+     "head_only": false
+    },
+    {
+     "pid": "271344622",
+     "model_id": "sony-a7m4",
+     "name": "소니 a7m4  바디셋",
+     "price": 1950000,
+     "status": "0",
+     "category_id": "600300001",
+     "num_faved": 48,
+     "update_time": 1781077963,
+     "used": 1,
+     "proshop": false,
+     "drop_reason": null,
+     "is_set": false,
+     "head_only": false
+    },
+    {
+     "pid": "410736326",
+     "model_id": "sony-a7m4",
+     "name": "소니a7m4 2천컨대 신동급바디팔아요~~교환가능입니다",
+     "price": 2100000,
+     "status": "0",
+     "category_id": "600300001",
+     "num_faved": 12,
+     "update_time": 1781068729,
+     "used": 1,
+     "proshop": false,
+     "drop_reason": null,
+     "is_set": false,
+     "head_only": false
+    },
+    {
+     "pid": "413434950",
+     "model_id": "sony-a7m4",
+     "name": "소니 a7m4 정품 거의 새상품 몇번안쓴",
+     "price": 2200000,
+     "status": "0",
+     "category_id": "600300001",
+     "num_faved": 1,
+     "update_time": 1781064027,
+     "used": 1,
+     "proshop": false,
+     "drop_reason": null,
+     "is_set": false,
+     "head_only": false
+    }
+   ]
+  },
+  "sony-a7m3": {
+   "label": "소니 A7M3",
+   "group": "소니",
+   "category": "camera",
+   "series": [
+    {
+     "date": "2026-06-11",
+     "median": 1240000,
+     "n": 2
+    }
+   ],
+   "basis": "asking_low",
+   "estimate": 1210000,
+   "asking_median": 1240000,
+   "stats": {
+    "n": 2,
+    "median": 1240000,
+    "q1": 1180000,
+    "q3": 1300000,
+    "min": 1200000,
+    "max": 1280000
+   },
+   "active_count": 2,
+   "sold": [],
+   "active_sample": [
+    {
+     "pid": "412137997",
+     "model_id": "sony-a7m3",
+     "category_key": "camera",
+     "name": "소니 a7m3 풀박스 바디 판매합니다",
+     "price": 1280000,
+     "status": "0",
+     "category_id": "600300001",
+     "num_faved": 10,
+     "update_time": 1781129647,
+     "used": 1,
+     "proshop": false,
+     "url": "https://m.bunjang.co.kr/products/412137997",
+     "drop_reason": null,
+     "is_set": false,
+     "head_only": false
+    },
+    {
+     "pid": "411374116",
+     "model_id": "sony-a7m3",
+     "category_key": "camera",
+     "name": "소니 A7M3 풀박스 카메라",
+     "price": 1200000,
+     "status": "0",
+     "category_id": "600300001",
+     "num_faved": 14,
+     "update_time": 1781112474,
+     "used": 1,
+     "proshop": false,
+     "url": "https://m.bunjang.co.kr/products/411374116",
+     "drop_reason": null,
+     "is_set": false,
+     "head_only": false
+    }
+   ]
+  },
+  "sony-a7c2": {
+   "label": "소니 A7C2",
+   "group": "소니",
+   "category": "camera",
+   "series": [
+    {
+     "date": "2026-06-11",
+     "median": 2200000,
+     "n": 1
+    }
+   ],
+   "basis": "asking_low",
+   "estimate": 2200000,
+   "asking_median": 2200000,
+   "stats": {
+    "n": 1,
+    "median": 2200000,
+    "q1": 2200000,
+    "q3": 2200000,
+    "min": 2200000,
+    "max": 2200000
+   },
+   "active_count": 2,
+   "sold": [],
+   "active_sample": [
+    {
+     "pid": "402498318",
+     "model_id": "sony-a7c2",
+     "category_key": "camera",
+     "name": "소니 A7C2 풀프레임 미러리스 바디 (ILCE-7CM2)",
+     "price": 2200000,
+     "status": "0",
+     "category_id": "600300001",
+     "num_faved": 13,
+     "update_time": 1781104044,
+     "used": 1,
+     "proshop": false,
+     "url": "https://m.bunjang.co.kr/products/402498318",
+     "drop_reason": null,
+     "is_set": false,
+     "head_only": false
+    },
+    {
+     "pid": "413532577",
+     "model_id": "sony-a7c2",
+     "category_key": "camera",
+     "name": "소니 카메라 A7C2 + 렌즈 SEL50F25G 판매",
+     "price": 2660000,
+     "status": "0",
+     "category_id": "600300001",
+     "num_faved": 0,
+     "update_time": 1781103196,
+     "used": 1,
+     "proshop": false,
+     "url": "https://m.bunjang.co.kr/products/413532577",
+     "drop_reason": null,
+     "is_set": true,
+     "head_only": false
+    }
+   ]
+  },
+  "sony-a7c": {
+   "label": "소니 A7C",
+   "group": "소니",
+   "category": "camera",
+   "series": [],
+   "basis": "none",
+   "estimate": null,
+   "asking_median": null,
+   "stats": null,
+   "active_count": 1,
+   "sold": [],
+   "active_sample": [
+    {
+     "pid": "413055410",
+     "model_id": "sony-a7c",
+     "name": "소니 A7C 미러리스+빌트록스 AF 28mm 4.5 fe렌즈 판매합니다",
+     "price": 1200000,
+     "status": "0",
+     "category_id": "600300001",
+     "num_faved": 9,
+     "update_time": 1781088488,
+     "used": 1,
+     "proshop": false,
+     "reassigned": true,
+     "drop_reason": null,
+     "is_set": true,
+     "head_only": false
+    }
+   ]
+  },
+  "sony-a7r5": {
+   "label": "소니 A7R5",
+   "group": "소니",
+   "category": "camera",
+   "series": [],
+   "basis": "none",
+   "estimate": null,
+   "asking_median": null,
+   "stats": null,
+   "active_count": 0,
+   "sold": [],
+   "active_sample": []
+  },
+  "sony-a7r4": {
+   "label": "소니 A7R4",
+   "group": "소니",
+   "category": "camera",
+   "series": [],
+   "basis": "none",
+   "estimate": null,
+   "asking_median": null,
+   "stats": null,
+   "active_count": 0,
+   "sold": [],
+   "active_sample": []
+  },
+  "sony-a6700": {
+   "label": "소니 A6700",
+   "group": "소니",
+   "category": "camera",
+   "series": [],
+   "basis": "none",
+   "estimate": null,
+   "asking_median": null,
+   "stats": null,
+   "active_count": 0,
+   "sold": [],
+   "active_sample": []
+  },
+  "sony-a6400": {
+   "label": "소니 A6400",
+   "group": "소니",
+   "category": "camera",
+   "series": [
+    {
+     "date": "2026-06-11",
+     "median": 780000,
+     "n": 1
+    }
+   ],
+   "basis": "asking_low",
+   "estimate": 780000,
+   "asking_median": 780000,
+   "stats": {
+    "n": 1,
+    "median": 780000,
+    "q1": 780000,
+    "q3": 780000,
+    "min": 780000,
+    "max": 780000
+   },
+   "active_count": 1,
+   "sold": [],
+   "active_sample": [
+    {
+     "pid": "396184446",
+     "model_id": "sony-a6400",
+     "category_key": "camera",
+     "name": "신품급> SONY 소니 A6400 블랙 크롭미러리스 알파6400",
+     "price": 780000,
+     "status": "0",
+     "category_id": "600300001",
+     "num_faved": 58,
+     "update_time": 1781103492,
+     "used": 1,
+     "proshop": true,
+     "url": "https://m.bunjang.co.kr/products/396184446",
+     "drop_reason": null,
+     "is_set": false,
+     "head_only": false
+    }
+   ]
+  },
+  "sony-a6000": {
+   "label": "소니 A6000",
+   "group": "소니",
+   "category": "camera",
+   "series": [],
+   "basis": "none",
+   "estimate": null,
+   "asking_median": null,
+   "stats": null,
+   "active_count": 0,
+   "sold": [],
+   "active_sample": []
+  },
+  "sony-zv-e10": {
+   "label": "소니 ZV-E10",
+   "group": "소니",
+   "category": "camera",
+   "series": [],
+   "basis": "none",
+   "estimate": null,
+   "asking_median": null,
+   "stats": null,
+   "active_count": 0,
+   "sold": [],
+   "active_sample": []
+  },
+  "sony-zv-e10m2": {
+   "label": "소니 ZV-E10 II",
+   "group": "소니",
+   "category": "camera",
+   "series": [],
+   "basis": "none",
+   "estimate": null,
+   "asking_median": null,
+   "stats": null,
+   "active_count": 0,
+   "sold": [],
+   "active_sample": []
+  },
+  "canon-r5m2": {
+   "label": "캐논 R5 Mark II",
+   "group": "캐논",
+   "category": "camera",
+   "series": [],
+   "basis": "none",
+   "estimate": null,
+   "asking_median": null,
+   "stats": null,
+   "active_count": 0,
+   "sold": [],
+   "active_sample": []
+  },
+  "canon-r5": {
+   "label": "캐논 R5",
+   "group": "캐논",
+   "category": "camera",
+   "series": [
+    {
+     "date": "2026-06-11",
+     "median": 2650000,
+     "n": 1
+    }
+   ],
+   "basis": "asking_low",
+   "estimate": 2650000,
+   "asking_median": 2650000,
+   "stats": {
+    "n": 1,
+    "median": 2650000,
+    "q1": 2650000,
+    "q3": 2650000,
+    "min": 2650000,
+    "max": 2650000
+   },
+   "active_count": 1,
+   "sold": [],
+   "active_sample": [
+    {
+     "pid": "412501860",
+     "model_id": "canon-r5",
+     "category_key": "camera",
+     "name": "캐논 R5 (내용 확인)",
+     "price": 2650000,
+     "status": "0",
+     "category_id": "600300001",
+     "num_faved": 5,
+     "update_time": 1781127122,
+     "used": 1,
+     "proshop": true,
+     "url": "https://m.bunjang.co.kr/products/412501860",
+     "drop_reason": null,
+     "is_set": false,
+     "head_only": false
+    }
+   ]
+  },
+  "canon-r6m2": {
+   "label": "캐논 R6 Mark II",
+   "group": "캐논",
+   "category": "camera",
+   "series": [],
+   "basis": "none",
+   "estimate": null,
+   "asking_median": null,
+   "stats": null,
+   "active_count": 0,
+   "sold": [],
+   "active_sample": []
+  },
+  "canon-r6": {
+   "label": "캐논 R6",
+   "group": "캐논",
+   "category": "camera",
+   "series": [],
+   "basis": "none",
+   "estimate": null,
+   "asking_median": null,
+   "stats": null,
+   "active_count": 0,
+   "sold": [],
+   "active_sample": []
+  },
+  "canon-r8": {
+   "label": "캐논 R8",
+   "group": "캐논",
+   "category": "camera",
+   "series": [
+    {
+     "date": "2026-06-11",
+     "median": 1480000,
+     "n": 2
+    }
+   ],
+   "basis": "asking_low",
+   "estimate": 1232500,
+   "asking_median": 1480000,
+   "stats": {
+    "n": 2,
+    "median": 1480000,
+    "q1": 985000,
+    "q3": 1975000,
+    "min": 1150000,
+    "max": 1810000
+   },
+   "active_count": 2,
+   "sold": [],
+   "active_sample": [
+    {
+     "pid": "413544665",
+     "model_id": "canon-r8",
+     "category_key": "camera",
+     "name": "캐논 eos r8 , 580EX II 스트로보",
+     "price": 1150000,
+     "status": "1",
+     "category_id": "600300001",
+     "num_faved": 1,
+     "update_time": 1781111414,
+     "used": 1,
+     "proshop": false,
+     "url": "https://m.bunjang.co.kr/products/413544665",
+     "drop_reason": null,
+     "is_set": false,
+     "head_only": false
+    },
+    {
+     "pid": "413534938",
+     "model_id": "canon-r8",
+     "category_key": "camera",
+     "name": "캐논 EOS R8 미러리스 카메라",
+     "price": 1810000,
+     "status": "0",
+     "category_id": "600300001",
+     "num_faved": 1,
+     "update_time": 1781108142,
+     "used": 1,
+     "proshop": false,
+     "url": "https://m.bunjang.co.kr/products/413534938",
+     "drop_reason": null,
+     "is_set": false,
+     "head_only": false
+    }
+   ]
+  },
+  "canon-r10": {
+   "label": "캐논 R10",
+   "group": "캐논",
+   "category": "camera",
+   "series": [],
+   "basis": "none",
+   "estimate": null,
+   "asking_median": null,
+   "stats": null,
+   "active_count": 1,
+   "sold": [],
+   "active_sample": [
+    {
+     "pid": "413539294",
+     "model_id": "canon-r10",
+     "category_key": "camera",
+     "name": "캐논 R10 (870컷)+18-45 줌렌즈 정품 박스셋 미러리스 카메라",
+     "price": 880000,
+     "status": "0",
+     "category_id": "600300001",
+     "num_faved": 2,
+     "update_time": 1781106945,
+     "used": 1,
+     "proshop": false,
+     "url": "https://m.bunjang.co.kr/products/413539294",
+     "drop_reason": null,
+     "is_set": true,
+     "head_only": false
+    }
+   ]
+  },
+  "canon-r50": {
+   "label": "캐논 R50",
+   "group": "캐논",
+   "category": "camera",
+   "series": [],
+   "basis": "none",
+   "estimate": null,
+   "asking_median": null,
+   "stats": null,
+   "active_count": 0,
+   "sold": [],
+   "active_sample": []
+  },
+  "canon-rp": {
+   "label": "캐논 RP",
+   "group": "캐논",
+   "category": "camera",
+   "series": [],
+   "basis": "none",
+   "estimate": null,
+   "asking_median": null,
+   "stats": null,
+   "active_count": 0,
+   "sold": [],
+   "active_sample": []
+  },
+  "canon-200d2": {
+   "label": "캐논 200D II",
+   "group": "캐논",
+   "category": "camera",
+   "series": [
+    {
+     "date": "2026-06-11",
+     "median": 450000,
+     "n": 1
+    }
+   ],
+   "basis": "asking_low",
+   "estimate": 450000,
+   "asking_median": 450000,
+   "stats": {
+    "n": 1,
+    "median": 450000,
+    "q1": 450000,
+    "q3": 450000,
+    "min": 450000,
+    "max": 450000
+   },
+   "active_count": 1,
+   "sold": [],
+   "active_sample": [
+    {
+     "pid": "412539527",
+     "model_id": "canon-200d2",
+     "category_key": "camera",
+     "name": "캐논 EOS 200D 화이트 DSLR 카메라",
+     "price": 450000,
+     "status": "0",
+     "category_id": "600300001",
+     "num_faved": 6,
+     "update_time": 1781124988,
+     "used": 1,
+     "proshop": false,
+     "url": "https://m.bunjang.co.kr/products/412539527",
+     "drop_reason": null,
+     "is_set": false,
+     "head_only": false
+    }
+   ]
+  },
+  "canon-90d": {
+   "label": "캐논 90D",
+   "group": "캐논",
+   "category": "camera",
+   "series": [],
+   "basis": "none",
+   "estimate": null,
+   "asking_median": null,
+   "stats": null,
+   "active_count": 1,
+   "sold": [],
+   "active_sample": [
+    {
+     "pid": "411286545",
+     "model_id": "canon-90d",
+     "category_key": "camera",
+     "name": "캐논 EOS 90D + 18~135mm 중고",
+     "price": 1220000,
+     "status": "0",
+     "category_id": "600300001",
+     "num_faved": 4,
+     "update_time": 1781117988,
+     "used": 1,
+     "proshop": false,
+     "url": "https://m.bunjang.co.kr/products/411286545",
+     "drop_reason": null,
+     "is_set": true,
+     "head_only": false
+    }
+   ]
+  },
+  "nikon-z8": {
+   "label": "니콘 Z8",
+   "group": "니콘",
+   "category": "camera",
+   "series": [],
+   "basis": "none",
+   "estimate": null,
+   "asking_median": null,
+   "stats": null,
+   "active_count": 0,
+   "sold": [],
+   "active_sample": []
+  },
+  "nikon-z6iii": {
+   "label": "니콘 Z6 III",
+   "group": "니콘",
+   "category": "camera",
+   "series": [],
+   "basis": "none",
+   "estimate": null,
+   "asking_median": null,
+   "stats": null,
+   "active_count": 0,
+   "sold": [],
+   "active_sample": []
+  },
+  "nikon-z6ii": {
+   "label": "니콘 Z6 II",
+   "group": "니콘",
+   "category": "camera",
+   "series": [],
+   "basis": "none",
+   "estimate": null,
+   "asking_median": null,
+   "stats": null,
+   "active_count": 0,
+   "sold": [],
+   "active_sample": []
+  },
+  "nikon-z6": {
+   "label": "니콘 Z6",
+   "group": "니콘",
+   "category": "camera",
+   "series": [],
+   "basis": "none",
+   "estimate": null,
+   "asking_median": null,
+   "stats": null,
+   "active_count": 0,
+   "sold": [],
+   "active_sample": []
+  },
+  "nikon-z5": {
+   "label": "니콘 Z5",
+   "group": "니콘",
+   "category": "camera",
+   "series": [],
+   "basis": "none",
+   "estimate": null,
+   "asking_median": null,
+   "stats": null,
+   "active_count": 0,
+   "sold": [],
+   "active_sample": []
+  },
+  "nikon-zf": {
+   "label": "니콘 Zf",
+   "group": "니콘",
+   "category": "camera",
+   "series": [],
+   "basis": "none",
+   "estimate": null,
+   "asking_median": null,
+   "stats": null,
+   "active_count": 0,
+   "sold": [],
+   "active_sample": []
+  },
+  "nikon-zfc": {
+   "label": "니콘 Zfc",
+   "group": "니콘",
+   "category": "camera",
+   "series": [
+    {
+     "date": "2026-06-11",
+     "median": 860000,
+     "n": 1
+    }
+   ],
+   "basis": "asking_low",
+   "estimate": 860000,
+   "asking_median": 860000,
+   "stats": {
+    "n": 1,
+    "median": 860000,
+    "q1": 860000,
+    "q3": 860000,
+    "min": 860000,
+    "max": 860000
+   },
+   "active_count": 1,
+   "sold": [],
+   "active_sample": [
+    {
+     "pid": "413200543",
+     "model_id": "nikon-zfc",
+     "category_key": "camera",
+     "name": "니콘 zfc 블랙 바디만(4600컷)",
+     "price": 860000,
+     "status": "0",
+     "category_id": "600300001",
+     "num_faved": 1,
+     "update_time": 1781131662,
+     "used": 1,
+     "proshop": false,
+     "url": "https://m.bunjang.co.kr/products/413200543",
+     "drop_reason": null,
+     "is_set": false,
+     "head_only": false
+    }
+   ]
+  },
+  "nikon-d850": {
+   "label": "니콘 D850",
+   "group": "니콘",
+   "category": "camera",
+   "series": [
+    {
+     "date": "2026-06-11",
+     "median": 2020000,
+     "n": 1
+    }
+   ],
+   "basis": "asking_low",
+   "estimate": 2020000,
+   "asking_median": 2020000,
+   "stats": {
+    "n": 1,
+    "median": 2020000,
+    "q1": 2020000,
+    "q3": 2020000,
+    "min": 2020000,
+    "max": 2020000
+   },
+   "active_count": 1,
+   "sold": [],
+   "active_sample": [
+    {
+     "pid": "413425602",
+     "model_id": "nikon-d850",
+     "category_key": "camera",
+     "name": "니콘/정품 d850 신품급/6000컷",
+     "price": 2020000,
+     "status": "0",
+     "category_id": "600300001",
+     "num_faved": 6,
+     "update_time": 1781121763,
+     "used": 1,
+     "proshop": false,
+     "url": "https://m.bunjang.co.kr/products/413425602",
+     "drop_reason": null,
+     "is_set": false,
+     "head_only": false
+    }
+   ]
+  },
+  "fuji-xt5": {
+   "label": "후지 X-T5",
+   "group": "후지",
+   "category": "camera",
+   "series": [],
+   "basis": "none",
+   "estimate": null,
+   "asking_median": null,
+   "stats": null,
+   "active_count": 0,
+   "sold": [],
+   "active_sample": []
+  },
+  "fuji-xt4": {
+   "label": "후지 X-T4",
+   "group": "후지",
+   "category": "camera",
+   "series": [],
+   "basis": "none",
+   "estimate": null,
+   "asking_median": null,
+   "stats": null,
+   "active_count": 0,
+   "sold": [],
+   "active_sample": []
+  },
+  "fuji-x100vi": {
+   "label": "후지 X100VI",
+   "group": "후지",
+   "category": "camera",
+   "series": [],
+   "basis": "none",
+   "estimate": null,
+   "asking_median": null,
+   "stats": null,
+   "active_count": 0,
+   "sold": [],
+   "active_sample": []
+  },
+  "fuji-x100v": {
+   "label": "후지 X100V",
+   "group": "후지",
+   "category": "camera",
+   "series": [],
+   "basis": "none",
+   "estimate": null,
+   "asking_median": null,
+   "stats": null,
+   "active_count": 0,
+   "sold": [],
+   "active_sample": []
+  },
+  "fuji-xs20": {
+   "label": "후지 X-S20",
+   "group": "후지",
+   "category": "camera",
+   "series": [
+    {
+     "date": "2026-06-11",
+     "median": 1400000,
+     "n": 1
+    }
+   ],
+   "basis": "asking_low",
+   "estimate": 1400000,
+   "asking_median": 1400000,
+   "stats": {
+    "n": 1,
+    "median": 1400000,
+    "q1": 1400000,
+    "q3": 1400000,
+    "min": 1400000,
+    "max": 1400000
+   },
+   "active_count": 1,
+   "sold": [],
+   "active_sample": [
+    {
+     "pid": "413143717",
+     "model_id": "fuji-xs20",
+     "category_key": "camera",
+     "name": "후지x-s20 카메라",
+     "price": 1400000,
+     "status": "0",
+     "category_id": "600300001",
+     "num_faved": 12,
+     "update_time": 1781103364,
+     "used": 1,
+     "proshop": false,
+     "url": "https://m.bunjang.co.kr/products/413143717",
+     "drop_reason": null,
+     "is_set": false,
+     "head_only": false
+    }
+   ]
+  },
+  "ricoh-gr3x": {
+   "label": "리코 GR3x",
+   "group": "리코",
+   "category": "camera",
+   "series": [],
+   "basis": "none",
+   "estimate": null,
+   "asking_median": null,
+   "stats": null,
+   "active_count": 0,
+   "sold": [],
+   "active_sample": []
+  },
+  "ricoh-gr3": {
+   "label": "리코 GR3",
+   "group": "리코",
+   "category": "camera",
+   "series": [],
+   "basis": "none",
+   "estimate": null,
+   "asking_median": null,
+   "stats": null,
+   "active_count": 0,
+   "sold": [],
+   "active_sample": []
+  },
+  "tm-qi35-driver": {
+   "label": "테일러메이드 Qi35 드라이버",
+   "group": "테일러메이드",
+   "category": "golf",
+   "series": [],
+   "basis": "none",
+   "estimate": null,
+   "asking_median": null,
+   "stats": null,
+   "active_count": 0,
+   "sold": [],
+   "active_sample": []
+  },
+  "tm-qi10-driver": {
+   "label": "테일러메이드 Qi10 드라이버",
+   "group": "테일러메이드",
+   "category": "golf",
+   "series": [],
+   "basis": "none",
+   "estimate": null,
+   "asking_median": null,
+   "stats": null,
+   "active_count": 0,
+   "sold": [],
+   "active_sample": []
+  },
+  "stealth2-driver": {
+   "label": "테일러메이드 스텔스2 드라이버",
+   "group": "테일러메이드",
+   "category": "golf",
+   "series": [
+    {
+     "date": "2026-06-10",
+     "median": 330000,
+     "n": 7
+    },
+    {
+     "date": "2026-06-11",
+     "median": 330000,
+     "n": 6
+    }
+   ],
+   "basis": "asking_low",
+   "estimate": 288125,
+   "asking_median": 330000,
+   "stats": {
+    "n": 6,
+    "median": 330000,
+    "q1": 246250,
+    "q3": 377500,
+    "min": 235000,
+    "max": 460000
+   },
+   "active_count": 9,
+   "sold": [
+    {
+     "pid": "413504486",
+     "model_id": "stealth2-driver",
+     "name": "테일러메이드 스텔스2 드라이버 9도",
+     "price": 250000,
+     "sold_date": "2026-06-11",
+     "is_set": false,
+     "head_only": false,
+     "num_faved": 0
+    }
+   ],
+   "active_sample": [
+    {
+     "pid": "368972909",
+     "model_id": "stealth2-driver",
+     "name": "테일러메이드 버너 / 스텔스2 드라이버 화이트",
+     "price": 350000,
+     "status": "0",
+     "category_id": "700600300",
+     "num_faved": 5,
+     "update_time": 1781102279,
+     "used": 1,
+     "proshop": false,
+     "drop_reason": null,
+     "is_set": false,
+     "head_only": false
+    },
+    {
+     "pid": "413517822",
+     "model_id": "stealth2-driver",
+     "name": "테일러메이드 스텔스2 10.5도 5X 드라이버(TX5885),000817",
+     "price": 330000,
+     "status": "0",
+     "category_id": "700600300",
+     "num_faved": 0,
+     "update_time": 1781097808,
+     "used": 1,
+     "proshop": true,
+     "drop_reason": null,
+     "is_set": false,
+     "head_only": false
+    },
+    {
+     "pid": "410183530",
+     "model_id": "stealth2-driver",
+     "name": "테일러메이드 스텔스2 플러스 10.5도 드라이버 헤드",
+     "price": 270000,
+     "status": "0",
+     "category_id": "700600300",
+     "num_faved": 2,
+     "update_time": 1781086566,
+     "used": 1,
+     "proshop": false,
+     "drop_reason": null,
+     "is_set": false,
+     "head_only": true
+    },
+    {
+     "pid": "413486821",
+     "model_id": "stealth2-driver",
+     "name": "테일러메이드 스텔스2 플러스 9도 드라이버 헤드 (커버포함)팝니다.",
+     "price": 250000,
+     "status": "0",
+     "category_id": "700600300",
+     "num_faved": 0,
+     "update_time": 1781085347,
+     "used": 1,
+     "proshop": false,
+     "drop_reason": null,
+     "is_set": false,
+     "head_only": true
+    },
+    {
+     "pid": "412974426",
+     "model_id": "stealth2-driver",
+     "name": "(A+급)스텔스 2 플러스 9도 드라이버 + 벤투스 블루 TR 5S 정품",
+     "price": 460000,
+     "status": "0",
+     "category_id": "700600300",
+     "num_faved": 1,
+     "update_time": 1781076355,
+     "used": 1,
+     "proshop": false,
+     "drop_reason": null,
+     "is_set": false,
+     "head_only": false
+    },
+    {
+     "pid": "399830731",
+     "model_id": "stealth2-driver",
+     "name": "테일러메이드 스텔스2 드라이버 10.5도 강도S",
+     "price": 235000,
+     "status": "0",
+     "category_id": "700600300",
+     "num_faved": 4,
+     "update_time": 1781072762,
+     "used": 1,
+     "proshop": false,
+     "drop_reason": null,
+     "is_set": false,
+     "head_only": false
+    },
+    {
+     "pid": "413451712",
+     "model_id": "stealth2-driver",
+     "name": "테일러메이드 스텔스2 9.0도 드라이버 헤드",
+     "price": 230000,
+     "status": "0",
+     "category_id": "700600300",
+     "num_faved": 0,
+     "update_time": 1781071976,
+     "used": 1,
+     "proshop": true,
+     "drop_reason": null,
+     "is_set": false,
+     "head_only": true
+    },
+    {
+     "pid": "409442978",
+     "model_id": "stealth2-driver",
+     "name": "테일러메이드 스텔스2 드라이버 샤프트 R",
+     "price": 330000,
+     "status": "0",
+     "category_id": "700600300",
+     "num_faved": 1,
+     "update_time": 1781062691,
+     "used": 1,
+     "proshop": true,
+     "drop_reason": null,
+     "is_set": false,
+     "head_only": false
+    },
+    {
+     "pid": "413420223",
+     "model_id": "stealth2-driver",
+     "name": "스텔스2 여자 드라이버 정품",
+     "price": 250000,
+     "status": "0",
+     "category_id": "700600300",
+     "num_faved": 0,
+     "update_time": 1781055690,
+     "used": 1,
+     "proshop": false,
+     "drop_reason": null,
+     "is_set": false,
+     "head_only": false
+    }
+   ]
+  },
+  "tm-stealth-driver": {
+   "label": "테일러메이드 스텔스 드라이버",
+   "group": "테일러메이드",
+   "category": "golf",
+   "series": [],
+   "basis": "none",
+   "estimate": null,
+   "asking_median": null,
+   "stats": null,
+   "active_count": 0,
+   "sold": [],
+   "active_sample": []
+  },
+  "tm-sim2-driver": {
+   "label": "테일러메이드 SIM2 드라이버",
+   "group": "테일러메이드",
+   "category": "golf",
+   "series": [],
+   "basis": "none",
+   "estimate": null,
+   "asking_median": null,
+   "stats": null,
+   "active_count": 0,
+   "sold": [],
+   "active_sample": []
+  },
+  "cw-ai-smoke-driver": {
+   "label": "캘러웨이 Ai 스모크 드라이버",
+   "group": "캘러웨이",
+   "category": "golf",
+   "series": [],
+   "basis": "none",
+   "estimate": null,
+   "asking_median": null,
+   "stats": null,
+   "active_count": 0,
+   "sold": [],
+   "active_sample": []
+  },
+  "cw-paradym-driver": {
+   "label": "캘러웨이 패러다임 드라이버",
+   "group": "캘러웨이",
+   "category": "golf",
+   "series": [],
+   "basis": "none",
+   "estimate": null,
+   "asking_median": null,
+   "stats": null,
+   "active_count": 0,
+   "sold": [],
+   "active_sample": []
+  },
+  "cw-rogue-st-driver": {
+   "label": "캘러웨이 로그 ST 드라이버",
+   "group": "캘러웨이",
+   "category": "golf",
+   "series": [],
+   "basis": "none",
+   "estimate": null,
+   "asking_median": null,
+   "stats": null,
+   "active_count": 0,
+   "sold": [],
+   "active_sample": []
+  },
+  "tt-gt3-driver": {
+   "label": "타이틀리스트 GT3 드라이버",
+   "group": "타이틀리스트",
+   "category": "golf",
+   "series": [],
+   "basis": "none",
+   "estimate": null,
+   "asking_median": null,
+   "stats": null,
+   "active_count": 0,
+   "sold": [],
+   "active_sample": []
+  },
+  "tt-gt2-driver": {
+   "label": "타이틀리스트 GT2 드라이버",
+   "group": "타이틀리스트",
+   "category": "golf",
+   "series": [],
+   "basis": "none",
+   "estimate": null,
+   "asking_median": null,
+   "stats": null,
+   "active_count": 0,
+   "sold": [],
+   "active_sample": []
+  },
+  "tt-tsr3-driver": {
+   "label": "타이틀리스트 TSR3 드라이버",
+   "group": "타이틀리스트",
+   "category": "golf",
+   "series": [],
+   "basis": "none",
+   "estimate": null,
+   "asking_median": null,
+   "stats": null,
+   "active_count": 0,
+   "sold": [],
+   "active_sample": []
+  },
+  "tt-tsr2-driver": {
+   "label": "타이틀리스트 TSR2 드라이버",
+   "group": "타이틀리스트",
+   "category": "golf",
+   "series": [],
+   "basis": "none",
+   "estimate": null,
+   "asking_median": null,
+   "stats": null,
+   "active_count": 0,
+   "sold": [],
+   "active_sample": []
+  },
+  "tt-tsi3-driver": {
+   "label": "타이틀리스트 TSi3 드라이버",
+   "group": "타이틀리스트",
+   "category": "golf",
+   "series": [],
+   "basis": "none",
+   "estimate": null,
+   "asking_median": null,
+   "stats": null,
+   "active_count": 0,
+   "sold": [],
+   "active_sample": []
+  },
+  "tt-tsi2-driver": {
+   "label": "타이틀리스트 TSi2 드라이버",
+   "group": "타이틀리스트",
+   "category": "golf",
+   "series": [],
+   "basis": "none",
+   "estimate": null,
+   "asking_median": null,
+   "stats": null,
+   "active_count": 0,
+   "sold": [],
+   "active_sample": []
+  },
+  "ping-g440-driver": {
+   "label": "핑 G440 드라이버",
+   "group": "핑",
+   "category": "golf",
+   "series": [],
+   "basis": "none",
+   "estimate": null,
+   "asking_median": null,
+   "stats": null,
+   "active_count": 0,
+   "sold": [],
+   "active_sample": []
+  },
+  "ping-g430-driver": {
+   "label": "핑 G430 드라이버",
+   "group": "핑",
+   "category": "golf",
+   "series": [
+    {
+     "date": "2026-06-11",
+     "median": 410000,
+     "n": 1
+    }
+   ],
+   "basis": "asking_low",
+   "estimate": 410000,
+   "asking_median": 410000,
+   "stats": {
+    "n": 1,
+    "median": 410000,
+    "q1": 410000,
+    "q3": 410000,
+    "min": 410000,
+    "max": 410000
+   },
+   "active_count": 2,
+   "sold": [],
+   "active_sample": [
+    {
+     "pid": "367168619",
+     "model_id": "ping-g430-driver",
+     "category_key": "golf",
+     "name": "G430 max 드라이버 헤드만 팝니다 ^^",
+     "price": 380000,
+     "status": "0",
+     "category_id": "700600300",
+     "num_faved": 8,
+     "update_time": 1781129522,
+     "used": 1,
+     "proshop": false,
+     "url": "https://m.bunjang.co.kr/products/367168619",
+     "drop_reason": null,
+     "is_set": false,
+     "head_only": true
+    },
+    {
+     "pid": "413519761",
+     "model_id": "ping-g430-driver",
+     "category_key": "golf",
+     "name": "핑 G430 MAX 드라이버 10.5 S",
+     "price": 410000,
+     "status": "0",
+     "category_id": "700600300",
+     "num_faved": 1,
+     "update_time": 1781128759,
+     "used": 1,
+     "proshop": false,
+     "url": "https://m.bunjang.co.kr/products/413519761",
+     "drop_reason": null,
+     "is_set": false,
+     "head_only": false
+    }
+   ]
+  },
+  "ping-g425-driver": {
+   "label": "핑 G425 드라이버",
+   "group": "핑",
+   "category": "golf",
+   "series": [],
+   "basis": "none",
+   "estimate": null,
+   "asking_median": null,
+   "stats": null,
+   "active_count": 0,
+   "sold": [],
+   "active_sample": []
+  },
+  "xxio-13-driver": {
+   "label": "젝시오 13 드라이버",
+   "group": "젝시오",
+   "category": "golf",
+   "series": [],
+   "basis": "none",
+   "estimate": null,
+   "asking_median": null,
+   "stats": null,
+   "active_count": 0,
+   "sold": [],
+   "active_sample": []
+  },
+  "xxio-12-driver": {
+   "label": "젝시오 12 드라이버",
+   "group": "젝시오",
+   "category": "golf",
+   "series": [],
+   "basis": "none",
+   "estimate": null,
+   "asking_median": null,
+   "stats": null,
+   "active_count": 0,
+   "sold": [],
+   "active_sample": []
+  }
+ }
+}
