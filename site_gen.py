@@ -70,6 +70,7 @@ SHELL = """<!DOCTYPE html>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{title} — 팔린가</title>
 <meta name="description" content="{desc}">
+<meta name="google-site-verification" content="c8ryxpEL18CTs-KrbwPDrGwoCODWrrW_unRzl1wVslA">
 <link rel="canonical" href="{canonical}">
 <meta property="og:title" content="{title} — 팔린가">
 <meta property="og:description" content="{desc}">
