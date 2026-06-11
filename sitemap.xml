@@ -2,8 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://palinga.xyz/about.html</loc><lastmod>2026-06-11</lastmod></url>
   <url><loc>https://palinga.xyz/cat-camera.html</loc><lastmod>2026-06-11</lastmod></url>
+  <url><loc>https://palinga.xyz/cat-console.html</loc><lastmod>2026-06-11</lastmod></url>
   <url><loc>https://palinga.xyz/cat-golf.html</loc><lastmod>2026-06-11</lastmod></url>
   <url><loc>https://palinga.xyz/cat-gpu.html</loc><lastmod>2026-06-11</lastmod></url>
+  <url><loc>https://palinga.xyz/cat-tablet.html</loc><lastmod>2026-06-11</lastmod></url>
+  <url><loc>https://palinga.xyz/guide-buy-checklist.html</loc><lastmod>2026-06-11</lastmod></url>
+  <url><loc>https://palinga.xyz/guide-camera.html</loc><lastmod>2026-06-11</lastmod></url>
+  <url><loc>https://palinga.xyz/guide-console.html</loc><lastmod>2026-06-11</lastmod></url>
+  <url><loc>https://palinga.xyz/guide-gpu.html</loc><lastmod>2026-06-11</lastmod></url>
+  <url><loc>https://palinga.xyz/guide-used-price.html</loc><lastmod>2026-06-11</lastmod></url>
+  <url><loc>https://palinga.xyz/guides.html</loc><lastmod>2026-06-11</lastmod></url>
   <url><loc>https://palinga.xyz/index.html</loc><lastmod>2026-06-11</lastmod></url>
   <url><loc>https://palinga.xyz/m-canon-200d2.html</loc><lastmod>2026-06-11</lastmod></url>
   <url><loc>https://palinga.xyz/m-canon-90d.html</loc><lastmod>2026-06-11</lastmod></url>
@@ -23,8 +31,20 @@
   <url><loc>https://palinga.xyz/m-fuji-xs20.html</loc><lastmod>2026-06-11</lastmod></url>
   <url><loc>https://palinga.xyz/m-fuji-xt4.html</loc><lastmod>2026-06-11</lastmod></url>
   <url><loc>https://palinga.xyz/m-fuji-xt5.html</loc><lastmod>2026-06-11</lastmod></url>
+  <url><loc>https://palinga.xyz/m-galaxy-tab-s10.html</loc><lastmod>2026-06-11</lastmod></url>
+  <url><loc>https://palinga.xyz/m-galaxy-tab-s9.html</loc><lastmod>2026-06-11</lastmod></url>
   <url><loc>https://palinga.xyz/m-gtx-1660-super.html</loc><lastmod>2026-06-11</lastmod></url>
   <url><loc>https://palinga.xyz/m-gtx-1660-ti.html</loc><lastmod>2026-06-11</lastmod></url>
+  <url><loc>https://palinga.xyz/m-ipad-10.html</loc><lastmod>2026-06-11</lastmod></url>
+  <url><loc>https://palinga.xyz/m-ipad-9.html</loc><lastmod>2026-06-11</lastmod></url>
+  <url><loc>https://palinga.xyz/m-ipad-air-m2.html</loc><lastmod>2026-06-11</lastmod></url>
+  <url><loc>https://palinga.xyz/m-ipad-air4.html</loc><lastmod>2026-06-11</lastmod></url>
+  <url><loc>https://palinga.xyz/m-ipad-air5.html</loc><lastmod>2026-06-11</lastmod></url>
+  <url><loc>https://palinga.xyz/m-ipad-mini6.html</loc><lastmod>2026-06-11</lastmod></url>
+  <url><loc>https://palinga.xyz/m-ipad-mini7.html</loc><lastmod>2026-06-11</lastmod></url>
+  <url><loc>https://palinga.xyz/m-ipad-pro-m1.html</loc><lastmod>2026-06-11</lastmod></url>
+  <url><loc>https://palinga.xyz/m-ipad-pro-m2.html</loc><lastmod>2026-06-11</lastmod></url>
+  <url><loc>https://palinga.xyz/m-ipad-pro-m4.html</loc><lastmod>2026-06-11</lastmod></url>
   <url><loc>https://palinga.xyz/m-nikon-d850.html</loc><lastmod>2026-06-11</lastmod></url>
   <url><loc>https://palinga.xyz/m-nikon-z5.html</loc><lastmod>2026-06-11</lastmod></url>
   <url><loc>https://palinga.xyz/m-nikon-z6.html</loc><lastmod>2026-06-11</lastmod></url>
@@ -33,9 +53,15 @@
   <url><loc>https://palinga.xyz/m-nikon-z8.html</loc><lastmod>2026-06-11</lastmod></url>
   <url><loc>https://palinga.xyz/m-nikon-zf.html</loc><lastmod>2026-06-11</lastmod></url>
   <url><loc>https://palinga.xyz/m-nikon-zfc.html</loc><lastmod>2026-06-11</lastmod></url>
+  <url><loc>https://palinga.xyz/m-nintendo-switch-oled.html</loc><lastmod>2026-06-11</lastmod></url>
+  <url><loc>https://palinga.xyz/m-nintendo-switch.html</loc><lastmod>2026-06-11</lastmod></url>
+  <url><loc>https://palinga.xyz/m-nintendo-switch2.html</loc><lastmod>2026-06-11</lastmod></url>
   <url><loc>https://palinga.xyz/m-ping-g425-driver.html</loc><lastmod>2026-06-11</lastmod></url>
   <url><loc>https://palinga.xyz/m-ping-g430-driver.html</loc><lastmod>2026-06-11</lastmod></url>
   <url><loc>https://palinga.xyz/m-ping-g440-driver.html</loc><lastmod>2026-06-11</lastmod></url>
+  <url><loc>https://palinga.xyz/m-ps4-pro.html</loc><lastmod>2026-06-11</lastmod></url>
+  <url><loc>https://palinga.xyz/m-ps5-pro.html</loc><lastmod>2026-06-11</lastmod></url>
+  <url><loc>https://palinga.xyz/m-ps5.html</loc><lastmod>2026-06-11</lastmod></url>
   <url><loc>https://palinga.xyz/m-ricoh-gr3.html</loc><lastmod>2026-06-11</lastmod></url>
   <url><loc>https://palinga.xyz/m-ricoh-gr3x.html</loc><lastmod>2026-06-11</lastmod></url>
   <url><loc>https://palinga.xyz/m-rtx-2060-super.html</loc><lastmod>2026-06-11</lastmod></url>
@@ -88,6 +114,7 @@
   <url><loc>https://palinga.xyz/m-sony-zv-e10.html</loc><lastmod>2026-06-11</lastmod></url>
   <url><loc>https://palinga.xyz/m-sony-zv-e10m2.html</loc><lastmod>2026-06-11</lastmod></url>
   <url><loc>https://palinga.xyz/m-stealth2-driver.html</loc><lastmod>2026-06-11</lastmod></url>
+  <url><loc>https://palinga.xyz/m-steam-deck.html</loc><lastmod>2026-06-11</lastmod></url>
   <url><loc>https://palinga.xyz/m-tm-qi10-driver.html</loc><lastmod>2026-06-11</lastmod></url>
   <url><loc>https://palinga.xyz/m-tm-qi35-driver.html</loc><lastmod>2026-06-11</lastmod></url>
   <url><loc>https://palinga.xyz/m-tm-sim2-driver.html</loc><lastmod>2026-06-11</lastmod></url>
@@ -98,7 +125,9 @@
   <url><loc>https://palinga.xyz/m-tt-tsi3-driver.html</loc><lastmod>2026-06-11</lastmod></url>
   <url><loc>https://palinga.xyz/m-tt-tsr2-driver.html</loc><lastmod>2026-06-11</lastmod></url>
   <url><loc>https://palinga.xyz/m-tt-tsr3-driver.html</loc><lastmod>2026-06-11</lastmod></url>
+  <url><loc>https://palinga.xyz/m-xbox-series-x.html</loc><lastmod>2026-06-11</lastmod></url>
   <url><loc>https://palinga.xyz/m-xxio-12-driver.html</loc><lastmod>2026-06-11</lastmod></url>
   <url><loc>https://palinga.xyz/m-xxio-13-driver.html</loc><lastmod>2026-06-11</lastmod></url>
   <url><loc>https://palinga.xyz/privacy.html</loc><lastmod>2026-06-11</lastmod></url>
+  <url><loc>https://palinga.xyz/terms.html</loc><lastmod>2026-06-11</lastmod></url>
 </urlset>

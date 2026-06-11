@@ -117,6 +117,37 @@ CAMS = [
     ("ricoh-gr3", "리코 GR3", "리코 GR3", r"gr\s*3(?!\s*x)|gr\s*iii(?!\s*x)", (70, 170)),
 ]
 
+# ---------------------------------------------------------------- Console
+CONSOLE_EXCLUDE = ["조이콘", "컨트롤러", "듀얼센스", "프로콘", "칩", "타이틀", "케이스",
+                   "거치대", "충전", "독만", "스킨", "게임보이", "3ds", "\\bds\\b"]
+CONSOLES = [
+    ("nintendo-switch2", "닌텐도 스위치 2", "닌텐도 스위치2", r"스위치\s*2|switch\s*2", (40, 100)),
+    ("nintendo-switch-oled", "닌텐도 스위치 OLED", "스위치 OLED", r"스위치\s*(oled|올레드)|(oled|올레드)\s*스위치", (20, 50)),
+    ("nintendo-switch", "닌텐도 스위치", "닌텐도 스위치 본체", r"(스위치|switch)(?!\s*2)", (12, 40)),
+    ("ps5-pro", "플레이스테이션 5 Pro", "PS5 PRO", r"(ps5|플스5|플레이스테이션\s*5)\s*(pro|프로)", (60, 120)),
+    ("ps5", "플레이스테이션 5", "PS5", r"ps5|플스5|플레이스테이션\s*5", (30, 90)),
+    ("xbox-series-x", "Xbox Series X", "엑스박스 시리즈X", r"(시리즈|series)\s*x", (25, 75)),
+    ("steam-deck", "스팀덱", "스팀덱", r"스팀\s*덱|steam\s*deck", (25, 95)),
+    ("ps4-pro", "플레이스테이션 4 Pro", "PS4 PRO", r"(ps4|플스4)\s*(pro|프로)", (12, 40)),
+]
+
+# ---------------------------------------------------------------- Tablet
+TABLET_EXCLUDE = ["케이스", "키보드", "펜슬", "필름", "거치대", "파우치", "어댑터", "충전기"]
+TABLETS = [
+    ("ipad-pro-m4", "아이패드 프로 M4", "아이패드 프로 M4", r"(프로|pro).{0,8}m4|m4.{0,8}(프로|pro)", (90, 250)),
+    ("ipad-pro-m2", "아이패드 프로 M2", "아이패드 프로 M2", r"(프로|pro).{0,8}m2|m2.{0,8}(프로|pro)", (50, 160)),
+    ("ipad-pro-m1", "아이패드 프로 M1", "아이패드 프로 M1", r"(프로|pro).{0,8}m1|m1.{0,8}(프로|pro)", (40, 130)),
+    ("ipad-air-m2", "아이패드 에어 M2", "아이패드 에어 M2", r"(에어|air).{0,8}m2|m2.{0,8}(에어|air)", (50, 110)),
+    ("ipad-air5", "아이패드 에어 5", "아이패드 에어5", r"(에어|air)\s*5", (33, 75)),
+    ("ipad-air4", "아이패드 에어 4", "아이패드 에어4", r"(에어|air)\s*4", (25, 60)),
+    ("ipad-mini7", "아이패드 미니 7", "아이패드 미니7", r"미니\s*7|mini\s*7", (48, 95)),
+    ("ipad-mini6", "아이패드 미니 6", "아이패드 미니6", r"미니\s*6|mini\s*6", (33, 75)),
+    ("ipad-10", "아이패드 10세대", "아이패드 10세대", r"10\s*세대", (28, 65)),
+    ("ipad-9", "아이패드 9세대", "아이패드 9세대", r"9\s*세대", (18, 48)),
+    ("galaxy-tab-s10", "갤럭시 탭 S10", "갤럭시탭 S10", r"탭\s*s\s*10|tab\s*s10", (55, 150)),
+    ("galaxy-tab-s9", "갤럭시 탭 S9", "갤럭시탭 S9", r"탭\s*s\s*9|tab\s*s9", (38, 115)),
+]
+
 # ---------------------------------------------------------------- Golf driver
 GOLF_EXCLUDE = ["우드", "아이언", "유틸", "웨지", "퍼터", "풀세트", "풀 세트", "캐디백"]
 GOLF_HEAD = ["헤드만", "드라이버 헤드", "헤드\\s*\\("]
@@ -197,6 +228,22 @@ def build() -> dict:
                 "models": expand(DRIVERS, {"exclude": GOLF_EXCLUDE,
                                            "head_only_keywords": GOLF_HEAD,
                                            "variant_fields": GOLF_VARIANTS},
+                                 lambda s, l: _brand_group(l)),
+            },
+            "console": {
+                "label": "게임기",
+                "bunjang_category_prefix": "600600",
+                "sweep_ids": ["600600001"],
+                "models": expand(CONSOLES, {"exclude": CONSOLE_EXCLUDE,
+                                            "set_keywords": ["풀박", "게임", "\\+", "세트"]},
+                                 lambda s, l: _brand_group(l)),
+            },
+            "tablet": {
+                "label": "태블릿",
+                "bunjang_category_prefix": "600710",
+                "sweep_ids": ["600710300"],
+                "models": expand(TABLETS, {"exclude": TABLET_EXCLUDE,
+                                           "set_keywords": ["풀박", "\\+", "세트", "포함"]},
                                  lambda s, l: _brand_group(l)),
             },
         },

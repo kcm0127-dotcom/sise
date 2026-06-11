@@ -19,7 +19,8 @@ BASE_URL = "https://palinga.xyz"  # Cloudflare Pages 주소 (커스텀 도메인
 ADSENSE_CLIENT = "ca-pub-6840959424010586"  # 퍼즐마루와 동일 퍼블리셔
 SITE_NAME = "팔린가"
 
-CATEGORY_LABELS = {"gpu": "그래픽카드", "camera": "카메라", "golf": "골프채"}
+CATEGORY_LABELS = {"gpu": "그래픽카드", "camera": "카메라", "golf": "골프채",
+                   "console": "게임기", "tablet": "태블릿"}
 BASIS_LABELS = {
     "sold": ("실거래 기준", "badge-sold"),
     "ratio": ("보정 호가 · 할인율 학습", "badge-adj"),
@@ -89,6 +90,8 @@ SHELL = """<!DOCTYPE html>
   <p class="note" style="border-top:none;padding-top:0">
     <a href="about.html" style="color:inherit">서비스 소개</a> ·
     <a href="privacy.html" style="color:inherit">개인정보처리방침</a> ·
+    <a href="terms.html" style="color:inherit">이용약관</a> ·
+    <a href="guides.html" style="color:inherit">중고 거래 가이드</a> ·
     문의 kcm0127@gmail.com</p>
 </div>
 {script}
@@ -135,6 +138,85 @@ PRIVACY_BODY = """
   통계 목적으로 집계한 것이며, 판매자의 개인정보(연락처, 정확한 위치 등)는 수집·표시하지 않습니다.</p>
   <h2>4. 문의</h2>
   <p style="font-size:15px;max-width:640px">개인정보 관련 문의: kcm0127@gmail.com</p>"""
+
+TERMS_BODY = """
+  <div class="crumb"><a href="index.html">홈</a> › 이용약관</div>
+  <h1>이용약관</h1>
+  <p class="sub">시행일: 2026-06-11</p>
+  <p style="font-size:15px;max-width:640px">본 약관은 팔린가(이하 "사이트")가 제공하는 중고 시세 정보 서비스의
+  이용 조건을 규정합니다. 사이트를 이용함으로써 이용자는 본 약관에 동의한 것으로 봅니다.</p>
+  <h2>1. 서비스의 성격</h2>
+  <p style="font-size:15px;max-width:640px">사이트가 제공하는 모든 시세는 공개된 중고 매물 정보를 통계적으로
+  추정한 <b>참고용 정보</b>입니다. 실제 거래 가격을 보장하지 않으며, 거래의 판단과 책임은 전적으로 이용자에게
+  있습니다.</p>
+  <h2>2. 데이터의 한계</h2>
+  <p style="font-size:15px;max-width:640px">거래완료 여부는 매물 상태 변화로 추정하므로 실제 체결가와 다를 수
+  있고, 표본이 적은 모델은 정확도가 낮을 수 있습니다. 사이트는 정보의 정확성·완전성을 보증하지 않습니다.</p>
+  <h2>3. 면책</h2>
+  <p style="font-size:15px;max-width:640px">이용자가 사이트 정보를 근거로 한 거래에서 발생한 손해에 대해
+  사이트는 책임을 지지 않습니다. 외부 링크(중고 거래 플랫폼 등)의 내용과 거래에 대해서도 책임지지 않습니다.</p>
+  <h2>4. 문의</h2>
+  <p style="font-size:15px;max-width:640px">kcm0127@gmail.com</p>"""
+
+_P = 'style="font-size:15px;max-width:660px;line-height:1.8"'
+GUIDES = [
+  {"slug": "guide-used-price", "title": "중고 시세, 호가와 실거래가는 왜 다를까",
+   "desc": "중고 거래에서 호가와 실제 체결가가 차이 나는 이유와 적정가 찾는 법",
+   "body": f"""
+  <p {_P}>중고 거래를 처음 할 때 가장 헷갈리는 것이 \"이 물건 얼마가 적정가지?\"라는 질문입니다.
+  중고 플랫폼에서 보이는 가격은 대부분 판매자가 부른 <b>호가</b>입니다. 호가는 판매자의 희망 사항일 뿐,
+  실제로 그 가격에 팔렸다는 보장이 없습니다. 인기 없는 매물은 몇 주째 같은 가격에 올라와 있기도 하고,
+  반대로 시세보다 싼 매물은 올라온 지 몇 분 만에 거래완료로 바뀝니다.</p>
+  <p {_P}>그래서 진짜 시세를 알려면 \"팔린 가격\"을 봐야 합니다. 하지만 대부분의 플랫폼은 거래완료된
+  매물의 가격을 따로 모아 보여주지 않습니다. 팔린가는 매일 활성 매물을 관찰해, 사라진(거래된 것으로 추정되는)
+  매물의 마지막 가격을 모아 모델별 실거래 추정 시세를 계산합니다.</p>
+  <p {_P}>적정가를 판단할 때는 평균보다 <b>중앙값</b>을 보는 것이 좋습니다. 평균은 터무니없이 비싼 매물
+  한두 개에 크게 흔들리지만, 중앙값은 \"딱 가운데 가격\"이라 체감 시세에 가깝습니다. 또한 정상 거래
+  범위(상·하위 25%를 제외한 구간)를 함께 보면, 내가 보려는 매물이 비싼 편인지 싼 편인지 한눈에 들어옵니다.</p>""" },
+  {"slug": "guide-buy-checklist", "title": "중고 거래 안전 체크리스트",
+   "desc": "중고 직거래·택배거래 사기 예방과 상태 확인 체크리스트",
+   "body": f"""
+  <p {_P}>중고 거래에서 가장 중요한 것은 시세보다 <b>사기 예방</b>입니다. 시세보다 유난히 싼 매물은
+  의심부터 하는 것이 안전합니다. 판매자에게 추가 사진을 실시간으로 요청했을 때 거부하거나, 보내온 사진이
+  인터넷에서 검색되는 사진이라면 거래를 중단하세요.</p>
+  <p {_P}>택배 거래라면 안전결제(에스크로)를 이용하는 것이 원칙입니다. 판매자가 안전결제를 거부하고
+  계좌이체만 고집한다면 위험 신호입니다. 직거래라면 사람이 많은 공공장소에서, 낮 시간에 만나는 것이 좋습니다.</p>
+  <p {_P}>상태 확인은 카테고리마다 다르지만 공통 원칙이 있습니다. 전원이 들어오는지, 외관 손상이 사진과
+  일치하는지, 구성품(박스·충전기·보증서)이 설명대로인지 그 자리에서 확인하세요. 영수증이나 보증서가 있으면
+  정품 여부와 남은 보증 기간을 알 수 있어 가격 협상에도 유리합니다.</p>""" },
+  {"slug": "guide-gpu", "title": "중고 그래픽카드 구매 가이드",
+   "desc": "중고 GPU 채굴 이력 확인, 테스트 방법, 변형 모델 구분법",
+   "body": f"""
+  <p {_P}>그래픽카드는 중고 거래가 가장 활발한 PC 부품이지만, 상태 편차도 가장 큽니다. 게임용으로 가볍게 쓴
+  카드와 채굴장에서 24시간 돌아간 카드는 수명이 다릅니다. 채굴 이력을 완전히 확인하긴 어렵지만, 같은 모델을
+  여러 장 파는 판매자, 백플레이트 나사의 개봉 흔적, 유난히 깨끗하게 세척된 기판은 의심 신호입니다.</p>
+  <p {_P}>직거래라면 그 자리에서 테스트를 요청하세요. GPU-Z로 모델·바이오스가 정품과 일치하는지, 부하
+  테스트로 온도와 팬 소음이 정상인지 10분이면 확인됩니다. 테스트를 거부하면 거르는 것이 맞습니다.</p>
+  <p {_P}>변형 모델 구분도 중요합니다. RTX 4070, 4070 SUPER, 4070 Ti, 4070 Ti SUPER는 이름이 비슷하지만
+  성능과 시세가 모두 다릅니다. 팔린가는 이 변형들을 별도 모델로 분리해 시세를 집계합니다. 세대 교체기에는
+  신품 할인가가 중고가를 추월하기도 하니, 중고가가 신품의 80%를 넘으면 신품도 함께 비교해 보세요.</p>""" },
+  {"slug": "guide-camera", "title": "중고 카메라·렌즈 구매 가이드",
+   "desc": "중고 카메라 셔터수·센서·렌즈 곰팡이 확인 체크리스트",
+   "body": f"""
+  <p {_P}>카메라 바디에서 먼저 확인할 것은 셔터수입니다. 자동차 주행거리에 해당하며, 보급기는 약 10만 컷,
+  플래그십은 30만 컷 이상이 설계 수명입니다. 판매자에게 최근 촬영 원본(JPG) 한 장을 요청하면 셔터수 확인
+  사이트로 조회할 수 있습니다.</p>
+  <p {_P}>센서는 조리개를 F16 이상으로 조이고 밝은 벽이나 하늘을 찍어 확인합니다. 같은 위치에 반복되는 점이
+  있으면 먼지나 데드픽셀입니다. 먼지는 청소로 해결되지만 데드픽셀은 수리 대상이라 가격에 반영해야 합니다.</p>
+  <p {_P}>렌즈는 곰팡이와 먼지가 핵심입니다. 플래시를 켜고 비스듬히 비추면 안쪽의 곰팡이(거미줄 무늬)와 헤이즈가
+  보입니다. 초점 링과 줌 링이 부드럽게 돌아가는지, 조리개 날개에 기름이 새지 않았는지도 확인하세요.</p>""" },
+  {"slug": "guide-console", "title": "중고 게임기 구매 가이드",
+   "desc": "닌텐도 스위치·PS5 중고 구매 시 확인할 것 — 변형 모델, 상태, 구성품",
+   "body": f"""
+  <p {_P}>게임기는 세대와 변형이 많아 모델 구분이 먼저입니다. 닌텐도 스위치만 해도 초기형, 배터리 개선형,
+  OLED, 라이트, 그리고 스위치 2까지 가격대가 크게 다릅니다. 제목만 믿지 말고 본체 모델명(뒷면 각인)으로
+  확인하세요.</p>
+  <p {_P}>상태 확인은 화면 번인(OLED), 조이콘 쏠림(드리프트), 도크 정상 출력이 핵심입니다. 직거래라면 게임을
+  실행해 스틱을 가만히 뒀을 때 캐릭터가 저절로 움직이는지 보면 드리프트를 바로 알 수 있습니다.</p>
+  <p {_P}>구성품도 가격에 큰 영향을 줍니다. 정품 어댑터·도크·조이콘이 모두 있는 풀박스와 본체만 있는 매물은
+  시세가 다릅니다. 팔린가는 게임 타이틀이 끼워진 세트 매물을 통계에서 분리해, 본체 단품 기준 시세를 보여줍니다.</p>""" },
+]
+
 
 
 def won(v) -> str:
@@ -270,6 +352,10 @@ inp.addEventListener('input', () => {{
 document.addEventListener('click', e => {{ if (!e.target.closest('.search')) hits.style.display = 'none'; }});
 </script>"""
 
+    guide_cards = "".join(
+        "<a class='card' href='" + g['slug'] + ".html'><b>" + g['title']
+        + "</b><br><span class='meta'>" + g['desc'] + "</span></a>"
+        for g in GUIDES)
     home_body = f"""
   <h1>이 물건, 실제로 얼마에 팔렸을까?</h1>
   <p class="sub">호가가 아닌 실거래 추정가로 보는 중고 시세.</p>
@@ -277,7 +363,9 @@ document.addEventListener('click', e => {{ if (!e.target.closest('.search')) hit
   <div class="cards">{cards}</div>
   <h2>최근 감지된 거래</h2>
   <table><thead><tr><th>날짜</th><th>모델</th><th>매물명</th><th class="num">최종 관측가</th></tr></thead>
-  <tbody>{sales_rows}</tbody></table>"""
+  <tbody>{sales_rows}</tbody></table>
+  <h2>중고 거래 가이드</h2>
+  <div class="cards">{guide_cards}</div>"""
     pages["index.html"] = render("index.html", "중고 실거래가 시세",
                                  "그래픽카드, 카메라, 골프채 중고 실거래가 시세 — 호가가 아닌 실제로 팔린 가격",
                                  home_body, search_script)
@@ -285,6 +373,22 @@ document.addEventListener('click', e => {{ if (!e.target.closest('.search')) hit
                                  "팔린가 서비스 소개 — 중고 실거래가 시세 산정 방식과 데이터 출처", ABOUT_BODY)
     pages["privacy.html"] = render("privacy.html", "개인정보처리방침",
                                    "팔린가 개인정보처리방침", PRIVACY_BODY)
+    pages["terms.html"] = render("terms.html", "이용약관", "팔린가 이용약관", TERMS_BODY)
+    guide_links = "".join(
+        "<li style='margin:8px 0'><a href='" + g['slug'] + ".html'>" + g['title']
+        + "</a> <span style='color:var(--muted);font-size:13px'>— " + g['desc'] + "</span></li>"
+        for g in GUIDES)
+    guides_index_body = (
+        "<div class='crumb'><a href='index.html'>홈</a> › 중고 거래 가이드</div>"
+        "<h1>중고 거래 가이드</h1>"
+        "<p class='sub'>시세를 더 잘 활용하는 법과 안전 거래 노하우.</p>"
+        "<ul style='list-style:none;padding:0'>" + guide_links + "</ul>")
+    pages['guides.html'] = render('guides.html', '중고 거래 가이드',
+                                  '중고 시세 활용법과 안전 거래 가이드 모음', guides_index_body)
+    for g in GUIDES:
+        gb = ("<div class='crumb'><a href='index.html'>홈</a> › <a href='guides.html'>가이드</a> › "
+              + g['title'] + "</div><h1>" + g['title'] + "</h1>" + g['body'])
+        pages[g['slug'] + '.html'] = render(g['slug'] + '.html', g['title'], g['desc'], gb)
 
     # --- category pages ---
     for ck, ids in by_cat.items():

@@ -115,8 +115,13 @@ def main() -> None:
     catalog = json.loads((BASE / "catalog.json").read_text(encoding="utf-8"))
     SNAP_DIR.mkdir(exist_ok=True)
     out_path = SNAP_DIR / f"{date.today().isoformat()}.jsonl"
-    with out_path.open("w", encoding="utf-8") as out:
+    # write to a temp file first, then atomically replace — a run that is
+    # interrupted midway never leaves a half-written / corrupt snapshot
+    tmp_path = out_path.with_suffix(".jsonl.tmp")
+    with tmp_path.open("w", encoding="utf-8") as out:
         count = sweep(catalog, out) if mode == "sweep" else query_mode(catalog, out)
+    import os
+    os.replace(tmp_path, out_path)
     print(f"snapshot written: {out_path} ({count:,} listings, mode={mode})")
 
 
