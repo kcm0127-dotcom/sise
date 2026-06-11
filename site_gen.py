@@ -77,7 +77,13 @@ CSS = """
   .hits a small { color:var(--muted); font-weight:500; font-size:12px; }
   .hits a:hover { background:var(--accent-bg); }
   h1 { font-size:26px; font-weight:800; letter-spacing:-.02em; line-height:1.3; margin-bottom:6px; }
-  h2 { font-size:19px; font-weight:700; letter-spacing:-.01em; margin:34px 0 12px; }
+  h2 { font-size:19px; font-weight:700; letter-spacing:-.01em; margin:34px 0 12px; scroll-margin-top:74px; }
+  h2 .cnt { color:var(--muted); font-weight:600; font-size:14px; }
+  .chips { display:flex; flex-wrap:wrap; gap:8px; margin:2px 0 6px; }
+  .chip { font-size:13px; font-weight:600; color:var(--sub2); background:var(--card); border-radius:999px;
+    padding:8px 14px; text-decoration:none; box-shadow:0 1px 3px rgba(2,32,71,.06); }
+  .chip:hover { color:var(--accent); background:var(--accent-bg); }
+  .chip small { color:var(--muted); font-weight:500; }
   .sub { color:var(--sub2); font-size:15px; margin-bottom:20px; }
   .tbl { background:var(--card); border-radius:16px; box-shadow:0 1px 4px rgba(2,32,71,.07); overflow-x:auto; }
   table { width:100%; border-collapse:collapse; }
@@ -124,6 +130,9 @@ SHELL = """<!DOCTYPE html>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <title>{title} — 팔린가</title>
 <meta name="description" content="{desc}">
 <meta name="google-site-verification" content="c8ryxpEL18CTs-KrbwPDrGwoCODWrrW_unRzl1wVslA">
@@ -584,18 +593,25 @@ document.addEventListener('click', e => {{ if (!e.target.closest('.search')) hit
         groups: dict[str, list[str]] = {}
         for mid in ids:
             groups.setdefault(models[mid].get("group") or "기타", []).append(mid)
+        sorted_groups = sorted(groups.items(), key=lambda kv: kv[0] == "기타")
+        chips_html = ""
+        if len(sorted_groups) > 1:
+            chips_html = "<div class='chips'>" + "".join(
+                f"<a class='chip' href='#g{i}'>{gname} <small>{len(gids)}</small></a>"
+                for i, (gname, gids) in enumerate(sorted_groups)) + "</div>"
         sections_html = []
-        for gname, gids in sorted(groups.items(),
-                                  key=lambda kv: kv[0] == "기타"):
+        for i, (gname, gids) in enumerate(sorted_groups):
             gids = sorted(gids, key=lambda i: (models[i]["stats"] is None,
                                                -models[i]["active_count"]))
             sections_html.append(
-                f"<h2>{gname}</h2>\n  <div class='tbl'><table>{TABLE_HEAD}"
+                f"<h2 id='g{i}'>{gname} <span class='cnt'>{len(gids)}</span></h2>\n"
+                f"  <div class='tbl'><table>{TABLE_HEAD}"
                 f"<tbody>{model_rows(models, gids)}</tbody></table></div>")
         body = f"""
   <div class="crumb"><a href="index.html">홈</a> › {label}</div>
   <h1>{label} 시세표</h1>
-  <p class="sub">모델을 클릭하면 거래 내역과 활성 매물을 볼 수 있습니다.</p>
+  <p class="sub">모델 {len(ids)}개 · 모델을 클릭하면 거래 내역과 활성 매물을 볼 수 있습니다.</p>
+  {chips_html}
   {chr(10).join(sections_html)}"""
         pages[f"cat-{ck}.html"] = render(f"cat-{ck}.html", f"{label} 중고 시세표",
                                          f"{label} 모델별 중고 실거래가 시세표", body)
