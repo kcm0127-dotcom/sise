@@ -30,9 +30,18 @@ BASE = Path(__file__).parent
 SNAP_DIR = BASE / "snapshots"
 API = "https://api.bunjang.co.kr/api/1/find_v2.json"
 PAGE_SIZE = 100
-SWEEP_PAGE_CAP = 200         # hard stop per category (200 x 100 = 20k listings)
+SWEEP_PAGE_CAP = 120         # default hard stop per category (120 x 100 = 12k listings)
+# per-category page caps — large/active categories get more pages.
+# tune here to trade off coverage vs. run time & snapshot size.
+SWEEP_PAGE_CAP_BY_CAT = {
+    "gpu": 150,       # ~14k active listings
+    "console": 150,   # ~19k active listings
+    "tablet": 80,
+    "camera": 60,
+    "golf": 40,
+}
 QUERY_PAGES_PER_MODEL = 3
-DELAY_SEC = 3                # polite delay between requests
+DELAY_SEC = 1.2             # polite delay between requests (lowered for full sweep)
 USER_AGENT = "Mozilla/5.0 (sise-mvp; contact: kcm0127@gmail.com)"
 
 
@@ -64,8 +73,9 @@ def slim(item: dict, model_id: str, category_key: str) -> dict:
 def sweep(catalog: dict, out) -> int:
     count = 0
     for cat_key, cat in catalog["categories"].items():
+        cap = SWEEP_PAGE_CAP_BY_CAT.get(cat_key, SWEEP_PAGE_CAP)
         for cid in cat.get("sweep_ids", []):
-            for page in range(SWEEP_PAGE_CAP):
+            for page in range(cap):
                 try:
                     data = fetch({"q": "", "f_category_id": cid, "page": page,
                                   "req_ref": "category"})
@@ -81,7 +91,7 @@ def sweep(catalog: dict, out) -> int:
                 if page == 0:
                     total = data.get("num_found", 0)
                     print(f"  {cat_key}/{cid}: {total:,} listings "
-                          f"(~{min(-(-total // PAGE_SIZE), SWEEP_PAGE_CAP)} pages)")
+                          f"(~{min(-(-total // PAGE_SIZE), cap)} pages)")
                 time.sleep(DELAY_SEC)
     return count
 
@@ -123,6 +133,14 @@ def main() -> None:
     import os
     os.replace(tmp_path, out_path)
     print(f"snapshot written: {out_path} ({count:,} listings, mode={mode})")
+
+    # retention: keep only the most recent KEEP_DAYS snapshots so the repo
+    # doesn't grow without bound (stats only needs the last couple of days)
+    KEEP_DAYS = 7
+    snaps = sorted(SNAP_DIR.glob("20*.jsonl"))
+    for old in snaps[:-KEEP_DAYS]:
+        old.unlink()
+        print(f"pruned old snapshot: {old.name}")
 
 
 if __name__ == "__main__":
