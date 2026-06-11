@@ -43,40 +43,80 @@ BASIS_LABELS = {
 }
 
 CSS = """
-  :root { --ink:#1a1a1a; --muted:#777; --line:#e5e2da; --bg:#faf9f5; --accent:#0c5d56; }
+  :root { --bg:#f2f4f6; --card:#fff; --ink:#191f28; --sub2:#4e5968; --muted:#8b95a1;
+          --line:#e5e8eb; --accent:#ff6f0f; --accent-bg:#fff1e7;
+          --orange:#f76808; --orange-bg:#fff3e9; --green:#149a5b; --green-bg:#e7f7ee; }
   * { box-sizing:border-box; margin:0; }
-  body { font-family:'Apple SD Gothic Neo','Noto Sans KR',sans-serif; background:var(--bg); color:var(--ink); line-height:1.6; }
-  .wrap { max-width:880px; margin:0 auto; padding:24px 20px 80px; }
-  header.site { display:flex; align-items:baseline; gap:14px; padding-bottom:14px; border-bottom:2px solid var(--ink); margin-bottom:18px; }
-  header.site a.logo { font-size:22px; font-weight:700; color:var(--ink); text-decoration:none; }
-  header.site .tag { font-size:13px; color:var(--muted); }
-  .crumb { font-size:13px; color:var(--muted); margin-bottom:18px; }
-  .crumb a { color:var(--accent); text-decoration:none; }
-  table { width:100%; border-collapse:collapse; background:#fff; border:1px solid var(--line); border-radius:10px; overflow:hidden; }
-  th,td { padding:10px 14px; text-align:left; font-size:14px; border-bottom:1px solid var(--line); }
-  th { background:#f3f1ea; font-weight:600; color:#555; }
+  body { font-family:'Pretendard Variable',Pretendard,'Apple SD Gothic Neo','Noto Sans KR',sans-serif;
+         background:var(--bg); color:var(--ink); line-height:1.6; -webkit-font-smoothing:antialiased; }
+  .wrap { max-width:960px; margin:0 auto; padding:18px 20px 80px; }
+  header.site { position:sticky; top:0; z-index:30; background:rgba(255,255,255,.88);
+    backdrop-filter:blur(14px); -webkit-backdrop-filter:blur(14px); border-bottom:1px solid var(--line); }
+  header.site .hrow { max-width:960px; margin:0 auto; padding:13px 20px; display:flex; align-items:center; gap:14px; }
+  header.site a.logo { font-size:21px; font-weight:800; letter-spacing:-.5px; color:var(--ink); text-decoration:none; }
+  header.site a.logo span { color:var(--accent); }
+  .asof { font-size:12px; color:var(--muted); font-weight:500; }
+  header.site nav { margin-left:auto; display:flex; gap:2px; }
+  header.site nav a { font-size:14px; font-weight:600; color:var(--sub2); text-decoration:none;
+    padding:7px 11px; border-radius:10px; }
+  header.site nav a:hover { background:var(--bg); color:var(--ink); }
+  .crumb { font-size:13px; color:var(--muted); margin-bottom:14px; }
+  .crumb a { color:var(--muted); text-decoration:none; }
+  .crumb a:hover { color:var(--accent); }
+  .search { position:relative; margin:6px 0 26px; }
+  .search input { width:100%; padding:15px 18px 15px 48px; font-size:16px; border:1.5px solid transparent;
+    border-radius:16px; background:var(--card); box-shadow:0 1px 4px rgba(2,32,71,.07);
+    transition:border-color .15s, box-shadow .15s; color:var(--ink); }
+  .search input::placeholder { color:var(--muted); }
+  .search input:focus { outline:none; border-color:var(--accent); box-shadow:0 4px 18px rgba(255,111,15,.18); }
+  .search .ico { position:absolute; left:17px; top:50%; transform:translateY(-50%); color:var(--muted); pointer-events:none; }
+  .hits { position:absolute; left:0; right:0; top:calc(100% + 8px); background:var(--card);
+    border-radius:16px; box-shadow:0 10px 34px rgba(2,32,71,.16); z-index:25; display:none; overflow:hidden; }
+  .hits a { display:flex; justify-content:space-between; align-items:center; gap:10px; padding:13px 18px;
+    color:var(--ink); text-decoration:none; font-size:15px; font-weight:600; }
+  .hits a small { color:var(--muted); font-weight:500; font-size:12px; }
+  .hits a:hover { background:var(--accent-bg); }
+  h1 { font-size:26px; font-weight:800; letter-spacing:-.02em; line-height:1.3; margin-bottom:6px; }
+  h2 { font-size:19px; font-weight:700; letter-spacing:-.01em; margin:34px 0 12px; }
+  .sub { color:var(--sub2); font-size:15px; margin-bottom:20px; }
+  .tbl { background:var(--card); border-radius:16px; box-shadow:0 1px 4px rgba(2,32,71,.07); overflow-x:auto; }
+  table { width:100%; border-collapse:collapse; }
+  th,td { padding:13px 16px; text-align:left; font-size:14px; border-bottom:1px solid var(--bg); white-space:nowrap; }
+  td:first-child, th:first-child { white-space:normal; }
+  th { font-size:12px; font-weight:600; color:var(--muted); }
   tr:last-child td { border-bottom:none; }
-  td a { color:var(--ink); text-decoration:none; font-weight:600; }
+  tbody tr:hover { background:#f8fafc; }
+  td a { color:var(--ink); text-decoration:none; font-weight:700; }
   td a:hover { color:var(--accent); }
   .num { text-align:right; font-variant-numeric:tabular-nums; }
-  .badge { display:inline-block; font-size:11px; padding:1px 8px; border-radius:10px; margin-left:6px; vertical-align:1px; white-space:nowrap; }
-  .badge-sold { background:#e8f0ef; color:var(--accent); }
-  .badge-adj { background:#f5ecd9; color:#8a6310; }
-  h1 { font-size:24px; margin-bottom:4px; } h2 { font-size:18px; margin:28px 0 10px; }
-  .sub { color:var(--muted); font-size:14px; margin-bottom:22px; }
-  .cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:14px; margin-bottom:8px; }
-  .card { background:#fff; border:1px solid var(--line); border-radius:12px; padding:18px; text-decoration:none; color:var(--ink); }
-  .card:hover { border-color:var(--accent); }
-  .card b { font-size:17px; } .card .meta { font-size:13px; color:var(--muted); }
-  .search { position:relative; margin-bottom:26px; }
-  .search input { width:100%; padding:12px 16px; font-size:16px; border:1.5px solid var(--line); border-radius:10px; background:#fff; }
-  .search input:focus { outline:none; border-color:var(--accent); }
-  .hits { position:absolute; left:0; right:0; top:100%; background:#fff; border:1px solid var(--line); border-radius:0 0 10px 10px; z-index:5; display:none; }
-  .hits a { display:block; padding:10px 16px; color:var(--ink); text-decoration:none; font-size:14px; border-bottom:1px solid var(--line); }
-  .hits a:hover { background:#f3f1ea; }
-  .price-big { font-size:30px; font-weight:700; color:var(--accent); }
-  .range { font-size:13px; color:var(--muted); }
+  .badge { display:inline-block; font-size:11px; font-weight:700; padding:3px 9px; border-radius:999px;
+    margin-left:6px; vertical-align:2px; white-space:nowrap; }
+  .badge-sold { background:var(--green-bg); color:var(--green); }
+  .badge-adj { background:var(--orange-bg); color:var(--orange); }
+  .badge-wait { background:#eef1f4; color:var(--muted); }
+  .cards { display:grid; grid-template-columns:repeat(auto-fill,minmax(210px,1fr)); gap:12px; }
+  .card { background:var(--card); border-radius:16px; padding:18px 20px; text-decoration:none; color:var(--ink);
+    box-shadow:0 1px 4px rgba(2,32,71,.07); transition:transform .15s, box-shadow .15s; }
+  .card:hover { transform:translateY(-2px); box-shadow:0 8px 24px rgba(2,32,71,.13); }
+  .card b { font-size:16px; font-weight:700; }
+  .card .meta { font-size:13px; color:var(--muted); }
+  .hero { padding:8px 0 2px; }
+  .hero h1 { font-size:29px; }
+  .price-card { background:var(--card); border-radius:20px; padding:22px 24px; margin:14px 0 4px;
+    box-shadow:0 1px 4px rgba(2,32,71,.07); }
+  .price-label { font-size:13px; color:var(--muted); font-weight:600; margin-bottom:2px; }
+  .price-big { font-size:34px; font-weight:800; letter-spacing:-.02em; color:var(--accent); }
+  .range { font-size:14px; color:var(--sub2); }
+  .chartbox { background:var(--card); border-radius:16px; padding:16px; box-shadow:0 1px 4px rgba(2,32,71,.07); }
   .note { margin-top:48px; font-size:12px; color:var(--muted); border-top:1px solid var(--line); padding-top:14px; }
+  @media (max-width:600px) {
+    .hide-m { display:none; }
+    th,td { padding:11px 12px; font-size:13px; }
+    h1 { font-size:22px; } .hero h1 { font-size:24px; }
+    .price-big { font-size:28px; }
+    .asof { display:none; }
+    header.site nav a { padding:6px 8px; font-size:13px; }
+  }
 """
 
 SHELL = """<!DOCTYPE html>
@@ -92,11 +132,21 @@ SHELL = """<!DOCTYPE html>
 <meta property="og:description" content="{desc}">
 <meta property="og:type" content="website">
 <meta property="og:url" content="{canonical}">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
 {adsense}<style>{css}</style>
 </head>
 <body>
+<header class="site"><div class="hrow">
+  <a class="logo" href="index.html">팔린<span>가</span></a>
+  <span class="asof">중고 실거래 시세 · {as_of} 기준</span>
+  <nav><a href="guides.html">가이드</a><a href="faq.html">FAQ</a><a href="about.html">소개</a></nav>
+</div></header>
 <div class="wrap">
-  <header class="site"><a class="logo" href="index.html">팔린가</a><span class="tag">중고 실거래가 · {as_of} 기준</span></header>
+  <div class="search">
+    <svg class="ico" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><line x1="20" y1="20" x2="16" y2="16"/></svg>
+    <input id="q" type="search" placeholder="모델명 검색 — 예: 4070, 아이폰 15, A7M4" autocomplete="off">
+    <div class="hits" id="hits"></div>
+  </div>
   {body}
   <p class="note">시세는 중앙값·사분위 기준. "보정 호가"는 거래 표본 부족 시 호가를 체결 할인율(학습값) 또는
   분포 하단으로 보정한 추정치이며, 거래 표본이 쌓이면 자동으로 실거래 기준으로 전환됩니다.
@@ -110,6 +160,7 @@ SHELL = """<!DOCTYPE html>
     <a href="faq.html" style="color:inherit">자주 묻는 질문</a> ·
     문의 kcm0127@gmail.com</p>
 </div>
+{searchjs}
 {script}
 </body>
 </html>
@@ -324,24 +375,24 @@ def model_rows(models: dict, ids: list[str]) -> str:
         if not m["stats"]:
             rows.append(
                 f"<tr><td><a href='m-{mid}.html'>{m['label']}</a>"
-                f"<span class='badge badge-adj'>수집 대기</span></td>"
-                f"<td class='num'>—</td><td class='num'>—</td>"
-                f"<td class='num'>0건</td><td class='num'>0건</td></tr>"
+                f"<span class='badge badge-wait'>수집 대기</span></td>"
+                f"<td class='num'>—</td><td class='num hide-m'>—</td>"
+                f"<td class='num hide-m'>0건</td><td class='num'>0건</td></tr>"
             )
             continue
         st = m["stats"]
         rows.append(
             f"<tr><td><a href='m-{mid}.html'>{m['label']}</a>{badge(m['basis'])}</td>"
             f"<td class='num'><b>{won(m['estimate'])}</b></td>"
-            f"<td class='num'>{won(st['q1'])} ~ {won(st['q3'])}</td>"
-            f"<td class='num'>{m['active_count']}건</td>"
+            f"<td class='num hide-m'>{won(st['q1'])} ~ {won(st['q3'])}</td>"
+            f"<td class='num hide-m'>{m['active_count']}건</td>"
             f"<td class='num'>{len(m['sold'])}건</td></tr>"
         )
     return "\n".join(rows)
 
 
 TABLE_HEAD = ("<thead><tr><th>모델</th><th class='num'>시세 추정</th>"
-              "<th class='num'>정상 범위</th><th class='num'>활성 매물</th>"
+              "<th class='num hide-m'>정상 범위</th><th class='num hide-m'>활성 매물</th>"
               "<th class='num'>거래 감지</th></tr></thead>")
 
 
@@ -361,28 +412,29 @@ def price_chart(series: list[dict], sold: list[dict]) -> str:
     def x(d): return ML + (dates.index(d) * (W - ML - 16) / max(len(dates) - 1, 1))
     def y(v): return 8 + (H - MB - 8) * (1 - (v - lo) / (hi - lo))
     poly = " ".join(f"{x(d):.1f},{y(v):.1f}" for d, v in pts)
-    line = (f"<polyline points='{poly}' fill='none' stroke='#0c5d56' stroke-width='2'/>"
+    line = (f"<polyline points='{poly}' fill='none' stroke='#ff6f0f' stroke-width='2.5' "
+            f"stroke-linecap='round' stroke-linejoin='round'/>"
             if len(pts) > 1 else "")
-    dots = "".join(f"<circle cx='{x(d):.1f}' cy='{y(v):.1f}' r='3.5' fill='#0c5d56'/>"
+    dots = "".join(f"<circle cx='{x(d):.1f}' cy='{y(v):.1f}' r='3.5' fill='#ff6f0f'/>"
                    f"<title>{d} 호가 중앙값 {v:,}원</title>" for d, v in pts)
-    sold_dots = "".join(f"<circle cx='{x(d):.1f}' cy='{y(v):.1f}' r='4' fill='#c47912'/>"
+    sold_dots = "".join(f"<circle cx='{x(d):.1f}' cy='{y(v):.1f}' r='4' fill='#149a5b'/>"
                         for d, v in sold_pts)
-    labels = "".join(f"<text x='{x(d):.1f}' y='{H - 6}' font-size='11' fill='#999' "
+    labels = "".join(f"<text x='{x(d):.1f}' y='{H - 6}' font-size='11' fill='#8b95a1' "
                      f"text-anchor='middle'>{d[5:]}</text>" for d in dates)
     ticks = "".join(
-        f"<text x='{ML - 8}' y='{y(v):.1f}' font-size='11' fill='#999' text-anchor='end' "
+        f"<text x='{ML - 8}' y='{y(v):.1f}' font-size='11' fill='#8b95a1' text-anchor='end' "
         f"dominant-baseline='middle'>{round(v / 10000):,}만</text>"
-        f"<line x1='{ML}' x2='{W - 16}' y1='{y(v):.1f}' y2='{y(v):.1f}' stroke='#eee'/>"
+        f"<line x1='{ML}' x2='{W - 16}' y1='{y(v):.1f}' y2='{y(v):.1f}' stroke='#f2f4f6'/>"
         for v in (lo + pad, (lo + hi) / 2, hi - pad))
     return f"""
   <h2>가격 추이</h2>
-  <div style="background:#fff;border:1px solid var(--line);border-radius:10px;padding:14px">
+  <div class="chartbox">
     <svg viewBox="0 0 {W} {H}" width="100%" role="img" aria-label="가격 추이 차트">
       {ticks}{line}{dots}{sold_dots}{labels}
     </svg>
     <div style="font-size:12px;color:var(--muted)">
-      <span style="color:#0c5d56">●</span> 일별 호가 중앙값 &nbsp;
-      <span style="color:#c47912">●</span> 감지된 거래
+      <span style="color:#ff6f0f">●</span> 일별 호가 중앙값 &nbsp;
+      <span style="color:#149a5b">●</span> 감지된 거래
     </div>
   </div>"""
 
@@ -393,9 +445,30 @@ def main() -> None:
     as_of = data["as_of"]
     adsense = ADSENSE_SNIPPET.format(client=ADSENSE_CLIENT) if ADSENSE_CLIENT else ""
 
+    # 전역 검색 (모든 페이지 헤더 아래 검색창)
+    search_index = [
+        {"label": m["label"], "href": f"m-{mid}.html",
+         "cat": CATEGORY_LABELS.get(m["category"], "")}
+        for mid, m in models.items()
+    ]
+    searchjs = f"""<script>
+const IDX = {json.dumps(search_index, ensure_ascii=False)};
+const inp = document.getElementById('q'), hits = document.getElementById('hits');
+inp.addEventListener('input', () => {{
+  const q = inp.value.trim().toLowerCase();
+  if (!q) {{ hits.style.display = 'none'; return; }}
+  const found = IDX.filter(m => m.label.toLowerCase().includes(q)).slice(0, 8);
+  hits.innerHTML = found.map(m =>
+    `<a href="${{m.href}}">${{m.label}} <small>${{m.cat}}</small></a>`).join('')
+    || '<a>검색 결과 없음</a>';
+  hits.style.display = 'block';
+}});
+document.addEventListener('click', e => {{ if (!e.target.closest('.search')) hits.style.display = 'none'; }});
+</script>"""
+
     def render(name: str, title: str, desc: str, body: str, script: str = "") -> str:
         return SHELL.format(title=title, desc=desc, css=CSS, as_of=as_of, body=body,
-                            script=script, adsense=adsense,
+                            script=script, adsense=adsense, searchjs=searchjs,
                             canonical=f"{BASE_URL.rstrip('/')}/{name}")
 
     by_cat: dict[str, list[str]] = {}
@@ -429,43 +502,24 @@ def main() -> None:
         key=lambda s: s["sold_date"], reverse=True)[:8]
     sales_rows = "".join(
         f"<tr><td>{s['sold_date']}</td><td><a href='m-{s['mid']}.html'>{s['model_label']}</a></td>"
-        f"<td><a href='https://m.bunjang.co.kr/products/{s['pid']}' target='_blank' rel='noopener' "
+        f"<td class='hide-m'><a href='https://m.bunjang.co.kr/products/{s['pid']}' target='_blank' rel='noopener' "
         f"style='font-weight:400'>{s['name'][:40]} ↗</a></td><td class='num'>{won(s['price'])}</td></tr>"
         for s in recent_sales
     ) or "<tr><td colspan='4' style='color:#999'>아직 감지된 거래가 없습니다</td></tr>"
-
-    search_index = [
-        {"label": m["label"], "href": f"m-{mid}.html",
-         "cat": CATEGORY_LABELS.get(m["category"], "")}
-        for mid, m in models.items()
-    ]
-    search_script = f"""<script>
-const IDX = {json.dumps(search_index, ensure_ascii=False)};
-const inp = document.getElementById('q'), hits = document.getElementById('hits');
-inp.addEventListener('input', () => {{
-  const q = inp.value.trim().toLowerCase();
-  if (!q) {{ hits.style.display = 'none'; return; }}
-  const found = IDX.filter(m => m.label.toLowerCase().includes(q)).slice(0, 8);
-  hits.innerHTML = found.map(m =>
-    `<a href="${{m.href}}">${{m.label}} <span style="color:#999;font-size:12px">${{m.cat}}</span></a>`).join('')
-    || '<a>검색 결과 없음</a>';
-  hits.style.display = 'block';
-}});
-document.addEventListener('click', e => {{ if (!e.target.closest('.search')) hits.style.display = 'none'; }});
-</script>"""
 
     guide_cards = "".join(
         "<a class='card' href='" + g['slug'] + ".html'><b>" + g['title']
         + "</b><br><span class='meta'>" + g['desc'] + "</span></a>"
         for g in GUIDES)
     home_body = f"""
+  <div class="hero">
   <h1>이 물건, 실제로 얼마에 팔렸을까?</h1>
   <p class="sub">호가가 아닌 실거래 추정가로 보는 중고 시세.</p>
-  <div class="search"><input id="q" type="search" placeholder="모델명 검색 — 예: 4070, A7M4, 스텔스" autocomplete="off"><div class="hits" id="hits"></div></div>
+  </div>
   {cards}
   <h2>최근 감지된 거래</h2>
-  <table><thead><tr><th>날짜</th><th>모델</th><th>매물명</th><th class="num">최종 관측가</th></tr></thead>
-  <tbody>{sales_rows}</tbody></table>
+  <div class="tbl"><table><thead><tr><th>날짜</th><th>모델</th><th class="hide-m">매물명</th><th class="num">최종 관측가</th></tr></thead>
+  <tbody>{sales_rows}</tbody></table></div>
   <h2>중고 거래 가이드</h2>
   <div class="cards">{guide_cards}</div>"""
     website_ld = ('<script type="application/ld+json">'
@@ -476,7 +530,7 @@ document.addEventListener('click', e => {{ if (!e.target.closest('.search')) hit
     pages["index.html"] = render("index.html", "중고 실거래가 시세",
                                  "스마트폰, 노트북, 그래픽카드, 카메라, 게임기, 골프채 중고 실거래가 시세 — "
                                  "호가가 아닌 실제로 팔린 가격",
-                                 home_body, search_script + website_ld)
+                                 home_body, website_ld)
     pages["about.html"] = render("about.html", "서비스 소개",
                                  "팔린가 서비스 소개 — 중고 실거래가 시세 산정 방식과 데이터 출처", ABOUT_BODY)
     pages["privacy.html"] = render("privacy.html", "개인정보처리방침",
@@ -536,8 +590,8 @@ document.addEventListener('click', e => {{ if (!e.target.closest('.search')) hit
             gids = sorted(gids, key=lambda i: (models[i]["stats"] is None,
                                                -models[i]["active_count"]))
             sections_html.append(
-                f"<h2>{gname}</h2>\n  <table>{TABLE_HEAD}"
-                f"<tbody>{model_rows(models, gids)}</tbody></table>")
+                f"<h2>{gname}</h2>\n  <div class='tbl'><table>{TABLE_HEAD}"
+                f"<tbody>{model_rows(models, gids)}</tbody></table></div>")
         body = f"""
   <div class="crumb"><a href="index.html">홈</a> › {label}</div>
   <h1>{label} 시세표</h1>
@@ -553,7 +607,7 @@ document.addEventListener('click', e => {{ if (!e.target.closest('.search')) hit
         if not st:
             body = f"""
   <div class="crumb"><a href="index.html">홈</a> › <a href="cat-{m['category']}.html">{cat_label}</a> › {m['label']}</div>
-  <h1>{m['label']} <span class="badge badge-adj">수집 대기</span></h1>
+  <h1>{m['label']} <span class="badge badge-wait">수집 대기</span></h1>
   <p class="sub">아직 수집된 매물이 없습니다. 수집기가 돌기 시작하면 시세가 표시됩니다.</p>"""
             pages[f"m-{mid}.html"] = render(f"m-{mid}.html", f"{m['label']} 중고 시세",
                                             f"{m['label']} 중고 실거래가 — 수집 대기 중", body)
@@ -566,28 +620,31 @@ document.addEventListener('click', e => {{ if (!e.target.closest('.search')) hit
         sold_rows = "".join(
             f"<tr><td>{s['sold_date']}</td><td>{listing_link(s)}</td>"
             f"<td class='num'>{won(s['price'])}</td>"
-            f"<td>{'세트' if s['is_set'] else ('헤드만' if s['head_only'] else '단품')}</td></tr>"
+            f"<td class='hide-m'>{'세트' if s['is_set'] else ('헤드만' if s['head_only'] else '단품')}</td></tr>"
             for s in m["sold"]
         ) or "<tr><td colspan='4' style='color:#999'>아직 감지된 거래가 없습니다 — 스냅샷이 쌓이면 표시됩니다</td></tr>"
         active_rows = "".join(
             f"<tr><td>{listing_link(r)}</td><td class='num'>{won(r['price'])}</td>"
-            f"<td class='num'>{r['num_faved']}</td>"
-            f"<td>{'세트' if r.get('is_set') else ('헤드만' if r.get('head_only') else '단품')}</td></tr>"
+            f"<td class='num hide-m'>{r['num_faved']}</td>"
+            f"<td class='hide-m'>{'세트' if r.get('is_set') else ('헤드만' if r.get('head_only') else '단품')}</td></tr>"
             for r in m["active_sample"][:12]
         )
         body = f"""
   <div class="crumb"><a href="index.html">홈</a> › <a href="cat-{m['category']}.html">{cat_label}</a> › {m['label']}</div>
   <h1>{m['label']} {badge(m['basis'])}</h1>
-  <div style="margin:10px 0 4px"><span class="price-big">{won(m['estimate'])}</span>
-    <span class="range">&nbsp; 정상 범위 {won(st['q1'])} ~ {won(st['q3'])} · 표본 {st['n']}건</span></div>
-  <p class="sub">호가 중앙값 {won(m['asking_median'])} · 활성 매물 {m['active_count']}건</p>
+  <div class="price-card">
+    <div class="price-label">실거래 추정가</div>
+    <div class="price-big">{won(m['estimate'])}</div>
+    <div class="range" style="margin-top:6px">정상 범위 {won(st['q1'])} ~ {won(st['q3'])} · 표본 {st['n']}건</div>
+    <div class="range">호가 중앙값 {won(m['asking_median'])} · 활성 매물 {m['active_count']}건</div>
+  </div>
   {price_chart(m.get('series', []), m['sold'])}
   <h2>감지된 거래</h2>
-  <table><thead><tr><th>날짜</th><th>매물명</th><th class="num">최종 관측가</th><th>구성</th></tr></thead>
-  <tbody>{sold_rows}</tbody></table>
+  <div class="tbl"><table><thead><tr><th>날짜</th><th>매물명</th><th class="num">최종 관측가</th><th class="hide-m">구성</th></tr></thead>
+  <tbody>{sold_rows}</tbody></table></div>
   <h2>현재 활성 매물</h2>
-  <table><thead><tr><th>매물명</th><th class="num">호가</th><th class="num">찜</th><th>구성</th></tr></thead>
-  <tbody>{active_rows}</tbody></table>"""
+  <div class="tbl"><table><thead><tr><th>매물명</th><th class="num">호가</th><th class="num hide-m">찜</th><th class="hide-m">구성</th></tr></thead>
+  <tbody>{active_rows}</tbody></table></div>"""
         crumb_ld = ('<script type="application/ld+json">'
                     + json.dumps({"@context": "https://schema.org", "@type": "BreadcrumbList",
                                   "itemListElement": [
