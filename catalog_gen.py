@@ -148,6 +148,87 @@ TABLETS = [
     ("galaxy-tab-s9", "갤럭시 탭 S9", "갤럭시탭 S9", r"탭\s*s\s*9|tab\s*s9", (38, 115)),
 ]
 
+# ---------------------------------------------------------------- Phone
+PHONE_EXCLUDE = ["케이스", "필름", "수리", "액정만", "부품", "매입", "삽니다", "구합니다",
+                 "강화유리", "스트랩", "충전기", "거치대", "공기계\\s*매입"]
+PHONE_SET = ["풀박", "세트", "\\+", "일괄"]
+PHONES = [
+    # iPhone — 프로맥스/프로/일반 음 disambiguation via lookaheads
+    ("iphone-16-pro-max", "아이폰 16 프로맥스", "아이폰 16 프로맥스", r"(아이폰|iphone)\s*16\s*(프로|pro)\s*(맥스|max)", (90, 220)),
+    ("iphone-16-pro", "아이폰 16 프로", "아이폰 16 프로", r"(아이폰|iphone)\s*16\s*(프로|pro)(?!\s*(맥스|max))", (70, 170)),
+    ("iphone-16", "아이폰 16", "아이폰 16", r"(아이폰|iphone)\s*16(?!\s*(프로|pro|플러스|plus|e))", (50, 130)),
+    ("iphone-15-pro-max", "아이폰 15 프로맥스", "아이폰 15 프로맥스", r"(아이폰|iphone)\s*15\s*(프로|pro)\s*(맥스|max)", (70, 170)),
+    ("iphone-15-pro", "아이폰 15 프로", "아이폰 15 프로", r"(아이폰|iphone)\s*15\s*(프로|pro)(?!\s*(맥스|max))", (55, 140)),
+    ("iphone-15", "아이폰 15", "아이폰 15", r"(아이폰|iphone)\s*15(?!\s*(프로|pro|플러스|plus))", (40, 100)),
+    ("iphone-14-pro", "아이폰 14 프로", "아이폰 14 프로", r"(아이폰|iphone)\s*14\s*(프로|pro)(?!\s*(맥스|max))", (38, 100)),
+    ("iphone-14", "아이폰 14", "아이폰 14", r"(아이폰|iphone)\s*14(?!\s*(프로|pro|플러스|plus))", (25, 75)),
+    ("iphone-13", "아이폰 13", "아이폰 13", r"(아이폰|iphone)\s*13(?!\s*(프로|pro|미니|mini|플러스|plus))", (20, 62)),
+    ("iphone-13-mini", "아이폰 13 미니", "아이폰 13 미니", r"(아이폰|iphone)\s*13\s*(미니|mini)", (18, 55)),
+    ("iphone-12", "아이폰 12", "아이폰 12", r"(아이폰|iphone)\s*12(?!\s*(프로|pro|미니|mini|플러스|plus))", (12, 45)),
+    ("iphone-se3", "아이폰 SE3", "아이폰 SE3", r"(아이폰|iphone)\s*se\s*3|se\s*3\s*세대", (12, 42)),
+    # Galaxy
+    ("galaxy-s25-ultra", "갤럭시 S25 울트라", "갤럭시 S25 울트라", r"s\s*25\s*(울트라|ultra)", (70, 165)),
+    ("galaxy-s24-ultra", "갤럭시 S24 울트라", "갤럭시 S24 울트라", r"s\s*24\s*(울트라|ultra)", (50, 125)),
+    ("galaxy-s23-ultra", "갤럭시 S23 울트라", "갤럭시 S23 울트라", r"s\s*23\s*(울트라|ultra)", (35, 95)),
+    ("galaxy-s24", "갤럭시 S24", "갤럭시 S24", r"갤럭시\s*s\s*24(?!\s*(울트라|ultra|플러스|plus|\+|fe))", (25, 78)),
+    ("galaxy-s23", "갤럭시 S23", "갤럭시 S23", r"갤럭시\s*s\s*23(?!\s*(울트라|ultra|플러스|plus|\+|fe))", (18, 60)),
+    ("galaxy-zflip6", "갤럭시 Z플립6", "갤럭시 Z플립6", r"(플립|flip)\s*6", (28, 90)),
+    ("galaxy-zflip5", "갤럭시 Z플립5", "갤럭시 Z플립5", r"(플립|flip)\s*5", (20, 68)),
+    ("galaxy-zfold6", "갤럭시 Z폴드6", "갤럭시 Z폴드6", r"(폴드|fold)\s*6", (55, 155)),
+    ("galaxy-zfold5", "갤럭시 Z폴드5", "갤럭시 Z폴드5", r"(폴드|fold)\s*5", (38, 115)),
+]
+
+# ---------------------------------------------------------------- Laptop
+LAPTOP_EXCLUDE = ["케이스", "파우치", "거치대", "충전기", "어댑터", "매입", "삽니다",
+                  "구합니다", "부품", "키스킨", "보호필름", "스탠드"]
+LAPTOP_SET = ["\\+", "세트", "일괄"]
+LAPTOPS = [
+    ("macbook-air-m4", "맥북 에어 M4", "맥북 에어 M4", r"(맥북|macbook)\s*(에어|air).{0,12}m4|m4.{0,12}(에어|air)", (100, 200)),
+    ("macbook-air-m3", "맥북 에어 M3", "맥북 에어 M3", r"(맥북|macbook)\s*(에어|air).{0,12}m3|m3.{0,12}(에어|air)", (75, 165)),
+    ("macbook-air-m2", "맥북 에어 M2", "맥북 에어 M2", r"(맥북|macbook)\s*(에어|air).{0,12}m2|m2.{0,12}(에어|air)", (55, 130)),
+    ("macbook-air-m1", "맥북 에어 M1", "맥북 에어 M1", r"(맥북|macbook)\s*(에어|air).{0,12}m1|m1.{0,12}(에어|air)", (35, 90)),
+    ("macbook-pro-m4", "맥북 프로 M4", "맥북 프로 M4", r"(맥북|macbook)\s*(프로|pro).{0,14}m4|m4(?:\s*(pro|max|프로|맥스))?.{0,12}(맥북|macbook)\s*(프로|pro)", (140, 450)),
+    ("macbook-pro-m3", "맥북 프로 M3", "맥북 프로 M3", r"(맥북|macbook)\s*(프로|pro).{0,14}m3", (110, 380)),
+    ("macbook-pro-m2", "맥북 프로 M2", "맥북 프로 M2", r"(맥북|macbook)\s*(프로|pro).{0,14}m2", (85, 320)),
+    ("macbook-pro-m1", "맥북 프로 M1", "맥북 프로 M1", r"(맥북|macbook)\s*(프로|pro).{0,14}m1", (60, 250)),
+    ("galaxy-book4-pro", "갤럭시북4 프로", "갤럭시북4 프로", r"(갤럭시\s*북|갤북)\s*4\s*(프로|pro)", (60, 150)),
+    ("galaxy-book3-pro", "갤럭시북3 프로", "갤럭시북3 프로", r"(갤럭시\s*북|갤북)\s*3\s*(프로|pro)", (45, 115)),
+    ("lg-gram-16", "LG 그램 16", "LG 그램 16", r"그램\s*16|gram\s*16", (35, 160)),
+    ("lg-gram-17", "LG 그램 17", "LG 그램 17", r"그램\s*17|gram\s*17", (35, 170)),
+]
+
+# ---------------------------------------------------------------- Audio (earbuds/headphones)
+AUDIO_EXCLUDE = ["케이스만", "이어팁", "유닛", "한쪽", "오른쪽", "왼쪽", "편측", "충전기",
+                 "케이블", "폼팁", "커버", "스킨", "매입", "삽니다"]
+AUDIO_SET = ["\\+", "세트", "일괄"]
+AUDIOS = [
+    ("airpods-pro2", "에어팟 프로 2", "에어팟 프로 2세대", r"에어팟\s*프로\s*2|airpods\s*pro\s*2", (13, 33)),
+    ("airpods-pro1", "에어팟 프로 1", "에어팟 프로 1세대", r"(에어팟\s*프로|airpods\s*pro)\s*(1|1세대)(?!\d)", (7, 22)),
+    ("airpods-4", "에어팟 4", "에어팟 4세대", r"에어팟\s*4|airpods\s*4", (10, 28)),
+    ("airpods-3", "에어팟 3", "에어팟 3세대", r"에어팟\s*3|airpods\s*3", (8, 22)),
+    ("airpods-max", "에어팟 맥스", "에어팟 맥스", r"에어팟\s*맥스|airpods\s*max", (30, 90)),
+    ("buds3-pro", "갤럭시 버즈3 프로", "버즈3 프로", r"버즈\s*3\s*(프로|pro)", (9, 28)),
+    ("buds2-pro", "갤럭시 버즈2 프로", "버즈2 프로", r"버즈\s*2\s*(프로|pro)", (5, 18)),
+    ("sony-wh1000xm5", "소니 WH-1000XM5", "소니 WH-1000XM5", r"1000\s*xm\s*5|xm5", (18, 48)),
+    ("sony-wh1000xm4", "소니 WH-1000XM4", "소니 WH-1000XM4", r"1000\s*xm\s*4|xm4", (12, 35)),
+    ("bose-qc-ultra", "보스 QC 울트라", "보스 QC 울트라", r"(qc|콰이어트컴포트)\s*(울트라|ultra)", (20, 52)),
+]
+
+# ---------------------------------------------------------------- Smartwatch
+WATCH_EXCLUDE = ["스트랩", "밴드", "케이스", "충전기", "필름", "커버", "매입", "삽니다", "거치대"]
+WATCH_SET = ["\\+", "세트", "일괄"]
+WATCHES = [
+    ("apple-watch-ultra2", "애플워치 울트라 2", "애플워치 울트라2", r"(애플\s*워치|애플워치|apple\s*watch).{0,8}(울트라|ultra)\s*2", (45, 110)),
+    ("apple-watch-ultra1", "애플워치 울트라 1", "애플워치 울트라1", r"(애플\s*워치|애플워치|apple\s*watch).{0,8}(울트라|ultra)(?!\s*2)", (30, 80)),
+    ("apple-watch-10", "애플워치 10", "애플워치 10", r"(애플\s*워치|애플워치|apple\s*watch)\s*(시리즈\s*)?10", (28, 70)),
+    ("apple-watch-9", "애플워치 9", "애플워치 9", r"(애플\s*워치|애플워치|apple\s*watch)\s*(시리즈\s*)?9", (20, 55)),
+    ("apple-watch-8", "애플워치 8", "애플워치 8", r"(애플\s*워치|애플워치|apple\s*watch)\s*(시리즈\s*)?8", (14, 45)),
+    ("apple-watch-se2", "애플워치 SE2", "애플워치 SE2", r"(애플\s*워치|애플워치|apple\s*watch)\s*se\s*2", (9, 32)),
+    ("galaxy-watch-ultra", "갤럭시 워치 울트라", "갤럭시 워치 울트라", r"(갤럭시\s*워치|갤워치)\s*(울트라|ultra)", (22, 60)),
+    ("galaxy-watch7", "갤럭시 워치 7", "갤럭시 워치7", r"(갤럭시\s*워치|갤워치)\s*7", (10, 35)),
+    ("galaxy-watch6", "갤럭시 워치 6", "갤럭시 워치6", r"(갤럭시\s*워치|갤워치)\s*6", (7, 28)),
+]
+
 # ---------------------------------------------------------------- Golf driver
 GOLF_EXCLUDE = ["우드", "아이언", "유틸", "웨지", "퍼터", "풀세트", "풀 세트", "캐디백"]
 GOLF_HEAD = ["헤드만", "드라이버 헤드", "헤드\\s*\\("]
@@ -244,6 +325,34 @@ def build() -> dict:
                 "sweep_ids": ["600710300"],
                 "models": expand(TABLETS, {"exclude": TABLET_EXCLUDE,
                                            "set_keywords": ["풀박", "\\+", "세트", "포함"]},
+                                 lambda s, l: _brand_group(l)),
+            },
+            "phone": {
+                "label": "스마트폰",
+                "bunjang_category_prefix": "600700",
+                "sweep_ids": ["600700001"],
+                "models": expand(PHONES, {"exclude": PHONE_EXCLUDE, "set_keywords": PHONE_SET},
+                                 lambda s, l: _brand_group(l)),
+            },
+            "laptop": {
+                "label": "노트북",
+                "bunjang_category_prefix": "600100",
+                "sweep_ids": ["600100001"],
+                "models": expand(LAPTOPS, {"exclude": LAPTOP_EXCLUDE, "set_keywords": LAPTOP_SET},
+                                 lambda s, l: _brand_group(l)),
+            },
+            "audio": {
+                "label": "이어폰·헤드폰",
+                "bunjang_category_prefix": "600500",
+                "sweep_ids": ["600500010"],
+                "models": expand(AUDIOS, {"exclude": AUDIO_EXCLUDE, "set_keywords": AUDIO_SET},
+                                 lambda s, l: _brand_group(l)),
+            },
+            "watch": {
+                "label": "스마트워치",
+                "bunjang_category_prefix": "600720",
+                "sweep_ids": ["600720100"],
+                "models": expand(WATCHES, {"exclude": WATCH_EXCLUDE, "set_keywords": WATCH_SET},
                                  lambda s, l: _brand_group(l)),
             },
         },

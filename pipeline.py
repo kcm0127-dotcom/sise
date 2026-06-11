@@ -9,8 +9,7 @@ Each record passes through, in order:
   6. flagging: is_set (bundles), head_only (golf)
 
 Usage:
-    from pipeline from __future__ import annotations
-import load_catalog, load_snapshot, clean
+    from pipeline import load_catalog, load_snapshot, clean
     listings = clean(load_snapshot("snapshots/2026-06-11.jsonl"), load_catalog())
 """
 
