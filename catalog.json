@@ -1,6 +1,7 @@
 {
  "categories": {
   "gpu": {
+   "joongna_category": "163",
    "label": "그래픽카드",
    "bunjang_category_prefix": "600200005",
    "sweep_ids": [
@@ -907,6 +908,7 @@
    ]
   },
   "camera": {
+   "joongna_category": "9",
    "label": "카메라",
    "bunjang_category_prefix": "600300",
    "sweep_ids": [
@@ -2248,6 +2250,7 @@
    ]
   },
   "golf": {
+   "joongna_category": "1260",
    "label": "골프채",
    "bunjang_category_prefix": "700600",
    "sweep_ids": [
@@ -3188,6 +3191,7 @@
    ]
   },
   "console": {
+   "joongna_category": "12",
    "label": "게임기",
    "bunjang_category_prefix": "600600",
    "sweep_ids": [
@@ -3477,6 +3481,7 @@
    ]
   },
   "tablet": {
+   "joongna_category": "140",
    "label": "태블릿",
    "bunjang_category_prefix": "600710",
    "sweep_ids": [
@@ -3834,6 +3839,7 @@
    ]
   },
   "phone": {
+   "joongna_category": "139",
    "label": "스마트폰",
    "bunjang_category_prefix": "600700",
    "sweep_ids": [
@@ -4557,6 +4563,7 @@
    ]
   },
   "laptop": {
+   "joongna_category": "158",
    "label": "노트북",
    "bunjang_category_prefix": "600100",
    "sweep_ids": [
@@ -4950,6 +4957,7 @@
    ]
   },
   "audio": {
+   "joongna_category": "1171",
    "label": "이어폰·헤드폰",
    "bunjang_category_prefix": "600500",
    "sweep_ids": [
@@ -5299,6 +5307,7 @@
    ]
   },
   "watch": {
+   "joongna_category": "141",
    "label": "스마트워치",
    "bunjang_category_prefix": "600720",
    "sweep_ids": [
@@ -5559,6 +5568,1877 @@
       "매입",
       "삽니다",
       "거치대"
+     ],
+     "set_keywords": [
+      "\\+",
+      "세트",
+      "일괄"
+     ]
+    }
+   ]
+  },
+  "appliance": {
+   "joongna_category": "7",
+   "label": "생활가전",
+   "bunjang_category_prefix": "610500",
+   "sweep_ids": [
+    "610500005"
+   ],
+   "models": [
+    {
+     "id": "dyson-v15",
+     "label": "다이슨 V15",
+     "query": "다이슨 V15",
+     "group": "다이슨",
+     "include": [
+      "v15"
+     ],
+     "price_range": [
+      250000,
+      750000
+     ],
+     "exclude": [
+      "헤드만",
+      "배터리",
+      "필터",
+      "거치대",
+      "부품",
+      "수리",
+      "호환",
+      "어댑터"
+     ],
+     "set_keywords": [
+      "\\+",
+      "세트",
+      "일괄"
+     ]
+    },
+    {
+     "id": "dyson-v12",
+     "label": "다이슨 V12",
+     "query": "다이슨 V12",
+     "group": "다이슨",
+     "include": [
+      "v12"
+     ],
+     "price_range": [
+      200000,
+      600000
+     ],
+     "exclude": [
+      "헤드만",
+      "배터리",
+      "필터",
+      "거치대",
+      "부품",
+      "수리",
+      "호환",
+      "어댑터"
+     ],
+     "set_keywords": [
+      "\\+",
+      "세트",
+      "일괄"
+     ]
+    },
+    {
+     "id": "dyson-v11",
+     "label": "다이슨 V11",
+     "query": "다이슨 V11",
+     "group": "다이슨",
+     "include": [
+      "v11"
+     ],
+     "price_range": [
+      150000,
+      500000
+     ],
+     "exclude": [
+      "헤드만",
+      "배터리",
+      "필터",
+      "거치대",
+      "부품",
+      "수리",
+      "호환",
+      "어댑터"
+     ],
+     "set_keywords": [
+      "\\+",
+      "세트",
+      "일괄"
+     ]
+    },
+    {
+     "id": "dyson-v10",
+     "label": "다이슨 V10",
+     "query": "다이슨 V10",
+     "group": "다이슨",
+     "include": [
+      "v10"
+     ],
+     "price_range": [
+      100000,
+      400000
+     ],
+     "exclude": [
+      "헤드만",
+      "배터리",
+      "필터",
+      "거치대",
+      "부품",
+      "수리",
+      "호환",
+      "어댑터"
+     ],
+     "set_keywords": [
+      "\\+",
+      "세트",
+      "일괄"
+     ]
+    },
+    {
+     "id": "dyson-v8",
+     "label": "다이슨 V8",
+     "query": "다이슨 V8",
+     "group": "다이슨",
+     "include": [
+      "\\bv8\\b"
+     ],
+     "price_range": [
+      70000,
+      300000
+     ],
+     "exclude": [
+      "헤드만",
+      "배터리",
+      "필터",
+      "거치대",
+      "부품",
+      "수리",
+      "호환",
+      "어댑터"
+     ],
+     "set_keywords": [
+      "\\+",
+      "세트",
+      "일괄"
+     ]
+    },
+    {
+     "id": "dyson-airwrap",
+     "label": "다이슨 에어랩",
+     "query": "다이슨 에어랩",
+     "group": "다이슨",
+     "include": [
+      "에어랩|airwrap"
+     ],
+     "price_range": [
+      200000,
+      600000
+     ],
+     "exclude": [
+      "헤드만",
+      "배터리",
+      "필터",
+      "거치대",
+      "부품",
+      "수리",
+      "호환",
+      "어댑터"
+     ],
+     "set_keywords": [
+      "\\+",
+      "세트",
+      "일괄"
+     ]
+    },
+    {
+     "id": "roborock-s8",
+     "label": "로보락 S8",
+     "query": "로보락 S8",
+     "group": "로보락",
+     "include": [
+      "로보락\\s*s8|roborock\\s*s8"
+     ],
+     "price_range": [
+      300000,
+      1200000
+     ],
+     "exclude": [
+      "헤드만",
+      "배터리",
+      "필터",
+      "거치대",
+      "부품",
+      "수리",
+      "호환",
+      "어댑터"
+     ],
+     "set_keywords": [
+      "\\+",
+      "세트",
+      "일괄"
+     ]
+    },
+    {
+     "id": "roborock-s7",
+     "label": "로보락 S7",
+     "query": "로보락 S7",
+     "group": "로보락",
+     "include": [
+      "로보락\\s*s7|roborock\\s*s7"
+     ],
+     "price_range": [
+      150000,
+      700000
+     ],
+     "exclude": [
+      "헤드만",
+      "배터리",
+      "필터",
+      "거치대",
+      "부품",
+      "수리",
+      "호환",
+      "어댑터"
+     ],
+     "set_keywords": [
+      "\\+",
+      "세트",
+      "일괄"
+     ]
+    },
+    {
+     "id": "lg-styler",
+     "label": "LG 스타일러",
+     "query": "LG 스타일러",
+     "group": "LG",
+     "include": [
+      "스타일러"
+     ],
+     "price_range": [
+      200000,
+      1200000
+     ],
+     "exclude": [
+      "헤드만",
+      "배터리",
+      "필터",
+      "거치대",
+      "부품",
+      "수리",
+      "호환",
+      "어댑터"
+     ],
+     "set_keywords": [
+      "\\+",
+      "세트",
+      "일괄"
+     ]
+    }
+   ]
+  },
+  "monitor": {
+   "joongna_category": "160",
+   "label": "모니터",
+   "bunjang_category_prefix": "600100",
+   "sweep_ids": [
+    "600100007"
+   ],
+   "models": [
+    {
+     "id": "odyssey-g9",
+     "label": "삼성 오디세이 G9",
+     "query": "오디세이 G9",
+     "group": "삼성",
+     "include": [
+      "오디세이\\s*g9|odyssey\\s*g9|네오\\s*g9"
+     ],
+     "price_range": [
+      400000,
+      1300000
+     ],
+     "exclude": [
+      "모니터암",
+      "거치대",
+      "받침대",
+      "스탠드만",
+      "케이블",
+      "박스만"
+     ],
+     "set_keywords": [
+      "\\+",
+      "세트",
+      "일괄"
+     ]
+    },
+    {
+     "id": "odyssey-g7",
+     "label": "삼성 오디세이 G7",
+     "query": "오디세이 G7",
+     "group": "삼성",
+     "include": [
+      "오디세이\\s*g7|odyssey\\s*g7"
+     ],
+     "price_range": [
+      200000,
+      600000
+     ],
+     "exclude": [
+      "모니터암",
+      "거치대",
+      "받침대",
+      "스탠드만",
+      "케이블",
+      "박스만"
+     ],
+     "set_keywords": [
+      "\\+",
+      "세트",
+      "일괄"
+     ]
+    },
+    {
+     "id": "odyssey-g5",
+     "label": "삼성 오디세이 G5",
+     "query": "오디세이 G5",
+     "group": "삼성",
+     "include": [
+      "오디세이\\s*g5|odyssey\\s*g5"
+     ],
+     "price_range": [
+      100000,
+      380000
+     ],
+     "exclude": [
+      "모니터암",
+      "거치대",
+      "받침대",
+      "스탠드만",
+      "케이블",
+      "박스만"
+     ],
+     "set_keywords": [
+      "\\+",
+      "세트",
+      "일괄"
+     ]
+    },
+    {
+     "id": "lg-27gp850",
+     "label": "LG 27GP850",
+     "query": "LG 27GP850",
+     "group": "LG",
+     "include": [
+      "27gp850"
+     ],
+     "price_range": [
+      150000,
+      450000
+     ],
+     "exclude": [
+      "모니터암",
+      "거치대",
+      "받침대",
+      "스탠드만",
+      "케이블",
+      "박스만"
+     ],
+     "set_keywords": [
+      "\\+",
+      "세트",
+      "일괄"
+     ]
+    },
+    {
+     "id": "studio-display",
+     "label": "애플 스튜디오 디스플레이",
+     "query": "스튜디오 디스플레이",
+     "group": "애플",
+     "include": [
+      "스튜디오\\s*디스플레이|studio\\s*display"
+     ],
+     "price_range": [
+      800000,
+      1900000
+     ],
+     "exclude": [
+      "모니터암",
+      "거치대",
+      "받침대",
+      "스탠드만",
+      "케이블",
+      "박스만"
+     ],
+     "set_keywords": [
+      "\\+",
+      "세트",
+      "일괄"
+     ]
+    }
+   ]
+  },
+  "cpu": {
+   "joongna_category": "161",
+   "label": "CPU",
+   "bunjang_category_prefix": "600100",
+   "sweep_ids": [
+    "600100006"
+   ],
+   "models": [
+    {
+     "id": "r7-9800x3d",
+     "label": "라이젠 7 9800X3D",
+     "query": "9800X3D",
+     "group": "라이젠",
+     "include": [
+      "9800\\s*x3d"
+     ],
+     "price_range": [
+      400000,
+      850000
+     ],
+     "exclude": [
+      "본체",
+      "컴퓨터",
+      "노트북",
+      "데스크탑",
+      "조립"
+     ],
+     "set_keywords": [
+      "보드",
+      "세트",
+      "\\+",
+      "메인보드"
+     ]
+    },
+    {
+     "id": "r7-7800x3d",
+     "label": "라이젠 7 7800X3D",
+     "query": "7800X3D",
+     "group": "라이젠",
+     "include": [
+      "7800\\s*x3d"
+     ],
+     "price_range": [
+      250000,
+      600000
+     ],
+     "exclude": [
+      "본체",
+      "컴퓨터",
+      "노트북",
+      "데스크탑",
+      "조립"
+     ],
+     "set_keywords": [
+      "보드",
+      "세트",
+      "\\+",
+      "메인보드"
+     ]
+    },
+    {
+     "id": "r7-5700x3d",
+     "label": "라이젠 7 5700X3D",
+     "query": "5700X3D",
+     "group": "라이젠",
+     "include": [
+      "5700\\s*x3d"
+     ],
+     "price_range": [
+      150000,
+      380000
+     ],
+     "exclude": [
+      "본체",
+      "컴퓨터",
+      "노트북",
+      "데스크탑",
+      "조립"
+     ],
+     "set_keywords": [
+      "보드",
+      "세트",
+      "\\+",
+      "메인보드"
+     ]
+    },
+    {
+     "id": "r5-7600",
+     "label": "라이젠 5 7600",
+     "query": "라이젠 7600",
+     "group": "라이젠",
+     "include": [
+      "라이젠.{0,6}7600|7600x?\\b"
+     ],
+     "price_range": [
+      80000,
+      280000
+     ],
+     "exclude": [
+      "본체",
+      "컴퓨터",
+      "노트북",
+      "데스크탑",
+      "조립"
+     ],
+     "set_keywords": [
+      "보드",
+      "세트",
+      "\\+",
+      "메인보드"
+     ]
+    },
+    {
+     "id": "r5-5600",
+     "label": "라이젠 5 5600",
+     "query": "라이젠 5600",
+     "group": "라이젠",
+     "include": [
+      "라이젠.{0,6}5600|5600x?\\b"
+     ],
+     "price_range": [
+      50000,
+      180000
+     ],
+     "exclude": [
+      "본체",
+      "컴퓨터",
+      "노트북",
+      "데스크탑",
+      "조립"
+     ],
+     "set_keywords": [
+      "보드",
+      "세트",
+      "\\+",
+      "메인보드"
+     ]
+    },
+    {
+     "id": "i5-12400f",
+     "label": "인텔 i5-12400F",
+     "query": "인텔 12400F",
+     "group": "인텔",
+     "include": [
+      "12400f?"
+     ],
+     "price_range": [
+      60000,
+      180000
+     ],
+     "exclude": [
+      "본체",
+      "컴퓨터",
+      "노트북",
+      "데스크탑",
+      "조립"
+     ],
+     "set_keywords": [
+      "보드",
+      "세트",
+      "\\+",
+      "메인보드"
+     ]
+    },
+    {
+     "id": "i5-14600k",
+     "label": "인텔 i5-14600K",
+     "query": "인텔 14600K",
+     "group": "인텔",
+     "include": [
+      "14600kf?"
+     ],
+     "price_range": [
+      180000,
+      450000
+     ],
+     "exclude": [
+      "본체",
+      "컴퓨터",
+      "노트북",
+      "데스크탑",
+      "조립"
+     ],
+     "set_keywords": [
+      "보드",
+      "세트",
+      "\\+",
+      "메인보드"
+     ]
+    },
+    {
+     "id": "i7-13700k",
+     "label": "인텔 i7-13700K",
+     "query": "인텔 13700K",
+     "group": "인텔",
+     "include": [
+      "13700kf?"
+     ],
+     "price_range": [
+      220000,
+      550000
+     ],
+     "exclude": [
+      "본체",
+      "컴퓨터",
+      "노트북",
+      "데스크탑",
+      "조립"
+     ],
+     "set_keywords": [
+      "보드",
+      "세트",
+      "\\+",
+      "메인보드"
+     ]
+    }
+   ]
+  },
+  "peripheral": {
+   "joongna_category": "166",
+   "label": "키보드·마우스",
+   "bunjang_category_prefix": "600100",
+   "sweep_ids": [
+    "600100010",
+    "600100011"
+   ],
+   "models": [
+    {
+     "id": "gpro-superlight",
+     "label": "로지텍 G PRO X 슈퍼라이트",
+     "query": "지프로 슈퍼라이트",
+     "group": "로지텍",
+     "include": [
+      "슈퍼라이트|superlight"
+     ],
+     "price_range": [
+      50000,
+      180000
+     ],
+     "exclude": [
+      "키캡만",
+      "스위치만",
+      "케이블",
+      "장패드",
+      "마우스패드",
+      "손목"
+     ],
+     "set_keywords": [
+      "\\+",
+      "세트",
+      "일괄"
+     ]
+    },
+    {
+     "id": "mx-master3s",
+     "label": "로지텍 MX Master 3S",
+     "query": "MX Master 3S",
+     "group": "로지텍",
+     "include": [
+      "mx\\s*master|마스터\\s*3"
+     ],
+     "price_range": [
+      50000,
+      150000
+     ],
+     "exclude": [
+      "키캡만",
+      "스위치만",
+      "케이블",
+      "장패드",
+      "마우스패드",
+      "손목"
+     ],
+     "set_keywords": [
+      "\\+",
+      "세트",
+      "일괄"
+     ]
+    },
+    {
+     "id": "logitech-g502",
+     "label": "로지텍 G502",
+     "query": "로지텍 G502",
+     "group": "로지텍",
+     "include": [
+      "g502"
+     ],
+     "price_range": [
+      30000,
+      120000
+     ],
+     "exclude": [
+      "키캡만",
+      "스위치만",
+      "케이블",
+      "장패드",
+      "마우스패드",
+      "손목"
+     ],
+     "set_keywords": [
+      "\\+",
+      "세트",
+      "일괄"
+     ]
+    },
+    {
+     "id": "hhkb",
+     "label": "HHKB 해피해킹",
+     "query": "해피해킹 키보드",
+     "group": "HHKB",
+     "include": [
+      "hhkb|해피해킹"
+     ],
+     "price_range": [
+      150000,
+      450000
+     ],
+     "exclude": [
+      "키캡만",
+      "스위치만",
+      "케이블",
+      "장패드",
+      "마우스패드",
+      "손목"
+     ],
+     "set_keywords": [
+      "\\+",
+      "세트",
+      "일괄"
+     ]
+    },
+    {
+     "id": "realforce",
+     "label": "리얼포스 키보드",
+     "query": "리얼포스 키보드",
+     "group": "리얼포스",
+     "include": [
+      "리얼포스|realforce"
+     ],
+     "price_range": [
+      100000,
+      450000
+     ],
+     "exclude": [
+      "키캡만",
+      "스위치만",
+      "케이블",
+      "장패드",
+      "마우스패드",
+      "손목"
+     ],
+     "set_keywords": [
+      "\\+",
+      "세트",
+      "일괄"
+     ]
+    }
+   ]
+  },
+  "golfiron": {
+   "joongna_category": "1262",
+   "label": "골프 아이언",
+   "bunjang_category_prefix": "700600",
+   "sweep_ids": [],
+   "models": [
+    {
+     "id": "tt-t100-iron",
+     "label": "타이틀리스트 T100 아이언",
+     "query": "타이틀리스트 T100 아이언",
+     "group": "타이틀리스트",
+     "include": [
+      "t100"
+     ],
+     "price_range": [
+      400000,
+      1300000
+     ],
+     "exclude": [
+      "드라이버",
+      "우드",
+      "유틸",
+      "퍼터",
+      "웨지",
+      "풀세트",
+      "풀 세트",
+      "캐디백",
+      "단품"
+     ],
+     "head_only_keywords": [
+      "헤드만",
+      "드라이버 헤드",
+      "헤드\\s*\\("
+     ]
+    },
+    {
+     "id": "tt-t200-iron",
+     "label": "타이틀리스트 T200 아이언",
+     "query": "타이틀리스트 T200 아이언",
+     "group": "타이틀리스트",
+     "include": [
+      "t200"
+     ],
+     "price_range": [
+      350000,
+      1200000
+     ],
+     "exclude": [
+      "드라이버",
+      "우드",
+      "유틸",
+      "퍼터",
+      "웨지",
+      "풀세트",
+      "풀 세트",
+      "캐디백",
+      "단품"
+     ],
+     "head_only_keywords": [
+      "헤드만",
+      "드라이버 헤드",
+      "헤드\\s*\\("
+     ]
+    },
+    {
+     "id": "ping-g430-iron",
+     "label": "핑 G430 아이언",
+     "query": "핑 G430 아이언",
+     "group": "핑",
+     "include": [
+      "g430"
+     ],
+     "price_range": [
+      500000,
+      1400000
+     ],
+     "exclude": [
+      "드라이버",
+      "우드",
+      "유틸",
+      "퍼터",
+      "웨지",
+      "풀세트",
+      "풀 세트",
+      "캐디백",
+      "단품"
+     ],
+     "head_only_keywords": [
+      "헤드만",
+      "드라이버 헤드",
+      "헤드\\s*\\("
+     ]
+    },
+    {
+     "id": "ping-g425-iron",
+     "label": "핑 G425 아이언",
+     "query": "핑 G425 아이언",
+     "group": "핑",
+     "include": [
+      "g425"
+     ],
+     "price_range": [
+      350000,
+      1100000
+     ],
+     "exclude": [
+      "드라이버",
+      "우드",
+      "유틸",
+      "퍼터",
+      "웨지",
+      "풀세트",
+      "풀 세트",
+      "캐디백",
+      "단품"
+     ],
+     "head_only_keywords": [
+      "헤드만",
+      "드라이버 헤드",
+      "헤드\\s*\\("
+     ]
+    },
+    {
+     "id": "mizuno-jpx923-iron",
+     "label": "미즈노 JPX923 아이언",
+     "query": "미즈노 JPX923 아이언",
+     "group": "미즈노",
+     "include": [
+      "jpx\\s*923"
+     ],
+     "price_range": [
+      400000,
+      1200000
+     ],
+     "exclude": [
+      "드라이버",
+      "우드",
+      "유틸",
+      "퍼터",
+      "웨지",
+      "풀세트",
+      "풀 세트",
+      "캐디백",
+      "단품"
+     ],
+     "head_only_keywords": [
+      "헤드만",
+      "드라이버 헤드",
+      "헤드\\s*\\("
+     ]
+    },
+    {
+     "id": "xxio-13-iron",
+     "label": "젝시오 13 아이언",
+     "query": "젝시오 13 아이언",
+     "group": "젝시오",
+     "include": [
+      "젝시오\\s*13|xxio\\s*13"
+     ],
+     "price_range": [
+      450000,
+      1300000
+     ],
+     "exclude": [
+      "드라이버",
+      "우드",
+      "유틸",
+      "퍼터",
+      "웨지",
+      "풀세트",
+      "풀 세트",
+      "캐디백",
+      "단품"
+     ],
+     "head_only_keywords": [
+      "헤드만",
+      "드라이버 헤드",
+      "헤드\\s*\\("
+     ]
+    }
+   ]
+  },
+  "golfputter": {
+   "joongna_category": "1263",
+   "label": "퍼터·웨지",
+   "bunjang_category_prefix": "700600",
+   "sweep_ids": [],
+   "models": [
+    {
+     "id": "scotty-newport2",
+     "label": "스카티카메론 뉴포트 2",
+     "query": "스카티카메론 뉴포트2",
+     "group": "스카티카메론",
+     "include": [
+      "뉴포트\\s*2|newport\\s*2"
+     ],
+     "price_range": [
+      300000,
+      900000
+     ],
+     "exclude": [
+      "드라이버",
+      "우드",
+      "유틸",
+      "아이언",
+      "풀세트",
+      "풀 세트",
+      "캐디백",
+      "커버만",
+      "그립만"
+     ],
+     "head_only_keywords": [
+      "헤드만",
+      "드라이버 헤드",
+      "헤드\\s*\\("
+     ]
+    },
+    {
+     "id": "scotty-phantom",
+     "label": "스카티카메론 팬텀",
+     "query": "스카티카메론 팬텀",
+     "group": "스카티카메론",
+     "include": [
+      "팬텀|phantom"
+     ],
+     "price_range": [
+      300000,
+      950000
+     ],
+     "exclude": [
+      "드라이버",
+      "우드",
+      "유틸",
+      "아이언",
+      "풀세트",
+      "풀 세트",
+      "캐디백",
+      "커버만",
+      "그립만"
+     ],
+     "head_only_keywords": [
+      "헤드만",
+      "드라이버 헤드",
+      "헤드\\s*\\("
+     ]
+    },
+    {
+     "id": "odyssey-whitehot",
+     "label": "오디세이 화이트핫 퍼터",
+     "query": "오디세이 화이트핫 퍼터",
+     "group": "오디세이",
+     "include": [
+      "화이트\\s*핫|white\\s*hot"
+     ],
+     "price_range": [
+      100000,
+      400000
+     ],
+     "exclude": [
+      "드라이버",
+      "우드",
+      "유틸",
+      "아이언",
+      "풀세트",
+      "풀 세트",
+      "캐디백",
+      "커버만",
+      "그립만"
+     ],
+     "head_only_keywords": [
+      "헤드만",
+      "드라이버 헤드",
+      "헤드\\s*\\("
+     ]
+    },
+    {
+     "id": "odyssey-ai-one",
+     "label": "오디세이 AI-ONE 퍼터",
+     "query": "오디세이 AI ONE 퍼터",
+     "group": "오디세이",
+     "include": [
+      "ai\\s*-?\\s*one"
+     ],
+     "price_range": [
+      200000,
+      600000
+     ],
+     "exclude": [
+      "드라이버",
+      "우드",
+      "유틸",
+      "아이언",
+      "풀세트",
+      "풀 세트",
+      "캐디백",
+      "커버만",
+      "그립만"
+     ],
+     "head_only_keywords": [
+      "헤드만",
+      "드라이버 헤드",
+      "헤드\\s*\\("
+     ]
+    },
+    {
+     "id": "vokey-sm10",
+     "label": "보키 SM10 웨지",
+     "query": "보키 SM10 웨지",
+     "group": "보키",
+     "include": [
+      "sm\\s*10"
+     ],
+     "price_range": [
+      100000,
+      300000
+     ],
+     "exclude": [
+      "드라이버",
+      "우드",
+      "유틸",
+      "아이언",
+      "풀세트",
+      "풀 세트",
+      "캐디백",
+      "커버만",
+      "그립만"
+     ],
+     "head_only_keywords": [
+      "헤드만",
+      "드라이버 헤드",
+      "헤드\\s*\\("
+     ]
+    },
+    {
+     "id": "vokey-sm9",
+     "label": "보키 SM9 웨지",
+     "query": "보키 SM9 웨지",
+     "group": "보키",
+     "include": [
+      "sm\\s*9"
+     ],
+     "price_range": [
+      80000,
+      250000
+     ],
+     "exclude": [
+      "드라이버",
+      "우드",
+      "유틸",
+      "아이언",
+      "풀세트",
+      "풀 세트",
+      "캐디백",
+      "커버만",
+      "그립만"
+     ],
+     "head_only_keywords": [
+      "헤드만",
+      "드라이버 헤드",
+      "헤드\\s*\\("
+     ]
+    }
+   ]
+  },
+  "lens": {
+   "joongna_category": "177",
+   "label": "카메라 렌즈",
+   "bunjang_category_prefix": "600300",
+   "sweep_ids": [
+    "600300004"
+   ],
+   "models": [
+    {
+     "id": "sony-2470gm2",
+     "label": "소니 FE 24-70 GM2",
+     "query": "소니 2470GM2",
+     "group": "소니",
+     "include": [
+      "24-?70.{0,6}gm\\s*(2|ii)|2470\\s*gm\\s*2"
+     ],
+     "price_range": [
+      1300000,
+      2500000
+     ],
+     "exclude": [
+      "필터",
+      "캡만",
+      "후드만",
+      "어댑터",
+      "바디",
+      "케이스",
+      "파우치"
+     ],
+     "set_keywords": [
+      "\\+",
+      "세트",
+      "일괄"
+     ]
+    },
+    {
+     "id": "sony-2470gm",
+     "label": "소니 FE 24-70 GM",
+     "query": "소니 2470GM",
+     "group": "소니",
+     "include": [
+      "24-?70.{0,6}gm(?!\\s*(2|ii))|2470\\s*gm(?!\\s*2)"
+     ],
+     "price_range": [
+      800000,
+      1700000
+     ],
+     "exclude": [
+      "필터",
+      "캡만",
+      "후드만",
+      "어댑터",
+      "바디",
+      "케이스",
+      "파우치"
+     ],
+     "set_keywords": [
+      "\\+",
+      "세트",
+      "일괄"
+     ]
+    },
+    {
+     "id": "sony-70200gm2",
+     "label": "소니 FE 70-200 GM2",
+     "query": "소니 70200GM2",
+     "group": "소니",
+     "include": [
+      "70-?200.{0,8}gm\\s*(2|ii)"
+     ],
+     "price_range": [
+      1600000,
+      2900000
+     ],
+     "exclude": [
+      "필터",
+      "캡만",
+      "후드만",
+      "어댑터",
+      "바디",
+      "케이스",
+      "파우치"
+     ],
+     "set_keywords": [
+      "\\+",
+      "세트",
+      "일괄"
+     ]
+    },
+    {
+     "id": "sigma-2470-art",
+     "label": "시그마 24-70 아트",
+     "query": "시그마 24-70 아트",
+     "group": "시그마",
+     "include": [
+      "시그마.{0,10}24-?70|24-?70.{0,10}(아트|art)"
+     ],
+     "price_range": [
+      500000,
+      1300000
+     ],
+     "exclude": [
+      "필터",
+      "캡만",
+      "후드만",
+      "어댑터",
+      "바디",
+      "케이스",
+      "파우치"
+     ],
+     "set_keywords": [
+      "\\+",
+      "세트",
+      "일괄"
+     ]
+    },
+    {
+     "id": "sony-85f18",
+     "label": "소니 FE 85mm F1.8",
+     "query": "소니 85.8 렌즈",
+     "group": "소니",
+     "include": [
+      "sel85f18|85.{0,4}f?1\\.8"
+     ],
+     "price_range": [
+      300000,
+      700000
+     ],
+     "exclude": [
+      "필터",
+      "캡만",
+      "후드만",
+      "어댑터",
+      "바디",
+      "케이스",
+      "파우치"
+     ],
+     "set_keywords": [
+      "\\+",
+      "세트",
+      "일괄"
+     ]
+    },
+    {
+     "id": "canon-rf2470",
+     "label": "캐논 RF 24-70",
+     "query": "캐논 RF 24-70",
+     "group": "캐논",
+     "include": [
+      "rf\\s*24-?70"
+     ],
+     "price_range": [
+      1300000,
+      2500000
+     ],
+     "exclude": [
+      "필터",
+      "캡만",
+      "후드만",
+      "어댑터",
+      "바디",
+      "케이스",
+      "파우치"
+     ],
+     "set_keywords": [
+      "\\+",
+      "세트",
+      "일괄"
+     ]
+    },
+    {
+     "id": "canon-rf50",
+     "label": "캐논 RF 50mm F1.8",
+     "query": "캐논 RF 50mm",
+     "group": "캐논",
+     "include": [
+      "rf\\s*50"
+     ],
+     "price_range": [
+      150000,
+      350000
+     ],
+     "exclude": [
+      "필터",
+      "캡만",
+      "후드만",
+      "어댑터",
+      "바디",
+      "케이스",
+      "파우치"
+     ],
+     "set_keywords": [
+      "\\+",
+      "세트",
+      "일괄"
+     ]
+    },
+    {
+     "id": "tamron-2875",
+     "label": "탐론 28-75 G2",
+     "query": "탐론 28-75",
+     "group": "탐론",
+     "include": [
+      "28-?75"
+     ],
+     "price_range": [
+      400000,
+      1000000
+     ],
+     "exclude": [
+      "필터",
+      "캡만",
+      "후드만",
+      "어댑터",
+      "바디",
+      "케이스",
+      "파우치"
+     ],
+     "set_keywords": [
+      "\\+",
+      "세트",
+      "일괄"
+     ]
+    }
+   ]
+  },
+  "filmcam": {
+   "joongna_category": "174",
+   "label": "필름카메라",
+   "bunjang_category_prefix": "600300",
+   "sweep_ids": [
+    "600300003"
+   ],
+   "models": [
+    {
+     "id": "contax-t2",
+     "label": "콘탁스 T2",
+     "query": "콘탁스 T2",
+     "group": "콘탁스",
+     "include": [
+      "콘탁스\\s*t2|contax\\s*t2"
+     ],
+     "price_range": [
+      800000,
+      2000000
+     ],
+     "exclude": [
+      "필름만",
+      "현상",
+      "케이스",
+      "스트랩",
+      "필터"
+     ],
+     "set_keywords": [
+      "\\+",
+      "세트",
+      "일괄"
+     ]
+    },
+    {
+     "id": "contax-t3",
+     "label": "콘탁스 T3",
+     "query": "콘탁스 T3",
+     "group": "콘탁스",
+     "include": [
+      "콘탁스\\s*t3|contax\\s*t3"
+     ],
+     "price_range": [
+      1500000,
+      3300000
+     ],
+     "exclude": [
+      "필름만",
+      "현상",
+      "케이스",
+      "스트랩",
+      "필터"
+     ],
+     "set_keywords": [
+      "\\+",
+      "세트",
+      "일괄"
+     ]
+    },
+    {
+     "id": "canon-ae1",
+     "label": "캐논 AE-1",
+     "query": "캐논 AE-1",
+     "group": "캐논",
+     "include": [
+      "ae-?1"
+     ],
+     "price_range": [
+      150000,
+      600000
+     ],
+     "exclude": [
+      "필름만",
+      "현상",
+      "케이스",
+      "스트랩",
+      "필터"
+     ],
+     "set_keywords": [
+      "\\+",
+      "세트",
+      "일괄"
+     ]
+    },
+    {
+     "id": "nikon-fm2",
+     "label": "니콘 FM2",
+     "query": "니콘 FM2",
+     "group": "니콘",
+     "include": [
+      "fm2"
+     ],
+     "price_range": [
+      250000,
+      800000
+     ],
+     "exclude": [
+      "필름만",
+      "현상",
+      "케이스",
+      "스트랩",
+      "필터"
+     ],
+     "set_keywords": [
+      "\\+",
+      "세트",
+      "일괄"
+     ]
+    },
+    {
+     "id": "olympus-mju2",
+     "label": "올림푸스 뮤2",
+     "query": "올림푸스 뮤2",
+     "group": "올림푸스",
+     "include": [
+      "뮤\\s*2|mju\\s*-?\\s*(2|ii)"
+     ],
+     "price_range": [
+      250000,
+      800000
+     ],
+     "exclude": [
+      "필름만",
+      "현상",
+      "케이스",
+      "스트랩",
+      "필터"
+     ],
+     "set_keywords": [
+      "\\+",
+      "세트",
+      "일괄"
+     ]
+    },
+    {
+     "id": "rollei35",
+     "label": "롤라이 35",
+     "query": "롤라이 35",
+     "group": "롤라이",
+     "include": [
+      "롤라이\\s*35|rollei\\s*35"
+     ],
+     "price_range": [
+      250000,
+      900000
+     ],
+     "exclude": [
+      "필름만",
+      "현상",
+      "케이스",
+      "스트랩",
+      "필터"
+     ],
+     "set_keywords": [
+      "\\+",
+      "세트",
+      "일괄"
+     ]
+    }
+   ]
+  },
+  "actioncam": {
+   "joongna_category": "175",
+   "label": "액션캠·짐벌",
+   "bunjang_category_prefix": "600300",
+   "sweep_ids": [
+    "600300007"
+   ],
+   "models": [
+    {
+     "id": "osmo-pocket3",
+     "label": "DJI 오즈모 포켓3",
+     "query": "오즈모 포켓3",
+     "group": "DJI",
+     "include": [
+      "포켓\\s*3|pocket\\s*3"
+     ],
+     "price_range": [
+      350000,
+      800000
+     ],
+     "exclude": [
+      "케이스",
+      "마운트",
+      "거치대",
+      "배터리",
+      "필터",
+      "스트랩"
+     ],
+     "set_keywords": [
+      "\\+",
+      "세트",
+      "일괄"
+     ]
+    },
+    {
+     "id": "gopro-13",
+     "label": "고프로 히어로 13",
+     "query": "고프로 13",
+     "group": "고프로",
+     "include": [
+      "(고프로|gopro|히어로|hero)\\s*13"
+     ],
+     "price_range": [
+      300000,
+      650000
+     ],
+     "exclude": [
+      "케이스",
+      "마운트",
+      "거치대",
+      "배터리",
+      "필터",
+      "스트랩"
+     ],
+     "set_keywords": [
+      "\\+",
+      "세트",
+      "일괄"
+     ]
+    },
+    {
+     "id": "gopro-12",
+     "label": "고프로 히어로 12",
+     "query": "고프로 12",
+     "group": "고프로",
+     "include": [
+      "(고프로|gopro|히어로|hero)\\s*12"
+     ],
+     "price_range": [
+      220000,
+      500000
+     ],
+     "exclude": [
+      "케이스",
+      "마운트",
+      "거치대",
+      "배터리",
+      "필터",
+      "스트랩"
+     ],
+     "set_keywords": [
+      "\\+",
+      "세트",
+      "일괄"
+     ]
+    },
+    {
+     "id": "insta360-x5",
+     "label": "인스타360 X5",
+     "query": "인스타360 X5",
+     "group": "인스타360",
+     "include": [
+      "(인스타|insta).{0,6}x5"
+     ],
+     "price_range": [
+      350000,
+      750000
+     ],
+     "exclude": [
+      "케이스",
+      "마운트",
+      "거치대",
+      "배터리",
+      "필터",
+      "스트랩"
+     ],
+     "set_keywords": [
+      "\\+",
+      "세트",
+      "일괄"
+     ]
+    },
+    {
+     "id": "insta360-x4",
+     "label": "인스타360 X4",
+     "query": "인스타360 X4",
+     "group": "인스타360",
+     "include": [
+      "(인스타|insta).{0,6}x4"
+     ],
+     "price_range": [
+      250000,
+      600000
+     ],
+     "exclude": [
+      "케이스",
+      "마운트",
+      "거치대",
+      "배터리",
+      "필터",
+      "스트랩"
+     ],
+     "set_keywords": [
+      "\\+",
+      "세트",
+      "일괄"
+     ]
+    },
+    {
+     "id": "dji-action4",
+     "label": "DJI 오즈모 액션4",
+     "query": "오즈모 액션4",
+     "group": "DJI",
+     "include": [
+      "액션\\s*4|action\\s*4"
+     ],
+     "price_range": [
+      200000,
+      500000
+     ],
+     "exclude": [
+      "케이스",
+      "마운트",
+      "거치대",
+      "배터리",
+      "필터",
+      "스트랩"
+     ],
+     "set_keywords": [
+      "\\+",
+      "세트",
+      "일괄"
+     ]
+    }
+   ]
+  },
+  "camping": {
+   "joongna_category": "241",
+   "label": "캠핑",
+   "bunjang_category_prefix": "700200",
+   "sweep_ids": [
+    "700200102"
+   ],
+   "models": [
+    {
+     "id": "helinox-chairone",
+     "label": "헬리녹스 체어원",
+     "query": "헬리녹스 체어원",
+     "group": "헬리녹스",
+     "include": [
+      "체어\\s*원|chair\\s*one"
+     ],
+     "price_range": [
+      50000,
+      180000
+     ],
+     "exclude": [
+      "커버만",
+      "파우치만",
+      "부품"
+     ],
+     "set_keywords": [
+      "\\+",
+      "세트",
+      "일괄",
+      "2개"
+     ]
+    },
+    {
+     "id": "helinox-tactical",
+     "label": "헬리녹스 택티컬 체어",
+     "query": "헬리녹스 택티컬 체어",
+     "group": "헬리녹스",
+     "include": [
+      "택티컬.{0,10}(체어|chair)|(체어|chair).{0,5}택티컬"
+     ],
+     "price_range": [
+      80000,
+      250000
+     ],
+     "exclude": [
+      "커버만",
+      "파우치만",
+      "부품"
+     ],
+     "set_keywords": [
+      "\\+",
+      "세트",
+      "일괄",
+      "2개"
+     ]
+    },
+    {
+     "id": "helinox-cotone",
+     "label": "헬리녹스 코트원",
+     "query": "헬리녹스 코트원",
+     "group": "헬리녹스",
+     "include": [
+      "코트\\s*원|cot\\s*one"
+     ],
+     "price_range": [
+      150000,
+      450000
+     ],
+     "exclude": [
+      "커버만",
+      "파우치만",
+      "부품"
+     ],
+     "set_keywords": [
+      "\\+",
+      "세트",
+      "일괄",
+      "2개"
+     ]
+    },
+    {
+     "id": "snowpeak-igt",
+     "label": "스노우피크 IGT",
+     "query": "스노우피크 IGT",
+     "group": "스노우피크",
+     "include": [
+      "igt"
+     ],
+     "price_range": [
+      100000,
+      600000
+     ],
+     "exclude": [
+      "커버만",
+      "파우치만",
+      "부품"
+     ],
+     "set_keywords": [
+      "\\+",
+      "세트",
+      "일괄",
+      "2개"
+     ]
+    }
+   ]
+  },
+  "bike": {
+   "joongna_category": "229",
+   "label": "자전거",
+   "bunjang_category_prefix": "700350",
+   "sweep_ids": [
+    "700350400"
+   ],
+   "models": [
+    {
+     "id": "brompton-cline",
+     "label": "브롬톤 C라인",
+     "query": "브롬톤 C라인",
+     "group": "브롬톤",
+     "include": [
+      "c\\s*-?라인|c\\s*line"
+     ],
+     "price_range": [
+      900000,
+      2500000
+     ],
+     "exclude": [
+      "부품",
+      "핸들",
+      "안장",
+      "바퀴만",
+      "가방",
+      "캐리어"
+     ],
+     "set_keywords": [
+      "\\+",
+      "세트",
+      "일괄"
+     ]
+    },
+    {
+     "id": "brompton-pline",
+     "label": "브롬톤 P라인",
+     "query": "브롬톤 P라인",
+     "group": "브롬톤",
+     "include": [
+      "p\\s*-?라인|p\\s*line"
+     ],
+     "price_range": [
+      1500000,
+      3500000
+     ],
+     "exclude": [
+      "부품",
+      "핸들",
+      "안장",
+      "바퀴만",
+      "가방",
+      "캐리어"
+     ],
+     "set_keywords": [
+      "\\+",
+      "세트",
+      "일괄"
+     ]
+    },
+    {
+     "id": "brompton-aline",
+     "label": "브롬톤 A라인",
+     "query": "브롬톤 A라인",
+     "group": "브롬톤",
+     "include": [
+      "a\\s*-?라인|a\\s*line"
+     ],
+     "price_range": [
+      600000,
+      1300000
+     ],
+     "exclude": [
+      "부품",
+      "핸들",
+      "안장",
+      "바퀴만",
+      "가방",
+      "캐리어"
      ],
      "set_keywords": [
       "\\+",

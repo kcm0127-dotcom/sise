@@ -257,6 +257,127 @@ DRIVERS = [
 ]
 
 
+# ---------------------------------------------------------------- Appliance
+APPLIANCE_EXCLUDE = ["헤드만", "배터리", "필터", "거치대", "부품", "수리", "호환", "어댑터"]
+APPLIANCES = [
+    ("dyson-v15", "다이슨 V15", "다이슨 V15", r"v15", (25, 75)),
+    ("dyson-v12", "다이슨 V12", "다이슨 V12", r"v12", (20, 60)),
+    ("dyson-v11", "다이슨 V11", "다이슨 V11", r"v11", (15, 50)),
+    ("dyson-v10", "다이슨 V10", "다이슨 V10", r"v10", (10, 40)),
+    ("dyson-v8", "다이슨 V8", "다이슨 V8", r"\bv8\b", (7, 30)),
+    ("dyson-airwrap", "다이슨 에어랩", "다이슨 에어랩", r"에어랩|airwrap", (20, 60)),
+    ("roborock-s8", "로보락 S8", "로보락 S8", r"로보락\s*s8|roborock\s*s8", (30, 120)),
+    ("roborock-s7", "로보락 S7", "로보락 S7", r"로보락\s*s7|roborock\s*s7", (15, 70)),
+    ("lg-styler", "LG 스타일러", "LG 스타일러", r"스타일러", (20, 120)),
+]
+
+# ---------------------------------------------------------------- Monitor
+MONITOR_EXCLUDE = ["모니터암", "거치대", "받침대", "스탠드만", "케이블", "박스만"]
+MONITORS = [
+    ("odyssey-g9", "삼성 오디세이 G9", "오디세이 G9", r"오디세이\s*g9|odyssey\s*g9|네오\s*g9", (40, 130)),
+    ("odyssey-g7", "삼성 오디세이 G7", "오디세이 G7", r"오디세이\s*g7|odyssey\s*g7", (20, 60)),
+    ("odyssey-g5", "삼성 오디세이 G5", "오디세이 G5", r"오디세이\s*g5|odyssey\s*g5", (10, 38)),
+    ("lg-27gp850", "LG 27GP850", "LG 27GP850", r"27gp850", (15, 45)),
+    ("studio-display", "애플 스튜디오 디스플레이", "스튜디오 디스플레이", r"스튜디오\s*디스플레이|studio\s*display", (80, 190)),
+]
+
+# ---------------------------------------------------------------- CPU
+CPU_EXCLUDE = ["본체", "컴퓨터", "노트북", "데스크탑", "조립"]
+CPU_SET = ["보드", "세트", "\\+", "메인보드"]
+CPUS = [
+    ("r7-9800x3d", "라이젠 7 9800X3D", "9800X3D", r"9800\s*x3d", (40, 85)),
+    ("r7-7800x3d", "라이젠 7 7800X3D", "7800X3D", r"7800\s*x3d", (25, 60)),
+    ("r7-5700x3d", "라이젠 7 5700X3D", "5700X3D", r"5700\s*x3d", (15, 38)),
+    ("r5-7600", "라이젠 5 7600", "라이젠 7600", r"라이젠.{0,6}7600|7600x?\b", (8, 28)),
+    ("r5-5600", "라이젠 5 5600", "라이젠 5600", r"라이젠.{0,6}5600|5600x?\b", (5, 18)),
+    ("i5-12400f", "인텔 i5-12400F", "인텔 12400F", r"12400f?", (6, 18)),
+    ("i5-14600k", "인텔 i5-14600K", "인텔 14600K", r"14600kf?", (18, 45)),
+    ("i7-13700k", "인텔 i7-13700K", "인텔 13700K", r"13700kf?", (22, 55)),
+]
+
+# ---------------------------------------------------------------- Peripheral (keyboard/mouse)
+PERIPHERAL_EXCLUDE = ["키캡만", "스위치만", "케이블", "장패드", "마우스패드", "손목"]
+PERIPHERALS = [
+    ("gpro-superlight", "로지텍 G PRO X 슈퍼라이트", "지프로 슈퍼라이트", r"슈퍼라이트|superlight", (5, 18)),
+    ("mx-master3s", "로지텍 MX Master 3S", "MX Master 3S", r"mx\s*master|마스터\s*3", (5, 15)),
+    ("logitech-g502", "로지텍 G502", "로지텍 G502", r"g502", (3, 12)),
+    ("hhkb", "HHKB 해피해킹", "해피해킹 키보드", r"hhkb|해피해킹", (15, 45)),
+    ("realforce", "리얼포스 키보드", "리얼포스 키보드", r"리얼포스|realforce", (10, 45)),
+]
+
+# ---------------------------------------------------------------- Golf iron / putter·wedge
+IRON_EXCLUDE = ["드라이버", "우드", "유틸", "퍼터", "웨지", "풀세트", "풀 세트", "캐디백", "단품"]
+IRONS = [
+    ("tt-t100-iron", "타이틀리스트 T100 아이언", "타이틀리스트 T100 아이언", r"t100", (40, 130)),
+    ("tt-t200-iron", "타이틀리스트 T200 아이언", "타이틀리스트 T200 아이언", r"t200", (35, 120)),
+    ("ping-g430-iron", "핑 G430 아이언", "핑 G430 아이언", r"g430", (50, 140)),
+    ("ping-g425-iron", "핑 G425 아이언", "핑 G425 아이언", r"g425", (35, 110)),
+    ("mizuno-jpx923-iron", "미즈노 JPX923 아이언", "미즈노 JPX923 아이언", r"jpx\s*923", (40, 120)),
+    ("xxio-13-iron", "젝시오 13 아이언", "젝시오 13 아이언", r"젝시오\s*13|xxio\s*13", (45, 130)),
+]
+PUTTER_EXCLUDE = ["드라이버", "우드", "유틸", "아이언", "풀세트", "풀 세트", "캐디백", "커버만", "그립만"]
+PUTTERS = [
+    ("scotty-newport2", "스카티카메론 뉴포트 2", "스카티카메론 뉴포트2", r"뉴포트\s*2|newport\s*2", (30, 90)),
+    ("scotty-phantom", "스카티카메론 팬텀", "스카티카메론 팬텀", r"팬텀|phantom", (30, 95)),
+    ("odyssey-whitehot", "오디세이 화이트핫 퍼터", "오디세이 화이트핫 퍼터", r"화이트\s*핫|white\s*hot", (10, 40)),
+    ("odyssey-ai-one", "오디세이 AI-ONE 퍼터", "오디세이 AI ONE 퍼터", r"ai\s*-?\s*one", (20, 60)),
+    ("vokey-sm10", "보키 SM10 웨지", "보키 SM10 웨지", r"sm\s*10", (10, 30)),
+    ("vokey-sm9", "보키 SM9 웨지", "보키 SM9 웨지", r"sm\s*9", (8, 25)),
+]
+
+# ---------------------------------------------------------------- Camera lens
+LENS_EXCLUDE = ["필터", "캡만", "후드만", "어댑터", "바디", "케이스", "파우치"]
+LENSES = [
+    ("sony-2470gm2", "소니 FE 24-70 GM2", "소니 2470GM2", r"24-?70.{0,6}gm\s*(2|ii)|2470\s*gm\s*2", (130, 250)),
+    ("sony-2470gm", "소니 FE 24-70 GM", "소니 2470GM", r"24-?70.{0,6}gm(?!\s*(2|ii))|2470\s*gm(?!\s*2)", (80, 170)),
+    ("sony-70200gm2", "소니 FE 70-200 GM2", "소니 70200GM2", r"70-?200.{0,8}gm\s*(2|ii)", (160, 290)),
+    ("sigma-2470-art", "시그마 24-70 아트", "시그마 24-70 아트", r"시그마.{0,10}24-?70|24-?70.{0,10}(아트|art)", (50, 130)),
+    ("sony-85f18", "소니 FE 85mm F1.8", "소니 85.8 렌즈", r"sel85f18|85.{0,4}f?1\.8", (30, 70)),
+    ("canon-rf2470", "캐논 RF 24-70", "캐논 RF 24-70", r"rf\s*24-?70", (130, 250)),
+    ("canon-rf50", "캐논 RF 50mm F1.8", "캐논 RF 50mm", r"rf\s*50", (15, 35)),
+    ("tamron-2875", "탐론 28-75 G2", "탐론 28-75", r"28-?75", (40, 100)),
+]
+
+# ---------------------------------------------------------------- Film camera
+FILMCAM_EXCLUDE = ["필름만", "현상", "케이스", "스트랩", "필터"]
+FILMCAMS = [
+    ("contax-t2", "콘탁스 T2", "콘탁스 T2", r"콘탁스\s*t2|contax\s*t2", (80, 200)),
+    ("contax-t3", "콘탁스 T3", "콘탁스 T3", r"콘탁스\s*t3|contax\s*t3", (150, 330)),
+    ("canon-ae1", "캐논 AE-1", "캐논 AE-1", r"ae-?1", (15, 60)),
+    ("nikon-fm2", "니콘 FM2", "니콘 FM2", r"fm2", (25, 80)),
+    ("olympus-mju2", "올림푸스 뮤2", "올림푸스 뮤2", r"뮤\s*2|mju\s*-?\s*(2|ii)", (25, 80)),
+    ("rollei35", "롤라이 35", "롤라이 35", r"롤라이\s*35|rollei\s*35", (25, 90)),
+]
+
+# ---------------------------------------------------------------- Action cam / gimbal
+ACTIONCAM_EXCLUDE = ["케이스", "마운트", "거치대", "배터리", "필터", "스트랩"]
+ACTIONCAMS = [
+    ("osmo-pocket3", "DJI 오즈모 포켓3", "오즈모 포켓3", r"포켓\s*3|pocket\s*3", (35, 80)),
+    ("gopro-13", "고프로 히어로 13", "고프로 13", r"(고프로|gopro|히어로|hero)\s*13", (30, 65)),
+    ("gopro-12", "고프로 히어로 12", "고프로 12", r"(고프로|gopro|히어로|hero)\s*12", (22, 50)),
+    ("insta360-x5", "인스타360 X5", "인스타360 X5", r"(인스타|insta).{0,6}x5", (35, 75)),
+    ("insta360-x4", "인스타360 X4", "인스타360 X4", r"(인스타|insta).{0,6}x4", (25, 60)),
+    ("dji-action4", "DJI 오즈모 액션4", "오즈모 액션4", r"액션\s*4|action\s*4", (20, 50)),
+]
+
+# ---------------------------------------------------------------- Camping
+CAMPING_EXCLUDE = ["커버만", "파우치만", "부품"]
+CAMPINGS = [
+    ("helinox-chairone", "헬리녹스 체어원", "헬리녹스 체어원", r"체어\s*원|chair\s*one", (5, 18)),
+    ("helinox-tactical", "헬리녹스 택티컬 체어", "헬리녹스 택티컬 체어", r"택티컬.{0,10}(체어|chair)|(체어|chair).{0,5}택티컬", (8, 25)),
+    ("helinox-cotone", "헬리녹스 코트원", "헬리녹스 코트원", r"코트\s*원|cot\s*one", (15, 45)),
+    ("snowpeak-igt", "스노우피크 IGT", "스노우피크 IGT", r"igt", (10, 60)),
+]
+
+# ---------------------------------------------------------------- Bike (folding)
+BIKE_EXCLUDE = ["부품", "핸들", "안장", "바퀴만", "가방", "캐리어"]
+BIKES = [
+    ("brompton-cline", "브롬톤 C라인", "브롬톤 C라인", r"c\s*-?라인|c\s*line", (90, 250)),
+    ("brompton-pline", "브롬톤 P라인", "브롬톤 P라인", r"p\s*-?라인|p\s*line", (150, 350)),
+    ("brompton-aline", "브롬톤 A라인", "브롬톤 A라인", r"a\s*-?라인|a\s*line", (60, 130)),
+]
+
+
 def _gpu_group(slug: str) -> str:
     if slug.startswith("rx-"):
         return "라데온 RX"
@@ -289,6 +410,7 @@ def build() -> dict:
     return {
         "categories": {
             "gpu": {
+                "joongna_category": "163",
                 "label": "그래픽카드",
                 "bunjang_category_prefix": "600200005",
                 "sweep_ids": ["600200005"],
@@ -296,6 +418,7 @@ def build() -> dict:
                                  lambda s, l: _gpu_group(s)),
             },
             "camera": {
+                "joongna_category": "9",
                 "label": "카메라",
                 "bunjang_category_prefix": "600300",
                 "sweep_ids": ["600300001"],
@@ -303,6 +426,7 @@ def build() -> dict:
                                  lambda s, l: _brand_group(l)),
             },
             "golf": {
+                "joongna_category": "1260",
                 "label": "골프채",
                 "bunjang_category_prefix": "700600",
                 "sweep_ids": ["700600300"],
@@ -312,6 +436,7 @@ def build() -> dict:
                                  lambda s, l: _brand_group(l)),
             },
             "console": {
+                "joongna_category": "12",
                 "label": "게임기",
                 "bunjang_category_prefix": "600600",
                 "sweep_ids": ["600600001"],
@@ -320,6 +445,7 @@ def build() -> dict:
                                  lambda s, l: _brand_group(l)),
             },
             "tablet": {
+                "joongna_category": "140",
                 "label": "태블릿",
                 "bunjang_category_prefix": "600710",
                 "sweep_ids": ["600710300"],
@@ -328,6 +454,7 @@ def build() -> dict:
                                  lambda s, l: _brand_group(l)),
             },
             "phone": {
+                "joongna_category": "139",
                 "label": "스마트폰",
                 "bunjang_category_prefix": "600700",
                 "sweep_ids": ["600700001"],
@@ -335,6 +462,7 @@ def build() -> dict:
                                  lambda s, l: _brand_group(l)),
             },
             "laptop": {
+                "joongna_category": "158",
                 "label": "노트북",
                 "bunjang_category_prefix": "600100",
                 "sweep_ids": ["600100001"],
@@ -342,6 +470,7 @@ def build() -> dict:
                                  lambda s, l: _brand_group(l)),
             },
             "audio": {
+                "joongna_category": "1171",
                 "label": "이어폰·헤드폰",
                 "bunjang_category_prefix": "600500",
                 "sweep_ids": ["600500010"],
@@ -349,10 +478,109 @@ def build() -> dict:
                                  lambda s, l: _brand_group(l)),
             },
             "watch": {
+                "joongna_category": "141",
                 "label": "스마트워치",
                 "bunjang_category_prefix": "600720",
                 "sweep_ids": ["600720100"],
                 "models": expand(WATCHES, {"exclude": WATCH_EXCLUDE, "set_keywords": WATCH_SET},
+                                 lambda s, l: _brand_group(l)),
+            },
+            "appliance": {
+                "joongna_category": "7",
+                "label": "생활가전",
+                "bunjang_category_prefix": "610500",
+                "sweep_ids": ["610500005"],
+                "models": expand(APPLIANCES, {"exclude": APPLIANCE_EXCLUDE,
+                                              "set_keywords": ["\\+", "세트", "일괄"]},
+                                 lambda s, l: _brand_group(l)),
+            },
+            "monitor": {
+                "joongna_category": "160",
+                "label": "모니터",
+                "bunjang_category_prefix": "600100",
+                "sweep_ids": ["600100007"],
+                "models": expand(MONITORS, {"exclude": MONITOR_EXCLUDE,
+                                            "set_keywords": ["\\+", "세트", "일괄"]},
+                                 lambda s, l: _brand_group(l)),
+            },
+            "cpu": {
+                "joongna_category": "161",
+                "label": "CPU",
+                "bunjang_category_prefix": "600100",
+                "sweep_ids": ["600100006"],
+                "models": expand(CPUS, {"exclude": CPU_EXCLUDE, "set_keywords": CPU_SET},
+                                 lambda s, l: _brand_group(l)),
+            },
+            "peripheral": {
+                "joongna_category": "166",
+                "label": "키보드·마우스",
+                "bunjang_category_prefix": "600100",
+                "sweep_ids": ["600100010", "600100011"],
+                "models": expand(PERIPHERALS, {"exclude": PERIPHERAL_EXCLUDE,
+                                               "set_keywords": ["\\+", "세트", "일괄"]},
+                                 lambda s, l: _brand_group(l)),
+            },
+            "golfiron": {
+                "joongna_category": "1262",
+                "label": "골프 아이언",
+                "bunjang_category_prefix": "700600",
+                "sweep_ids": [],   # golf sweep already covers 700600300
+                "models": expand(IRONS, {"exclude": IRON_EXCLUDE,
+                                         "head_only_keywords": GOLF_HEAD},
+                                 lambda s, l: _brand_group(l)),
+            },
+            "golfputter": {
+                "joongna_category": "1263",
+                "label": "퍼터·웨지",
+                "bunjang_category_prefix": "700600",
+                "sweep_ids": [],
+                "models": expand(PUTTERS, {"exclude": PUTTER_EXCLUDE,
+                                           "head_only_keywords": GOLF_HEAD},
+                                 lambda s, l: _brand_group(l)),
+            },
+            "lens": {
+                "joongna_category": "177",
+                "label": "카메라 렌즈",
+                "bunjang_category_prefix": "600300",
+                "sweep_ids": ["600300004"],
+                "models": expand(LENSES, {"exclude": LENS_EXCLUDE,
+                                          "set_keywords": ["\\+", "세트", "일괄"]},
+                                 lambda s, l: _brand_group(l)),
+            },
+            "filmcam": {
+                "joongna_category": "174",
+                "label": "필름카메라",
+                "bunjang_category_prefix": "600300",
+                "sweep_ids": ["600300003"],
+                "models": expand(FILMCAMS, {"exclude": FILMCAM_EXCLUDE,
+                                            "set_keywords": ["\\+", "세트", "일괄"]},
+                                 lambda s, l: _brand_group(l)),
+            },
+            "actioncam": {
+                "joongna_category": "175",
+                "label": "액션캠·짐벌",
+                "bunjang_category_prefix": "600300",
+                "sweep_ids": ["600300007"],
+                "models": expand(ACTIONCAMS, {"exclude": ACTIONCAM_EXCLUDE,
+                                              "set_keywords": ["\\+", "세트", "일괄"]},
+                                 lambda s, l: _brand_group(l)),
+            },
+            "camping": {
+                "joongna_category": "241",
+                "label": "캠핑",
+                "bunjang_category_prefix": "700200",
+                "sweep_ids": ["700200102"],
+                "models": expand(CAMPINGS, {"exclude": CAMPING_EXCLUDE,
+                                            "set_keywords": ["\\+", "세트", "일괄", "2개"]},
+                                 lambda s, l: _brand_group(l)),
+            },
+            "bike": {
+                "joongna_category": "229",
+                "label": "자전거",
+                "bunjang_category_prefix": "700350",
+                "sweep_ids": ["700350400"],
+                "models": expand(BIKES, {"exclude": BIKE_EXCLUDE,
+                                         "set_keywords": ["\\+", "세트", "일괄"]},
                                  lambda s, l: _brand_group(l)),
             },
         },

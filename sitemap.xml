@@ -1,12 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://palinga.xyz/about.html</loc><lastmod>2026-06-11</lastmod></url>
+  <url><loc>https://palinga.xyz/cat-actioncam.html</loc><lastmod>2026-06-11</lastmod></url>
+  <url><loc>https://palinga.xyz/cat-appliance.html</loc><lastmod>2026-06-11</lastmod></url>
   <url><loc>https://palinga.xyz/cat-audio.html</loc><lastmod>2026-06-11</lastmod></url>
+  <url><loc>https://palinga.xyz/cat-bike.html</loc><lastmod>2026-06-11</lastmod></url>
   <url><loc>https://palinga.xyz/cat-camera.html</loc><lastmod>2026-06-11</lastmod></url>
+  <url><loc>https://palinga.xyz/cat-camping.html</loc><lastmod>2026-06-11</lastmod></url>
   <url><loc>https://palinga.xyz/cat-console.html</loc><lastmod>2026-06-11</lastmod></url>
+  <url><loc>https://palinga.xyz/cat-cpu.html</loc><lastmod>2026-06-11</lastmod></url>
+  <url><loc>https://palinga.xyz/cat-filmcam.html</loc><lastmod>2026-06-11</lastmod></url>
   <url><loc>https://palinga.xyz/cat-golf.html</loc><lastmod>2026-06-11</lastmod></url>
+  <url><loc>https://palinga.xyz/cat-golfiron.html</loc><lastmod>2026-06-11</lastmod></url>
+  <url><loc>https://palinga.xyz/cat-golfputter.html</loc><lastmod>2026-06-11</lastmod></url>
   <url><loc>https://palinga.xyz/cat-gpu.html</loc><lastmod>2026-06-11</lastmod></url>
   <url><loc>https://palinga.xyz/cat-laptop.html</loc><lastmod>2026-06-11</lastmod></url>
+  <url><loc>https://palinga.xyz/cat-lens.html</loc><lastmod>2026-06-11</lastmod></url>
+  <url><loc>https://palinga.xyz/cat-monitor.html</loc><lastmod>2026-06-11</lastmod></url>
+  <url><loc>https://palinga.xyz/cat-peripheral.html</loc><lastmod>2026-06-11</lastmod></url>
   <url><loc>https://palinga.xyz/cat-phone.html</loc><lastmod>2026-06-11</lastmod></url>
   <url><loc>https://palinga.xyz/cat-tablet.html</loc><lastmod>2026-06-11</lastmod></url>
   <url><loc>https://palinga.xyz/cat-watch.html</loc><lastmod>2026-06-11</lastmod></url>
@@ -34,10 +45,14 @@
   <url><loc>https://palinga.xyz/m-apple-watch-ultra1.html</loc><lastmod>2026-06-11</lastmod></url>
   <url><loc>https://palinga.xyz/m-apple-watch-ultra2.html</loc><lastmod>2026-06-11</lastmod></url>
   <url><loc>https://palinga.xyz/m-bose-qc-ultra.html</loc><lastmod>2026-06-11</lastmod></url>
+  <url><loc>https://palinga.xyz/m-brompton-aline.html</loc><lastmod>2026-06-11</lastmod></url>
+  <url><loc>https://palinga.xyz/m-brompton-cline.html</loc><lastmod>2026-06-11</lastmod></url>
+  <url><loc>https://palinga.xyz/m-brompton-pline.html</loc><lastmod>2026-06-11</lastmod></url>
   <url><loc>https://palinga.xyz/m-buds2-pro.html</loc><lastmod>2026-06-11</lastmod></url>
   <url><loc>https://palinga.xyz/m-buds3-pro.html</loc><lastmod>2026-06-11</lastmod></url>
   <url><loc>https://palinga.xyz/m-canon-200d2.html</loc><lastmod>2026-06-11</lastmod></url>
   <url><loc>https://palinga.xyz/m-canon-90d.html</loc><lastmod>2026-06-11</lastmod></url>
+  <url><loc>https://palinga.xyz/m-canon-ae1.html</loc><lastmod>2026-06-11</lastmod></url>
   <url><loc>https://palinga.xyz/m-canon-r10.html</loc><lastmod>2026-06-11</lastmod></url>
   <url><loc>https://palinga.xyz/m-canon-r5.html</loc><lastmod>2026-06-11</lastmod></url>
   <url><loc>https://palinga.xyz/m-canon-r50.html</loc><lastmod>2026-06-11</lastmod></url>
@@ -45,10 +60,21 @@
   <url><loc>https://palinga.xyz/m-canon-r6.html</loc><lastmod>2026-06-11</lastmod></url>
   <url><loc>https://palinga.xyz/m-canon-r6m2.html</loc><lastmod>2026-06-11</lastmod></url>
   <url><loc>https://palinga.xyz/m-canon-r8.html</loc><lastmod>2026-06-11</lastmod></url>
+  <url><loc>https://palinga.xyz/m-canon-rf2470.html</loc><lastmod>2026-06-11</lastmod></url>
+  <url><loc>https://palinga.xyz/m-canon-rf50.html</loc><lastmod>2026-06-11</lastmod></url>
   <url><loc>https://palinga.xyz/m-canon-rp.html</loc><lastmod>2026-06-11</lastmod></url>
+  <url><loc>https://palinga.xyz/m-contax-t2.html</loc><lastmod>2026-06-11</lastmod></url>
+  <url><loc>https://palinga.xyz/m-contax-t3.html</loc><lastmod>2026-06-11</lastmod></url>
   <url><loc>https://palinga.xyz/m-cw-ai-smoke-driver.html</loc><lastmod>2026-06-11</lastmod></url>
   <url><loc>https://palinga.xyz/m-cw-paradym-driver.html</loc><lastmod>2026-06-11</lastmod></url>
   <url><loc>https://palinga.xyz/m-cw-rogue-st-driver.html</loc><lastmod>2026-06-11</lastmod></url>
+  <url><loc>https://palinga.xyz/m-dji-action4.html</loc><lastmod>2026-06-11</lastmod></url>
+  <url><loc>https://palinga.xyz/m-dyson-airwrap.html</loc><lastmod>2026-06-11</lastmod></url>
+  <url><loc>https://palinga.xyz/m-dyson-v10.html</loc><lastmod>2026-06-11</lastmod></url>
+  <url><loc>https://palinga.xyz/m-dyson-v11.html</loc><lastmod>2026-06-11</lastmod></url>
+  <url><loc>https://palinga.xyz/m-dyson-v12.html</loc><lastmod>2026-06-11</lastmod></url>
+  <url><loc>https://palinga.xyz/m-dyson-v15.html</loc><lastmod>2026-06-11</lastmod></url>
+  <url><loc>https://palinga.xyz/m-dyson-v8.html</loc><lastmod>2026-06-11</lastmod></url>
   <url><loc>https://palinga.xyz/m-fuji-x100v.html</loc><lastmod>2026-06-11</lastmod></url>
   <url><loc>https://palinga.xyz/m-fuji-x100vi.html</loc><lastmod>2026-06-11</lastmod></url>
   <url><loc>https://palinga.xyz/m-fuji-xs20.html</loc><lastmod>2026-06-11</lastmod></url>
@@ -70,8 +96,20 @@
   <url><loc>https://palinga.xyz/m-galaxy-zflip6.html</loc><lastmod>2026-06-11</lastmod></url>
   <url><loc>https://palinga.xyz/m-galaxy-zfold5.html</loc><lastmod>2026-06-11</lastmod></url>
   <url><loc>https://palinga.xyz/m-galaxy-zfold6.html</loc><lastmod>2026-06-11</lastmod></url>
+  <url><loc>https://palinga.xyz/m-gopro-12.html</loc><lastmod>2026-06-11</lastmod></url>
+  <url><loc>https://palinga.xyz/m-gopro-13.html</loc><lastmod>2026-06-11</lastmod></url>
+  <url><loc>https://palinga.xyz/m-gpro-superlight.html</loc><lastmod>2026-06-11</lastmod></url>
   <url><loc>https://palinga.xyz/m-gtx-1660-super.html</loc><lastmod>2026-06-11</lastmod></url>
   <url><loc>https://palinga.xyz/m-gtx-1660-ti.html</loc><lastmod>2026-06-11</lastmod></url>
+  <url><loc>https://palinga.xyz/m-helinox-chairone.html</loc><lastmod>2026-06-11</lastmod></url>
+  <url><loc>https://palinga.xyz/m-helinox-cotone.html</loc><lastmod>2026-06-11</lastmod></url>
+  <url><loc>https://palinga.xyz/m-helinox-tactical.html</loc><lastmod>2026-06-11</lastmod></url>
+  <url><loc>https://palinga.xyz/m-hhkb.html</loc><lastmod>2026-06-11</lastmod></url>
+  <url><loc>https://palinga.xyz/m-i5-12400f.html</loc><lastmod>2026-06-11</lastmod></url>
+  <url><loc>https://palinga.xyz/m-i5-14600k.html</loc><lastmod>2026-06-11</lastmod></url>
+  <url><loc>https://palinga.xyz/m-i7-13700k.html</loc><lastmod>2026-06-11</lastmod></url>
+  <url><loc>https://palinga.xyz/m-insta360-x4.html</loc><lastmod>2026-06-11</lastmod></url>
+  <url><loc>https://palinga.xyz/m-insta360-x5.html</loc><lastmod>2026-06-11</lastmod></url>
   <url><loc>https://palinga.xyz/m-ipad-10.html</loc><lastmod>2026-06-11</lastmod></url>
   <url><loc>https://palinga.xyz/m-ipad-9.html</loc><lastmod>2026-06-11</lastmod></url>
   <url><loc>https://palinga.xyz/m-ipad-air-m2.html</loc><lastmod>2026-06-11</lastmod></url>
@@ -94,8 +132,11 @@
   <url><loc>https://palinga.xyz/m-iphone-16-pro.html</loc><lastmod>2026-06-11</lastmod></url>
   <url><loc>https://palinga.xyz/m-iphone-16.html</loc><lastmod>2026-06-11</lastmod></url>
   <url><loc>https://palinga.xyz/m-iphone-se3.html</loc><lastmod>2026-06-11</lastmod></url>
+  <url><loc>https://palinga.xyz/m-lg-27gp850.html</loc><lastmod>2026-06-11</lastmod></url>
   <url><loc>https://palinga.xyz/m-lg-gram-16.html</loc><lastmod>2026-06-11</lastmod></url>
   <url><loc>https://palinga.xyz/m-lg-gram-17.html</loc><lastmod>2026-06-11</lastmod></url>
+  <url><loc>https://palinga.xyz/m-lg-styler.html</loc><lastmod>2026-06-11</lastmod></url>
+  <url><loc>https://palinga.xyz/m-logitech-g502.html</loc><lastmod>2026-06-11</lastmod></url>
   <url><loc>https://palinga.xyz/m-macbook-air-m1.html</loc><lastmod>2026-06-11</lastmod></url>
   <url><loc>https://palinga.xyz/m-macbook-air-m2.html</loc><lastmod>2026-06-11</lastmod></url>
   <url><loc>https://palinga.xyz/m-macbook-air-m3.html</loc><lastmod>2026-06-11</lastmod></url>
@@ -104,7 +145,10 @@
   <url><loc>https://palinga.xyz/m-macbook-pro-m2.html</loc><lastmod>2026-06-11</lastmod></url>
   <url><loc>https://palinga.xyz/m-macbook-pro-m3.html</loc><lastmod>2026-06-11</lastmod></url>
   <url><loc>https://palinga.xyz/m-macbook-pro-m4.html</loc><lastmod>2026-06-11</lastmod></url>
+  <url><loc>https://palinga.xyz/m-mizuno-jpx923-iron.html</loc><lastmod>2026-06-11</lastmod></url>
+  <url><loc>https://palinga.xyz/m-mx-master3s.html</loc><lastmod>2026-06-11</lastmod></url>
   <url><loc>https://palinga.xyz/m-nikon-d850.html</loc><lastmod>2026-06-11</lastmod></url>
+  <url><loc>https://palinga.xyz/m-nikon-fm2.html</loc><lastmod>2026-06-11</lastmod></url>
   <url><loc>https://palinga.xyz/m-nikon-z5.html</loc><lastmod>2026-06-11</lastmod></url>
   <url><loc>https://palinga.xyz/m-nikon-z6.html</loc><lastmod>2026-06-11</lastmod></url>
   <url><loc>https://palinga.xyz/m-nikon-z6ii.html</loc><lastmod>2026-06-11</lastmod></url>
@@ -115,14 +159,32 @@
   <url><loc>https://palinga.xyz/m-nintendo-switch-oled.html</loc><lastmod>2026-06-11</lastmod></url>
   <url><loc>https://palinga.xyz/m-nintendo-switch.html</loc><lastmod>2026-06-11</lastmod></url>
   <url><loc>https://palinga.xyz/m-nintendo-switch2.html</loc><lastmod>2026-06-11</lastmod></url>
+  <url><loc>https://palinga.xyz/m-odyssey-ai-one.html</loc><lastmod>2026-06-11</lastmod></url>
+  <url><loc>https://palinga.xyz/m-odyssey-g5.html</loc><lastmod>2026-06-11</lastmod></url>
+  <url><loc>https://palinga.xyz/m-odyssey-g7.html</loc><lastmod>2026-06-11</lastmod></url>
+  <url><loc>https://palinga.xyz/m-odyssey-g9.html</loc><lastmod>2026-06-11</lastmod></url>
+  <url><loc>https://palinga.xyz/m-odyssey-whitehot.html</loc><lastmod>2026-06-11</lastmod></url>
+  <url><loc>https://palinga.xyz/m-olympus-mju2.html</loc><lastmod>2026-06-11</lastmod></url>
+  <url><loc>https://palinga.xyz/m-osmo-pocket3.html</loc><lastmod>2026-06-11</lastmod></url>
   <url><loc>https://palinga.xyz/m-ping-g425-driver.html</loc><lastmod>2026-06-11</lastmod></url>
+  <url><loc>https://palinga.xyz/m-ping-g425-iron.html</loc><lastmod>2026-06-11</lastmod></url>
   <url><loc>https://palinga.xyz/m-ping-g430-driver.html</loc><lastmod>2026-06-11</lastmod></url>
+  <url><loc>https://palinga.xyz/m-ping-g430-iron.html</loc><lastmod>2026-06-11</lastmod></url>
   <url><loc>https://palinga.xyz/m-ping-g440-driver.html</loc><lastmod>2026-06-11</lastmod></url>
   <url><loc>https://palinga.xyz/m-ps4-pro.html</loc><lastmod>2026-06-11</lastmod></url>
   <url><loc>https://palinga.xyz/m-ps5-pro.html</loc><lastmod>2026-06-11</lastmod></url>
   <url><loc>https://palinga.xyz/m-ps5.html</loc><lastmod>2026-06-11</lastmod></url>
+  <url><loc>https://palinga.xyz/m-r5-5600.html</loc><lastmod>2026-06-11</lastmod></url>
+  <url><loc>https://palinga.xyz/m-r5-7600.html</loc><lastmod>2026-06-11</lastmod></url>
+  <url><loc>https://palinga.xyz/m-r7-5700x3d.html</loc><lastmod>2026-06-11</lastmod></url>
+  <url><loc>https://palinga.xyz/m-r7-7800x3d.html</loc><lastmod>2026-06-11</lastmod></url>
+  <url><loc>https://palinga.xyz/m-r7-9800x3d.html</loc><lastmod>2026-06-11</lastmod></url>
+  <url><loc>https://palinga.xyz/m-realforce.html</loc><lastmod>2026-06-11</lastmod></url>
   <url><loc>https://palinga.xyz/m-ricoh-gr3.html</loc><lastmod>2026-06-11</lastmod></url>
   <url><loc>https://palinga.xyz/m-ricoh-gr3x.html</loc><lastmod>2026-06-11</lastmod></url>
+  <url><loc>https://palinga.xyz/m-roborock-s7.html</loc><lastmod>2026-06-11</lastmod></url>
+  <url><loc>https://palinga.xyz/m-roborock-s8.html</loc><lastmod>2026-06-11</lastmod></url>
+  <url><loc>https://palinga.xyz/m-rollei35.html</loc><lastmod>2026-06-11</lastmod></url>
   <url><loc>https://palinga.xyz/m-rtx-2060-super.html</loc><lastmod>2026-06-11</lastmod></url>
   <url><loc>https://palinga.xyz/m-rtx-2070-super.html</loc><lastmod>2026-06-11</lastmod></url>
   <url><loc>https://palinga.xyz/m-rtx-2080-super.html</loc><lastmod>2026-06-11</lastmod></url>
@@ -160,6 +222,14 @@
   <url><loc>https://palinga.xyz/m-rx-7900-xtx.html</loc><lastmod>2026-06-11</lastmod></url>
   <url><loc>https://palinga.xyz/m-rx-9070-xt.html</loc><lastmod>2026-06-11</lastmod></url>
   <url><loc>https://palinga.xyz/m-rx-9070.html</loc><lastmod>2026-06-11</lastmod></url>
+  <url><loc>https://palinga.xyz/m-scotty-newport2.html</loc><lastmod>2026-06-11</lastmod></url>
+  <url><loc>https://palinga.xyz/m-scotty-phantom.html</loc><lastmod>2026-06-11</lastmod></url>
+  <url><loc>https://palinga.xyz/m-sigma-2470-art.html</loc><lastmod>2026-06-11</lastmod></url>
+  <url><loc>https://palinga.xyz/m-snowpeak-igt.html</loc><lastmod>2026-06-11</lastmod></url>
+  <url><loc>https://palinga.xyz/m-sony-2470gm.html</loc><lastmod>2026-06-11</lastmod></url>
+  <url><loc>https://palinga.xyz/m-sony-2470gm2.html</loc><lastmod>2026-06-11</lastmod></url>
+  <url><loc>https://palinga.xyz/m-sony-70200gm2.html</loc><lastmod>2026-06-11</lastmod></url>
+  <url><loc>https://palinga.xyz/m-sony-85f18.html</loc><lastmod>2026-06-11</lastmod></url>
   <url><loc>https://palinga.xyz/m-sony-a6000.html</loc><lastmod>2026-06-11</lastmod></url>
   <url><loc>https://palinga.xyz/m-sony-a6400.html</loc><lastmod>2026-06-11</lastmod></url>
   <url><loc>https://palinga.xyz/m-sony-a6700.html</loc><lastmod>2026-06-11</lastmod></url>
@@ -176,19 +246,26 @@
   <url><loc>https://palinga.xyz/m-sony-zv-e10m2.html</loc><lastmod>2026-06-11</lastmod></url>
   <url><loc>https://palinga.xyz/m-stealth2-driver.html</loc><lastmod>2026-06-11</lastmod></url>
   <url><loc>https://palinga.xyz/m-steam-deck.html</loc><lastmod>2026-06-11</lastmod></url>
+  <url><loc>https://palinga.xyz/m-studio-display.html</loc><lastmod>2026-06-11</lastmod></url>
+  <url><loc>https://palinga.xyz/m-tamron-2875.html</loc><lastmod>2026-06-11</lastmod></url>
   <url><loc>https://palinga.xyz/m-tm-qi10-driver.html</loc><lastmod>2026-06-11</lastmod></url>
   <url><loc>https://palinga.xyz/m-tm-qi35-driver.html</loc><lastmod>2026-06-11</lastmod></url>
   <url><loc>https://palinga.xyz/m-tm-sim2-driver.html</loc><lastmod>2026-06-11</lastmod></url>
   <url><loc>https://palinga.xyz/m-tm-stealth-driver.html</loc><lastmod>2026-06-11</lastmod></url>
   <url><loc>https://palinga.xyz/m-tt-gt2-driver.html</loc><lastmod>2026-06-11</lastmod></url>
   <url><loc>https://palinga.xyz/m-tt-gt3-driver.html</loc><lastmod>2026-06-11</lastmod></url>
+  <url><loc>https://palinga.xyz/m-tt-t100-iron.html</loc><lastmod>2026-06-11</lastmod></url>
+  <url><loc>https://palinga.xyz/m-tt-t200-iron.html</loc><lastmod>2026-06-11</lastmod></url>
   <url><loc>https://palinga.xyz/m-tt-tsi2-driver.html</loc><lastmod>2026-06-11</lastmod></url>
   <url><loc>https://palinga.xyz/m-tt-tsi3-driver.html</loc><lastmod>2026-06-11</lastmod></url>
   <url><loc>https://palinga.xyz/m-tt-tsr2-driver.html</loc><lastmod>2026-06-11</lastmod></url>
   <url><loc>https://palinga.xyz/m-tt-tsr3-driver.html</loc><lastmod>2026-06-11</lastmod></url>
+  <url><loc>https://palinga.xyz/m-vokey-sm10.html</loc><lastmod>2026-06-11</lastmod></url>
+  <url><loc>https://palinga.xyz/m-vokey-sm9.html</loc><lastmod>2026-06-11</lastmod></url>
   <url><loc>https://palinga.xyz/m-xbox-series-x.html</loc><lastmod>2026-06-11</lastmod></url>
   <url><loc>https://palinga.xyz/m-xxio-12-driver.html</loc><lastmod>2026-06-11</lastmod></url>
   <url><loc>https://palinga.xyz/m-xxio-13-driver.html</loc><lastmod>2026-06-11</lastmod></url>
+  <url><loc>https://palinga.xyz/m-xxio-13-iron.html</loc><lastmod>2026-06-11</lastmod></url>
   <url><loc>https://palinga.xyz/privacy.html</loc><lastmod>2026-06-11</lastmod></url>
   <url><loc>https://palinga.xyz/terms.html</loc><lastmod>2026-06-11</lastmod></url>
 </urlset>

@@ -19,9 +19,14 @@ BASE_URL = "https://palinga.xyz"  # Cloudflare Pages 주소 (커스텀 도메인
 ADSENSE_CLIENT = "ca-pub-6840959424010586"  # 퍼즐마루와 동일 퍼블리셔
 SITE_NAME = "팔린가"
 
-CATEGORY_LABELS = {"gpu": "그래픽카드", "camera": "카메라", "golf": "골프채",
+CATEGORY_LABELS = {"gpu": "그래픽카드", "camera": "카메라", "golf": "골프 드라이버",
                    "console": "게임기", "tablet": "태블릿", "phone": "스마트폰",
-                   "laptop": "노트북", "audio": "이어폰·헤드폰", "watch": "스마트워치"}
+                   "laptop": "노트북", "audio": "이어폰·헤드폰", "watch": "스마트워치",
+                   "appliance": "생활가전", "monitor": "모니터", "cpu": "CPU",
+                   "peripheral": "키보드·마우스", "golfiron": "골프 아이언",
+                   "golfputter": "퍼터·웨지", "lens": "카메라 렌즈",
+                   "filmcam": "필름카메라", "actioncam": "액션캠·짐벌",
+                   "camping": "캠핑", "bike": "자전거"}
 BASIS_LABELS = {
     "sold": ("실거래 기준", "badge-sold"),
     "ratio": ("보정 호가 · 할인율 학습", "badge-adj"),
@@ -87,7 +92,7 @@ SHELL = """<!DOCTYPE html>
   <p class="note">시세는 중앙값·사분위 기준. "보정 호가"는 거래 표본 부족 시 호가를 체결 할인율(학습값) 또는
   분포 하단으로 보정한 추정치이며, 거래 표본이 쌓이면 자동으로 실거래 기준으로 전환됩니다.
   세트·부분 매물은 통계에서 제외. 거래완료는 스냅샷 추적 추정값으로 실제 체결가와 다를 수 있습니다.
-  ↗ 링크는 번개장터 원본 매물로 연결됩니다 — 직접 확인해보세요 (판매완료·삭제된 매물은 열리지 않을 수 있습니다).</p>
+  ↗ 링크는 번개장터·중고나라 원본 매물로 연결됩니다 — 직접 확인해보세요 (판매완료·삭제된 매물은 열리지 않을 수 있습니다).</p>
   <p class="note" style="border-top:none;padding-top:0">
     <a href="about.html" style="color:inherit">서비스 소개</a> ·
     <a href="privacy.html" style="color:inherit">개인정보처리방침</a> ·

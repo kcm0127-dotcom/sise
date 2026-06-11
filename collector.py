@@ -48,6 +48,15 @@ SWEEP_PAGE_CAP_BY_CAT = {
     "laptop": 60,
     "audio": 50,
     "watch": 30,
+    "appliance": 40,
+    "monitor": 40,
+    "cpu": 30,
+    "peripheral": 25,
+    "lens": 40,
+    "filmcam": 15,
+    "actioncam": 20,
+    "camping": 20,
+    "bike": 20,
 }
 QUERY_PAGES_PER_MODEL = 2
 DELAY_SEC = 0.4              # polite delay between requests
@@ -55,6 +64,11 @@ TIME_BUDGET = 33             # seconds per chunk-mode invocation
 USER_AGENT = "Mozilla/5.0 (sise-mvp; contact: kcm0127@gmail.com)"
 
 STATE_PATH = SNAP_DIR / ".collect_state.json"
+
+# ---- Joongna (중고나라) — SSR HTML parsing of web search pages ----
+JN_SEARCH = "https://web.joongna.com/search"
+JN_PAGES_PER_MODEL = 2       # 50 listings per page
+JN_CARD_RE = None            # compiled lazily in parse_joongna
 
 
 def fetch(params: dict) -> dict:
@@ -82,6 +96,57 @@ def slim(item: dict, model_id: str, category_key: str) -> dict:
     }
 
 
+def fetch_joongna(query: str, jn_category: str, page: int) -> str:
+    qs = urllib.parse.urlencode({"keyword": query, "category": jn_category,
+                                 "page": page + 1})  # joongna pages are 1-based
+    req = urllib.request.Request(f"{JN_SEARCH}?{qs}",
+                                 headers={"User-Agent": USER_AGENT.replace("sise-mvp", "Mozilla"),
+                                          "Accept-Language": "ko"})
+    with urllib.request.urlopen(req, timeout=20) as resp:
+        return resp.read().decode("utf-8", "replace")
+
+
+def parse_joongna(html: str, model_id: str, category_key: str,
+                  category_prefix: str) -> list[dict]:
+    """Parse SSR product cards: /product/{pid}, img alt = title, first ###,###원."""
+    import re
+    records = []
+    cards = re.split(r'(?=<a[^>]+href="/product/\d+")', html)
+    for c in cards:
+        m_pid = re.match(r'<a[^>]+href="/product/(\d+)"', c)
+        if not m_pid:
+            continue
+        m_alt = re.search(r'alt="(.*?)(?:\s*이미지)?"', c)
+        if not m_alt:
+            continue
+        head = c[:m_alt.start()]
+        if "판매완료" in head or "예약중" in head:   # overlay before the image
+            continue
+        m_price = re.search(r'>([\d,]{4,})\s*<[^>]*>\s*원', c) or \
+                  re.search(r'([\d,]{4,})\D{0,12}원', re.sub(r"<[^>]+>", "|", c))
+        if not m_price:
+            continue
+        pid = f"jn{m_pid.group(1)}"
+        records.append({
+            "pid": pid,
+            "model_id": model_id,
+            "category_key": category_key,
+            "name": m_alt.group(1),
+            "price": int(m_price.group(1).replace(",", "")),
+            "status": "",
+            # constrained by joongna category in the URL — tag with the
+            # bunjang prefix so the pipeline's category check passes
+            "category_id": category_prefix,
+            "num_faved": 0,
+            "update_time": 0,
+            "used": True,
+            "proshop": False,
+            "source": "joongna",
+            "url": f"https://web.joongna.com/product/{m_pid.group(1)}",
+        })
+    return records
+
+
 def build_jobs(catalog: dict, mode: str) -> list[dict]:
     """Job list: one entry per (sweep category id) or (query model)."""
     jobs = []
@@ -97,6 +162,16 @@ def build_jobs(catalog: dict, mode: str) -> list[dict]:
                 jobs.append({"kind": "query", "cat": cat_key, "mid": model["id"],
                              "q": model["query"], "page": 0,
                              "cap": min(QUERY_PAGES_PER_MODEL, MAX_PAGE + 1)})
+    if mode in ("hybrid", "chunk", "jn"):
+        for cat_key, cat in catalog["categories"].items():
+            jn_cat = cat.get("joongna_category")
+            if not jn_cat:
+                continue
+            for model in cat["models"]:
+                jobs.append({"kind": "jn", "cat": cat_key, "mid": model["id"],
+                             "q": model["query"], "jn_cat": jn_cat,
+                             "prefix": cat["bunjang_category_prefix"],
+                             "page": 0, "cap": JN_PAGES_PER_MODEL})
     return jobs
 
 
@@ -104,6 +179,16 @@ def run_job_page(job: dict, out, seen: set) -> bool:
     """Fetch one page of a job. Returns True if the job has more pages."""
     page = job["page"]
     try:
+        if job["kind"] == "jn":
+            html = fetch_joongna(job["q"], job["jn_cat"], page)
+            recs = parse_joongna(html, job["mid"], job["cat"], job["prefix"])
+            for r in recs:
+                if r["pid"] in seen:
+                    continue
+                seen.add(r["pid"])
+                out.write(json.dumps(r, ensure_ascii=False) + "\n")
+            job["page"] += 1
+            return bool(recs) and job["page"] < job["cap"]
         if job["kind"] == "sweep":
             data = fetch({"q": "", "f_category_id": job["cid"], "page": page,
                           "req_ref": "category"})
@@ -165,21 +250,31 @@ def main() -> None:
     out_path = SNAP_DIR / f"{today}.jsonl"
     tmp_path = out_path.with_suffix(".jsonl.tmp")
 
-    if mode == "chunk":
+    if mode in ("chunk", "jn-chunk", "cats-chunk"):
         # resumable: load or build job state, work for TIME_BUDGET, save, exit
+        # jn-chunk:   only joongna jobs, appended onto today's FINAL snapshot
+        # cats-chunk: all job kinds but only for the categories given as the
+        #             2nd CLI arg (comma-separated), appended onto the FINAL
+        #             snapshot — used to enrich after adding new categories
+        target = tmp_path if mode == "chunk" else out_path
         if STATE_PATH.exists():
             state = json.loads(STATE_PATH.read_text(encoding="utf-8"))
-            if state.get("date") != today:
+            if state.get("date") != today or state.get("mode") != mode:
                 state = None
         else:
             state = None
         if state is None:
-            state = {"date": today, "jobs": build_jobs(catalog, "chunk")}
-            if tmp_path.exists():
+            jobset = "jn" if mode == "jn-chunk" else "chunk"
+            jobs = build_jobs(catalog, jobset)
+            if mode == "cats-chunk":
+                cats = set((sys.argv[2] if len(sys.argv) > 2 else "").split(","))
+                jobs = [j for j in jobs if j["cat"] in cats]
+            state = {"date": today, "mode": mode, "jobs": jobs}
+            if mode == "chunk" and tmp_path.exists():
                 tmp_path.unlink()
-        seen = load_seen(tmp_path)
+        seen = load_seen(target)
         start = time.time()
-        with tmp_path.open("a", encoding="utf-8") as out:
+        with target.open("a", encoding="utf-8") as out:
             while state["jobs"] and time.time() - start < TIME_BUDGET:
                 job = state["jobs"][0]
                 if not run_job_page(job, out, seen):
@@ -189,7 +284,12 @@ def main() -> None:
             STATE_PATH.write_text(json.dumps(state), encoding="utf-8")
             print(f"CONTINUE jobs_left={len(state['jobs'])} collected={len(seen):,}")
         else:
-            finalize(tmp_path, out_path, len(seen))
+            if mode in ("jn-chunk", "cats-chunk"):
+                if STATE_PATH.exists():
+                    STATE_PATH.unlink()
+                print(f"snapshot enriched: {target} ({len(seen):,} listings)")
+            else:
+                finalize(tmp_path, out_path, len(seen))
             print("DONE")
         return
 
