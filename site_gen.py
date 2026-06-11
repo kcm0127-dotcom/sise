@@ -27,6 +27,15 @@ CATEGORY_LABELS = {"gpu": "그래픽카드", "camera": "카메라", "golf": "골
                    "golfputter": "퍼터·웨지", "lens": "카메라 렌즈",
                    "filmcam": "필름카메라", "actioncam": "액션캠·짐벌",
                    "camping": "캠핑", "bike": "자전거"}
+
+# 홈 화면 카테고리 카드 묶음 (표시 순서대로)
+CATEGORY_GROUPS = [
+    ("모바일·웨어러블", ["phone", "tablet", "watch", "audio"]),
+    ("PC·게임", ["gpu", "cpu", "laptop", "monitor", "peripheral", "console"]),
+    ("카메라·영상", ["camera", "lens", "filmcam", "actioncam"]),
+    ("골프", ["golf", "golfiron", "golfputter"]),
+    ("생활·취미", ["appliance", "camping", "bike"]),
+]
 BASIS_LABELS = {
     "sold": ("실거래 기준", "badge-sold"),
     "ratio": ("보정 호가 · 할인율 학습", "badge-adj"),
@@ -396,11 +405,24 @@ def main() -> None:
     pages: dict[str, str] = {}
 
     # --- home ---
-    cards = "".join(
-        f"<a class='card' href='cat-{ck}.html'><b>{CATEGORY_LABELS.get(ck, ck)}</b><br>"
-        f"<span class='meta'>{len(ids)}개 모델 · 활성 매물 {sum(models[i]['active_count'] for i in ids)}건</span></a>"
-        for ck, ids in by_cat.items()
-    )
+    def cat_card(ck: str) -> str:
+        ids = by_cat[ck]
+        return (f"<a class='card' href='cat-{ck}.html'><b>{CATEGORY_LABELS.get(ck, ck)}</b><br>"
+                f"<span class='meta'>{len(ids)}개 모델 · 활성 매물 "
+                f"{sum(models[i]['active_count'] for i in ids)}건</span></a>")
+
+    grouped_cks = {ck for _, cks in CATEGORY_GROUPS for ck in cks}
+    leftover = [ck for ck in by_cat if ck not in grouped_cks]
+    home_groups = CATEGORY_GROUPS + ([("기타", leftover)] if leftover else [])
+    cat_sections = []
+    for gtitle, cks in home_groups:
+        cks = sorted((ck for ck in cks if ck in by_cat),
+                     key=lambda ck: -sum(models[i]["active_count"] for i in by_cat[ck]))
+        if not cks:
+            continue
+        cat_sections.append(f"<h2>{gtitle}</h2>\n  <div class='cards'>"
+                            f"{''.join(cat_card(ck) for ck in cks)}</div>")
+    cards = "\n  ".join(cat_sections)
     recent_sales = sorted(
         (s | {"model_label": models[s['model_id']]['label'], "mid": s['model_id']}
          for m in models.values() for s in m["sold"]),
@@ -440,7 +462,7 @@ document.addEventListener('click', e => {{ if (!e.target.closest('.search')) hit
   <h1>이 물건, 실제로 얼마에 팔렸을까?</h1>
   <p class="sub">호가가 아닌 실거래 추정가로 보는 중고 시세.</p>
   <div class="search"><input id="q" type="search" placeholder="모델명 검색 — 예: 4070, A7M4, 스텔스" autocomplete="off"><div class="hits" id="hits"></div></div>
-  <div class="cards">{cards}</div>
+  {cards}
   <h2>최근 감지된 거래</h2>
   <table><thead><tr><th>날짜</th><th>모델</th><th>매물명</th><th class="num">최종 관측가</th></tr></thead>
   <tbody>{sales_rows}</tbody></table>
@@ -503,13 +525,14 @@ document.addEventListener('click', e => {{ if (!e.target.closest('.search')) hit
     # --- category pages ---
     for ck, ids in by_cat.items():
         label = CATEGORY_LABELS.get(ck, ck)
-        # group by series/brand (preserve catalog order of first appearance);
+        # group by series/brand (catalog order of first appearance, "기타"는 맨 뒤);
         # inside a group: models with data first, 수집 대기 at the bottom
         groups: dict[str, list[str]] = {}
         for mid in ids:
             groups.setdefault(models[mid].get("group") or "기타", []).append(mid)
         sections_html = []
-        for gname, gids in groups.items():
+        for gname, gids in sorted(groups.items(),
+                                  key=lambda kv: kv[0] == "기타"):
             gids = sorted(gids, key=lambda i: (models[i]["stats"] is None,
                                                -models[i]["active_count"]))
             sections_html.append(
