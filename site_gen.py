@@ -121,8 +121,15 @@ CSS = """
   .badge-wait { background:#eef1f4; color:var(--muted); }
   .cards { display:grid; grid-template-columns:repeat(auto-fill,minmax(210px,1fr)); gap:12px; }
   .card { background:var(--card); border-radius:16px; padding:18px 20px; text-decoration:none; color:var(--ink);
-    box-shadow:0 1px 4px rgba(2,32,71,.07); transition:transform .15s, box-shadow .15s; }
-  .card:hover { transform:translateY(-2px); box-shadow:0 8px 24px rgba(2,32,71,.13); }
+    border:1.5px solid transparent; box-shadow:0 1px 4px rgba(2,32,71,.07);
+    transition:transform .18s cubic-bezier(.2,.8,.3,1.1), box-shadow .18s, border-color .18s; }
+  .card:hover { transform:translateY(-3px); box-shadow:0 12px 28px rgba(255,111,15,.14);
+    border-color:rgba(255,111,15,.45); }
+  .card:active { transform:translateY(-1px) scale(.99); }
+  .card .ico-chip { display:inline-flex; align-items:center; justify-content:center;
+    width:38px; height:38px; border-radius:12px; background:var(--accent-bg);
+    font-size:20px; margin-bottom:8px; transition:transform .25s; }
+  .card:hover .ico-chip { transform:scale(1.12) rotate(-6deg); }
   .card b { font-size:16px; font-weight:700; }
   .card .meta { font-size:13px; color:var(--muted); }
   .hero { padding:8px 0 2px; }
@@ -141,6 +148,43 @@ CSS = """
     .price-big { font-size:28px; }
     .asof { display:none; }
     header.site nav a { padding:6px 8px; font-size:13px; }
+  }
+
+  /* ---- 2026-06 인터랙티브 폴리시 ---- */
+  header.site { transition:box-shadow .25s; }
+  header.site.scrolled { box-shadow:0 4px 18px rgba(2,32,71,.08); }
+  .hero h1 .grad { background:linear-gradient(92deg,var(--accent) 20%,#ff9a3d 80%);
+    -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; }
+  .stats-row { display:flex; flex-wrap:wrap; gap:8px; margin:14px 0 4px; }
+  .stat-pill { background:var(--card); border-radius:999px; padding:7px 15px; font-size:13px;
+    color:var(--sub2); font-weight:600; box-shadow:0 1px 3px rgba(2,32,71,.06); }
+  .stat-pill b { color:var(--accent); font-variant-numeric:tabular-nums; }
+  .reveal { opacity:0; transform:translateY(14px); transition:opacity .5s ease, transform .5s ease; }
+  .reveal.in { opacity:1; transform:none; }
+  .chip { border:1.5px solid transparent; cursor:pointer; transition:background .15s,color .15s,border-color .15s; }
+  .chip.on { background:var(--accent); color:#fff; }
+  .chip.on small { color:rgba(255,255,255,.8); }
+  th.sortable { cursor:pointer; user-select:none; }
+  th.sortable:hover { color:var(--accent); }
+  th.sortable::after { content:'↕'; opacity:.35; margin-left:4px; font-size:10px; }
+  th.sortable.asc::after { content:'↑'; opacity:1; color:var(--accent); }
+  th.sortable.desc::after { content:'↓'; opacity:1; color:var(--accent); }
+  tbody tr { transition:background .12s; }
+  .hits a.sel { background:var(--accent-bg); }
+  .price-card { background:linear-gradient(135deg,#fff 55%,var(--accent-bg)); position:relative; overflow:hidden; }
+  .price-card::after { content:''; position:absolute; right:-30px; top:-30px; width:130px; height:130px;
+    border-radius:50%; background:radial-gradient(circle,rgba(255,111,15,.12),transparent 70%); }
+  .chartbox svg circle { transition:r .12s; cursor:default; }
+  .chartbox svg circle:hover { r:6; }
+  #topbtn { position:fixed; right:18px; bottom:20px; width:44px; height:44px; border-radius:50%;
+    background:var(--card); color:var(--sub2); border:1px solid var(--line); font-size:18px; cursor:pointer;
+    box-shadow:0 4px 14px rgba(2,32,71,.14); opacity:0; pointer-events:none; transition:opacity .25s, transform .25s;
+    transform:translateY(8px); z-index:40; }
+  #topbtn.show { opacity:1; pointer-events:auto; transform:none; }
+  #topbtn:hover { color:var(--accent); border-color:var(--accent); }
+  @media (prefers-reduced-motion: reduce) {
+    .reveal { opacity:1; transform:none; transition:none; }
+    .card, .card .ico-chip { transition:none; }
   }
 """
 
@@ -188,7 +232,87 @@ SHELL = """<!DOCTYPE html>
     <a href="faq.html" style="color:inherit">자주 묻는 질문</a> ·
     문의 kcm0127@gmail.com</p>
 </div>
+<button id="topbtn" aria-label="맨 위로">↑</button>
 {searchjs}
+<script>
+(() => {{
+  const rm = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  // 헤더 그림자 + 맨 위로 버튼
+  const hd = document.querySelector('header.site'), tb = document.getElementById('topbtn');
+  addEventListener('scroll', () => {{
+    hd.classList.toggle('scrolled', scrollY > 8);
+    tb.classList.toggle('show', scrollY > 600);
+  }}, {{passive: true}});
+  tb.addEventListener('click', () => scrollTo({{top: 0, behavior: rm ? 'auto' : 'smooth'}}));
+  // 스크롤 등장 애니메이션
+  if (!rm && 'IntersectionObserver' in window) {{
+    const io = new IntersectionObserver(es => es.forEach(e => {{
+      if (e.isIntersecting) {{ e.target.classList.add('in'); io.unobserve(e.target); }}
+    }}), {{rootMargin: '0px 0px -8% 0px'}});
+    document.querySelectorAll('.card, .tbl, .chartbox, .price-card').forEach((el, i) => {{
+      el.classList.add('reveal'); el.style.transitionDelay = Math.min(i % 8 * 40, 280) + 'ms';
+      io.observe(el);
+    }});
+  }}
+  // 시세표 정렬 (숫자 컬럼 클릭)
+  document.querySelectorAll('.tbl table').forEach(tbl => {{
+    const ths = tbl.querySelectorAll('thead th');
+    ths.forEach((th, ci) => {{
+      if (ci === 0) return;
+      th.classList.add('sortable');
+      th.addEventListener('click', () => {{
+        const dir = th.classList.contains('desc') ? 1 : -1;
+        ths.forEach(t => t.classList.remove('asc', 'desc'));
+        th.classList.add(dir === 1 ? 'asc' : 'desc');
+        const tb2 = tbl.querySelector('tbody');
+        [...tb2.rows].map(r => [parseFloat((r.cells[ci]?.textContent || '').replace(/[^0-9.-]/g, '')) || 0, r])
+          .sort((a, b) => dir * (a[0] - b[0])).forEach(([, r]) => tb2.appendChild(r));
+      }});
+    }});
+  }});
+  // 그룹 필터 칩 (카테고리 페이지)
+  const chips = document.querySelectorAll('.chip[data-g]');
+  if (chips.length) {{
+    const secs = document.querySelectorAll('[data-gsec]');
+    chips.forEach(ch => ch.addEventListener('click', ev => {{
+      ev.preventDefault();
+      const g = ch.dataset.g, isOn = ch.classList.contains('on');
+      chips.forEach(c => c.classList.remove('on'));
+      if (isOn || g === '*') {{ secs.forEach(s => s.style.display = ''); return; }}
+      ch.classList.add('on');
+      secs.forEach(s => s.style.display = (s.dataset.gsec === g) ? '' : 'none');
+      scrollTo({{top: 0, behavior: rm ? 'auto' : 'smooth'}});
+    }}));
+  }}
+  // 모델 페이지: 시세 카운트업
+  const pb = document.querySelector('.price-big');
+  if (pb && !rm) {{
+    const txt = pb.textContent, num = parseInt(txt.replace(/[^0-9]/g, ''), 10);
+    if (num > 0) {{
+      const t0 = performance.now(), DUR = 700;
+      const tick = t => {{
+        const p = Math.min((t - t0) / DUR, 1), e = 1 - Math.pow(1 - p, 3);
+        pb.textContent = Math.round(num * e).toLocaleString('ko-KR') + '원';
+        if (p < 1) requestAnimationFrame(tick); else pb.textContent = txt;
+      }};
+      requestAnimationFrame(tick);
+    }}
+  }}
+  // 검색 키보드 내비게이션
+  const inp = document.getElementById('q'), hits = document.getElementById('hits');
+  if (inp && hits) inp.addEventListener('keydown', e => {{
+    const as = [...hits.querySelectorAll('a[href]')];
+    if (!as.length) return;
+    let i = as.findIndex(a => a.classList.contains('sel'));
+    if (e.key === 'ArrowDown' || e.key === 'ArrowUp') {{
+      e.preventDefault();
+      i = (i + (e.key === 'ArrowDown' ? 1 : -1) + as.length) % as.length;
+      as.forEach(a => a.classList.remove('sel')); as[i].classList.add('sel');
+    }} else if (e.key === 'Enter' && i >= 0) {{ location.href = as[i].href; }}
+    else if (e.key === 'Escape') {{ hits.style.display = 'none'; }}
+  }});
+}})();
+</script>
 {script}
 </body>
 </html>
@@ -529,7 +653,7 @@ document.addEventListener('click', e => {{ if (!e.target.closest('.search')) hit
         names = " · ".join(CATEGORY_LABELS.get(ck, ck) for ck in cks[:4])
         more = f" 외 {len(cks) - 4}" if len(cks) > 4 else ""
         return (f"<a class='card' href='g-{gslug}.html'>"
-                f"<span style='font-size:21px'>{gicon}</span> <b>{gtitle}</b><br>"
+                f"<div class='ico-chip'>{gicon}</div><br><b>{gtitle}</b><br>"
                 f"<span class='meta'>{names}{more}</span><br>"
                 f"<span class='meta'>카테고리 {len(cks)} · 모델 {n_models} · "
                 f"매물 {n_active:,}건</span></a>")
@@ -553,10 +677,18 @@ document.addEventListener('click', e => {{ if (!e.target.closest('.search')) hit
         "<a class='card' href='" + g['slug'] + ".html'><b>" + g['title']
         + "</b><br><span class='meta'>" + g['desc'] + "</span></a>"
         for g in GUIDES)
+    n_active_all = sum(m["active_count"] for m in models.values())
+    n_sold_all = sum(len(m["sold"]) for m in models.values())
     home_body = f"""
   <div class="hero">
-  <h1>이 물건, 실제로 얼마에 팔렸을까?</h1>
+  <h1>이 물건, <span class="grad">실제로 얼마에</span> 팔렸을까?</h1>
   <p class="sub">호가가 아닌 실거래 추정가로 보는 중고 시세.</p>
+  <div class="stats-row">
+    <span class="stat-pill">모델 <b>{len(models):,}</b>개</span>
+    <span class="stat-pill">추적 중인 매물 <b>{n_active_all:,}</b>건</span>
+    <span class="stat-pill">감지된 거래 <b>{n_sold_all:,}</b>건</span>
+    <span class="stat-pill">매일 갱신 · {as_of}</span>
+  </div>
   </div>
   {cards}
   <h2>최근 감지된 거래</h2>
@@ -647,17 +779,22 @@ document.addEventListener('click', e => {{ if (!e.target.closest('.search')) hit
         sorted_groups = sorted(groups.items(), key=lambda kv: kv[0] == "기타")
         chips_html = ""
         if len(sorted_groups) > 1:
-            chips_html = "<div class='chips'>" + "".join(
-                f"<a class='chip' href='#g{i}'>{gname} <small>{len(gids)}</small></a>"
-                for i, (gname, gids) in enumerate(sorted_groups)) + "</div>"
+            chips_html = ("<div class='chips'>"
+                          + "<a class='chip' href='#' data-g='*'>전체</a>"
+                          + "".join(
+                              f"<a class='chip' href='#g{i}' data-g='g{i}'>{gname} "
+                              f"<small>{len(gids)}</small></a>"
+                              for i, (gname, gids) in enumerate(sorted_groups))
+                          + "</div>")
         sections_html = []
         for i, (gname, gids) in enumerate(sorted_groups):
             gids = sorted(gids, key=lambda i: (models[i]["stats"] is None,
                                                -models[i]["active_count"]))
             sections_html.append(
+                f"<div data-gsec='g{i}'>"
                 f"<h2 id='g{i}'>{gname} <span class='cnt'>{len(gids)}</span></h2>\n"
                 f"  <div class='tbl'><table>{TABLE_HEAD}"
-                f"<tbody>{model_rows(models, gids)}</tbody></table></div>")
+                f"<tbody>{model_rows(models, gids)}</tbody></table></div></div>")
         body = f"""
   <div class="crumb"><a href="index.html">홈</a> › <a href="g-{gslug}.html">{gtitle}</a> › {label}</div>
   <h1>{label} 시세표</h1>
