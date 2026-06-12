@@ -56,7 +56,25 @@ SWEEP_PAGE_CAP_BY_CAT = {
     "filmcam": 15,
     "actioncam": 20,
     "camping": 20,
-    "bike": 20,
+    "bike": 25,
+    # 2026-06 확장 카테고리
+    "projector": 20,
+    "speaker": 20,
+    "tv": 15,
+    "kitchen": 10,
+    "beauty": 15,
+    "babygear": 8,
+    "lego": 30,
+    "drone": 12,
+    "ebook": 6,
+    "kickboard": 8,
+    "tennis": 8,
+    "luxwatch": 20,
+    "guitar": 15,
+    "piano": 15,
+    "nas": 12,
+    "tools": 20,
+    "healthgear": 12,
 }
 QUERY_PAGES_PER_MODEL = 2
 DELAY_SEC = 0.4              # polite delay between requests

@@ -364,6 +364,9 @@ APPLIANCES = [
     ("lg-styler", "LG 스타일러", "LG 스타일러", r"스타일러", (20, 120)),
     ("bespoke-jet", "삼성 비스포크 제트", "비스포크 제트", r"비스포크\s*제트|bespoke\s*jet", (15, 70)),
     ("balmuda-toaster", "발뮤다 토스터", "발뮤다 토스터", r"발뮤다.{0,8}(토스터|toaster)", (5, 20)),
+    ("xiaomi-miair", "샤오미 미에어", "샤오미 공기청정기", r"미에어|mi\s*air", (3, 25)),
+    ("lg-puricare360", "LG 퓨리케어 360", "LG 퓨리케어 360", r"(?=.*퓨리케어)(?=.*360)", (15, 80)),
+    ("dyson-purifier", "다이슨 공기청정기", "다이슨 공기청정기", r"(?=.*다이슨)(?=.*(퓨어|청정|tp0?\d|hp0?\d))", (15, 70)),
 ]
 
 # ---------------------------------------------------------------- Monitor
@@ -500,6 +503,9 @@ CAMPINGS = [
     ("snowpeak-amenity", "스노우피크 어메니티돔", "스노우피크 어메니티돔", r"어메니티\s*돔?|amenity", (15, 45)),
     ("nordisk-asgard", "노르디스크 아스가르드", "노르디스크 아스가르드", r"아스가르드|asgard", (30, 100)),
     ("coleman-infinity", "콜맨 인피니티 체어", "콜맨 인피니티 체어", r"인피니티\s*체어|infinity\s*chair", (3, 12)),
+    ("ecoflow-river2", "에코플로우 리버2", "에코플로우 리버2", r"(리버|river)\s*2", (20, 70)),
+    ("ecoflow-delta2", "에코플로우 델타2", "에코플로우 델타2", r"(델타|delta)\s*2", (50, 130)),
+    ("jackery-1000", "잭커리 1000", "잭커리 1000", r"(?=.*(잭커리|jackery))(?=.*1000)", (40, 110)),
 ]
 
 # ---------------------------------------------------------------- Bike (folding)
@@ -511,6 +517,291 @@ BIKES = [
     ("brompton-aline", "브롬톤 A라인", "브롬톤 A라인", r"a\s*-?라인|a\s*line", (60, 130)),
     ("dahon", "다혼 폴딩 자전거", "다혼 자전거", r"다혼|dahon", (10, 80)),
     ("strida", "스트라이다", "스트라이다", r"스트라이다|strida", (15, 60)),
+    # road
+    ("spec-tarmac", "스페셜라이즈드 타막", "스페셜라이즈드 타막", r"타막|tarmac", (100, 600)),
+    ("giant-tcr", "자이언트 TCR", "자이언트 TCR", r"\btcr\b", (60, 350)),
+    ("trek-madone", "트렉 마돈", "트렉 마돈", r"마돈|madone", (100, 600)),
+]
+
+# ---------------------------------------------------------------- Projector
+PROJECTOR_EXCLUDE = ["스크린만", "브라켓", "마운트", "램프만", "리모컨만", "케이스만", "천장"]
+PROJECTORS = [
+    ("lg-hu70", "LG 시네빔 HU70", "LG 시네빔 HU70", r"hu70", (40, 120)),
+    ("lg-pf610", "LG 시네빔 PF610", "LG 시네빔 PF610", r"pf610", (20, 70)),
+    ("lg-pf50k", "LG 시네빔 PF50K", "LG 시네빔 PF50K", r"pf50k", (15, 50)),
+    ("samsung-freestyle", "삼성 더 프리스타일", "삼성 더 프리스타일", r"프리스타일|freestyle", (20, 80)),
+    ("xgimi-horizon", "엑스지미 호라이즌", "엑스지미 호라이즌", r"호라이즌|horizon", (40, 180)),
+    ("xgimi-halo", "엑스지미 할로", "엑스지미 할로", r"(?=.*(엑스지미|샤오미|xgimi))(?=.*(할로|halo))", (30, 90)),
+    ("xgimi-mogo", "엑스지미 모고", "엑스지미 모고", r"모고|mogo", (15, 80)),
+    ("nebula-capsule", "앤커 네뷸라 캡슐", "네뷸라 캡슐", r"(?=.*(네뷸라|nebula))(?=.*(캡슐|capsule))", (10, 60)),
+]
+
+# ---------------------------------------------------------------- Speaker / soundbar
+SPEAKER_EXCLUDE = ["커버만", "스탠드만", "케이블", "브라켓", "리모컨만"]
+SPEAKERS = [
+    ("marshall-stanmore", "마샬 스탠모어", "마샬 스탠모어", r"스탠모어|stanmore", (15, 60)),
+    ("marshall-acton", "마샬 액턴", "마샬 액턴", r"액턴|액톤|acton", (10, 45)),
+    ("marshall-woburn", "마샬 우번", "마샬 우번", r"우번|woburn", (25, 90)),
+    ("bose-soundlink", "보스 사운드링크", "보스 사운드링크", r"사운드링크|soundlink", (5, 45)),
+    ("jbl-charge5", "JBL 차지5", "JBL 차지5", r"(차지|charge)\s*5", (5, 22)),
+    ("jbl-flip6", "JBL 플립6", "JBL 플립6", r"(플립|flip)\s*6", (4, 16)),
+    ("homepod-mini", "애플 홈팟 미니", "홈팟 미니", r"(홈팟|homepod)\s*(미니|mini)", (5, 16)),
+    ("homepod2", "애플 홈팟 2세대", "애플 홈팟", r"(홈팟|homepod)(?!\s*(미니|mini))", (15, 45)),
+    ("samsung-q930", "삼성 사운드바 Q930", "삼성 사운드바 Q930", r"q930", (25, 100)),
+    ("sonos-era100", "소노스 에라 100", "소노스 Era 100", r"(에라|era)\s*100", (15, 45)),
+]
+
+# ---------------------------------------------------------------- TV
+TV_EXCLUDE = ["브라켓", "벽걸이만", "리모컨만", "스탠드만", "다리만"]
+TVS = [
+    ("lg-oled-c1", "LG OLED C1", "LG OLED C1", r"(?=.*(올레드|oled))(?=.*c1)", (40, 250)),
+    ("lg-oled-c2", "LG OLED C2", "LG OLED C2", r"(?=.*(올레드|oled))(?=.*c2)", (50, 300)),
+    ("lg-oled-c3", "LG OLED C3", "LG OLED C3", r"(?=.*(올레드|oled))(?=.*c3)", (60, 350)),
+    ("lg-oled-c4", "LG OLED C4", "LG OLED C4", r"(?=.*(올레드|oled))(?=.*c4)", (70, 400)),
+    ("samsung-frame", "삼성 더 프레임", "삼성 더 프레임", r"더\s*프레임|the\s*frame", (30, 250)),
+    ("samsung-qn90", "삼성 Neo QLED QN90", "삼성 QN90", r"qn90", (50, 350)),
+    ("lg-stanbyme", "LG 스탠바이미", "LG 스탠바이미", r"스탠바이\s*미(?!\s*고)|stanbyme(?!\s*go)", (30, 95)),
+    ("lg-stanbyme-go", "LG 스탠바이미 고", "스탠바이미 고", r"스탠바이\s*미\s*고|stanbyme\s*go", (50, 120)),
+]
+
+# ---------------------------------------------------------------- Kitchen (coffee 중심)
+KITCHEN_EXCLUDE = ["캡슐만", "부품", "필터만", "호환", "포터필터만", "원두"]
+KITCHENS = [
+    ("nespresso-vertuo", "네스프레소 버츄오", "네스프레소 버츄오", r"버츄오|vertuo", (5, 40)),
+    ("delonghi-dinamica", "드롱기 디나미카", "드롱기 디나미카", r"디나미카|dinamica", (40, 120)),
+    ("delonghi-magnifica", "드롱기 매그니피카", "드롱기 매그니피카", r"매그니피카|magnifica", (25, 110)),
+    ("breville-878", "브레빌 878", "브레빌 878", r"878", (60, 150)),
+    ("breville-870", "브레빌 870", "브레빌 870", r"870", (40, 110)),
+    ("moccamaster", "모카마스터", "모카마스터", r"모카\s*마스터|moccamaster", (15, 50)),
+    ("thermomix", "테르모믹스 TM6", "테르모믹스", r"테르모믹스|thermomix", (80, 200)),
+]
+
+# ---------------------------------------------------------------- Beauty appliance
+BEAUTY_EXCLUDE = ["노즐만", "거치대", "케이스만", "파우치"]
+BEAUTYS = [
+    ("dyson-airstrait", "다이슨 에어스트레이트", "다이슨 에어스트레이트", r"에어\s*스트레이트|airstrait", (25, 60)),
+    ("lg-pra-l", "LG 프라엘", "LG 프라엘", r"프라엘", (5, 80)),
+    ("medicube-booster", "메디큐브 부스터프로", "메디큐브 부스터프로", r"부스터\s*프로|booster\s*pro", (10, 35)),
+    ("braun-series9", "브라운 시리즈9", "브라운 시리즈9 면도기", r"시리즈\s*9|series\s*9", (8, 35)),
+    ("ghd-platinum", "ghd 플래티넘", "ghd 고데기", r"ghd", (8, 30)),
+]
+
+# ---------------------------------------------------------------- Baby gear
+BABY_EXCLUDE = ["대여", "렌탈", "부품", "컵홀더", "커버만", "악세사리", "어댑터", "모기장", "풋머프"]
+BABYS = [
+    ("bugaboo-fox", "부가부 폭스", "부가부 폭스", r"(?=.*(부가부|bugaboo))(?=.*(폭스|fox))", (40, 160)),
+    ("bugaboo-bee", "부가부 비", "부가부 비", r"(?=.*(부가부|bugaboo))(?=.*(비\s*[3-6]|bee))", (30, 110)),
+    ("stokke-xplory", "스토케 익스플로리", "스토케 익스플로리", r"익스플로리|xplory", (40, 160)),
+    ("babyzen-yoyo", "베이비젠 요요", "베이비젠 요요", r"요요\s*[2-3]?|yoyo", (30, 100)),
+    ("cybex-priam", "싸이벡스 프리암", "싸이벡스 프리암", r"프리암|priam", (50, 180)),
+    ("cybex-mios", "싸이벡스 미오스", "싸이벡스 미오스", r"미오스|mios", (40, 140)),
+    ("cybex-cloud", "싸이벡스 클라우드 카시트", "싸이벡스 클라우드", r"(?=.*(싸이벡스|사이벡스|cybex))(?=.*(클라우드|cloud))", (20, 90)),
+    ("cybex-sirona", "싸이벡스 시로나 카시트", "싸이벡스 시로나", r"시로나|sirona", (15, 70)),
+    ("doona-carseat", "두나 카시트", "두나 카시트", r"두나|doona", (25, 90)),
+]
+
+# ---------------------------------------------------------------- Lego
+LEGO_EXCLUDE = ["호환", "레핀", "나노블럭", "부품", "브릭만", "미니피규어만", "피규어만", "설명서만", "박스만"]
+LEGOS = [
+    ("lego-75192", "레고 밀레니엄 팔콘 75192", "레고 75192", r"75192|밀레니엄\s*팔콘", (50, 130)),
+    ("lego-10294", "레고 타이타닉 10294", "레고 타이타닉", r"10294|타이타닉", (45, 110)),
+    ("lego-10307", "레고 에펠탑 10307", "레고 에펠탑", r"10307|에펠", (45, 100)),
+    ("lego-71043", "레고 호그와트 성 71043", "레고 호그와트 성", r"71043|호그와트\s*성", (30, 90)),
+    ("lego-10276", "레고 콜로세움 10276", "레고 콜로세움", r"10276|콜로세움", (35, 90)),
+    ("lego-42083", "레고 부가티 시론 42083", "레고 부가티 시론", r"42083|시론", (25, 70)),
+    ("lego-42115", "레고 람보르기니 42115", "레고 람보르기니", r"42115|시안", (22, 60)),
+    ("lego-42143", "레고 페라리 데이토나 42143", "레고 42143", r"42143", (25, 60)),
+]
+
+# ---------------------------------------------------------------- Drone
+DRONE_EXCLUDE = ["배터리만", "프로펠러", "케이스만", "가드", "부품", "조종기만"]
+DRONES = [
+    ("dji-mini2", "DJI 미니2", "DJI 미니2", r"(미니|mini)\s*2", (20, 65)),
+    ("dji-mini3-pro", "DJI 미니3 프로", "DJI 미니3 프로", r"(미니|mini)\s*3\s*(프로|pro)", (40, 100)),
+    ("dji-mini3", "DJI 미니3", "DJI 미니3", r"(미니|mini)\s*3(?!\s*(프로|pro))", (25, 75)),
+    ("dji-mini4-pro", "DJI 미니4 프로", "DJI 미니4 프로", r"(미니|mini)\s*4", (50, 130)),
+    ("dji-air2s", "DJI 에어2S", "DJI 에어2S", r"(에어|air)\s*2\s*s", (40, 110)),
+    ("dji-air3", "DJI 에어3", "DJI 에어3", r"(에어|air)\s*3", (60, 170)),
+    ("dji-mavic3", "DJI 매빅3", "DJI 매빅3", r"(매빅|mavic)\s*3", (80, 280)),
+    ("dji-avata2", "DJI 아바타2", "DJI 아바타2", r"(아바타|avata)\s*2", (40, 120)),
+    ("dji-neo", "DJI 네오", "DJI 네오", r"(?=.*dji)(?=.*(네오|neo))", (15, 50)),
+]
+
+# ---------------------------------------------------------------- E-book reader
+EBOOK_EXCLUDE = ["케이스만", "커버만", "필름"]
+EBOOKS = [
+    ("ridi-paper4", "리디 페이퍼4", "리디 페이퍼4", r"(페이퍼|paper)\s*4", (10, 32)),
+    ("ridi-paper-pro", "리디 페이퍼 프로", "리디 페이퍼 프로", r"(페이퍼|paper)\s*(프로|pro)", (15, 42)),
+    ("kindle-paperwhite", "킨들 페이퍼화이트", "킨들 페이퍼화이트", r"페이퍼\s*화이트|paperwhite", (5, 28)),
+    ("kindle-oasis", "킨들 오아시스", "킨들 오아시스", r"오아시스|oasis", (10, 38)),
+    ("crema-motif", "크레마 모티프", "크레마 모티프", r"모티프", (10, 32)),
+    ("crema-s", "크레마S", "크레마S", r"크레마\s*s\b", (5, 22)),
+    ("onyx-boox", "오닉스 북스", "오닉스 북스", r"오닉스|boox", (10, 70)),
+    ("remarkable2", "리마커블2", "리마커블2", r"리마커블|remarkable", (25, 70)),
+]
+
+# ---------------------------------------------------------------- E-kickboard
+KICKBOARD_EXCLUDE = ["배터리만", "타이어", "부품", "수리", "킥보드 거치대"]
+KICKBOARDS = [
+    ("xiaomi-scooter", "샤오미 미지아 전동킥보드", "샤오미 전동킥보드", r"샤오미|미지아", (5, 50)),
+    ("ninebot-max", "나인봇 맥스", "나인봇 맥스", r"(?=.*나인봇)(?=.*(맥스|max))", (25, 80)),
+    ("ninebot-f2", "나인봇 F2", "나인봇 F2", r"(?=.*나인봇)(?=.*f2)", (20, 60)),
+    ("dualtron-mini", "듀얼트론 미니", "듀얼트론 미니", r"(?=.*듀얼트론)(?=.*미니)", (40, 120)),
+]
+
+# ---------------------------------------------------------------- Fishing reel
+FISHING_EXCLUDE = ["로드만", "낚싯대만", "케이스만", "라인", "줄만", "의류"]
+FISHINGS = [
+    ("shimano-stella", "시마노 스텔라", "시마노 스텔라", r"스텔라|stella", (25, 130)),
+    ("shimano-twinpower", "시마노 트윈파워", "시마노 트윈파워", r"트윈\s*파워|twin\s*power", (20, 75)),
+    ("shimano-stradic", "시마노 스트라딕", "시마노 스트라딕", r"스트라딕|stradic", (10, 40)),
+    ("daiwa-certate", "다이와 세르테이트", "다이와 세르테이트", r"세르테이트|certate", (30, 95)),
+    ("daiwa-caldia", "다이와 칼디아", "다이와 칼디아", r"칼디아|caldia", (10, 40)),
+    ("daiwa-exist", "다이와 이그지스트", "다이와 이그지스트", r"이그지스트|exist", (50, 150)),
+    ("daiwa-saltiga", "다이와 솔티가", "다이와 솔티가", r"솔티가|saltiga", (40, 150)),
+]
+
+# ---------------------------------------------------------------- Tennis racket
+TENNIS_EXCLUDE = ["가방만", "케이스만", "의류"]  # "그립"은 라켓 제목에 흔해(그립2 등) 제외하면 안 됨
+TENNISES = [
+    ("babolat-puredrive", "바볼랏 퓨어드라이브", "바볼랏 퓨어드라이브", r"퓨어\s*드라이브|pure\s*drive", (10, 38)),
+    ("babolat-pureaero", "바볼랏 퓨어에어로", "바볼랏 퓨어에어로", r"퓨어\s*에어로|pure\s*aero", (10, 38)),
+    ("wilson-blade", "윌슨 블레이드", "윌슨 블레이드", r"(?=.*(윌슨|wilson))(?=.*(블레이드|blade))", (10, 38)),
+    ("wilson-prostaff", "윌슨 프로스태프", "윌슨 프로스태프", r"프로\s*스태프|pro\s*staff", (10, 38)),
+    ("yonex-ezone", "요넥스 이존", "요넥스 이존", r"이존|ezone", (10, 38)),
+    ("yonex-vcore", "요넥스 브이코어", "요넥스 브이코어", r"브이코어|vcore", (10, 38)),
+    ("head-speed", "헤드 스피드", "헤드 스피드 라켓", r"(?=.*(헤드|head))(?=.*(스피드|speed))", (8, 38)),
+    ("head-radical", "헤드 래디컬", "헤드 래디컬", r"래디컬|radical", (8, 35)),
+]
+
+# ---------------------------------------------------------------- Watch (luxury / mechanical)
+LUXWATCH_EXCLUDE = ["줄만", "밴드만", "박스만", "베젤만", "부품", "레플리카", "레플", "미러급", "커스텀"]
+LUXWATCHES = [
+    ("rolex-submariner", "롤렉스 서브마리너", "롤렉스 서브마리너", r"서브마리너|submariner", (500, 3500)),
+    ("rolex-datejust", "롤렉스 데이트저스트", "롤렉스 데이트저스트", r"데이트저스트|datejust", (600, 3000)),
+    ("rolex-daytona", "롤렉스 데이토나", "롤렉스 데이토나", r"(?=.*(롤렉스|rolex))(?=.*(데이토나|daytona))", (1500, 7000)),
+    ("omega-speedmaster", "오메가 스피드마스터", "오메가 스피드마스터", r"스피드마스터|speedmaster", (250, 1500)),
+    ("omega-seamaster", "오메가 씨마스터", "오메가 씨마스터", r"씨마스터|seamaster", (200, 1300)),
+    ("tudor-blackbay", "튜더 블랙베이", "튜더 블랙베이", r"블랙\s*베이|black\s*bay", (250, 800)),
+    ("cartier-tank", "까르띠에 탱크", "까르띠에 탱크", r"(?=.*(까르띠에|cartier))(?=.*(탱크|tank))", (300, 2000)),
+    ("cartier-santos", "까르띠에 산토스", "까르띠에 산토스", r"산토스|santos", (350, 1800)),
+    ("grandseiko", "그랜드 세이코", "그랜드 세이코", r"그랜드\s*세이코|grand\s*seiko", (200, 1000)),
+    ("hamilton-khaki", "해밀턴 카키", "해밀턴 카키", r"(?=.*(해밀턴|hamilton))(?=.*(카키|khaki))", (30, 160)),
+    ("tissot-prx", "티쏘 PRX", "티쏘 PRX", r"prx", (20, 90)),
+]
+
+# ---------------------------------------------------------------- Luxury bag
+LUXBAG_EXCLUDE = ["더스트백만", "박스만", "스트랩만", "미러급", "레플", "이미테이션", "차용"]
+LUXBAGS = [
+    ("lv-neverfull", "루이비통 네버풀", "루이비통 네버풀", r"네버풀|neverfull", (60, 350)),
+    ("lv-speedy", "루이비통 스피디", "루이비통 스피디", r"(?=.*(루이비통|louis))(?=.*(스피디|speedy))", (60, 300)),
+    ("chanel-classic", "샤넬 클래식 플랩백", "샤넬 클래식", r"(?=.*샤넬)(?=.*(클래식|클플))(?=.*(미디움|미듐|스몰|점보|플랩))", (700, 2200)),
+    ("chanel-woc", "샤넬 WOC", "샤넬 WOC", r"(?=.*샤넬)(?=.*(woc|월렛\s*온\s*체인))", (300, 800)),
+    ("goyard-stlouis", "고야드 생루이", "고야드 생루이", r"생루이|st\.?\s*louis", (100, 350)),
+    ("prada-hobo", "프라다 호보백", "프라다 호보", r"(?=.*프라다)(?=.*(호보|hobo))", (60, 280)),
+    ("gucci-marmont", "구찌 마몬트", "구찌 마몬트", r"마몬트|marmont", (60, 220)),
+]
+
+# ---------------------------------------------------------------- Guitar
+GUITAR_EXCLUDE = ["케이스만", "스트랩", "픽업만", "넥만", "바디만", "스탠드", "기타줄", "현만"]
+GUITARS = [
+    ("fender-strat", "펜더 스트라토캐스터", "펜더 스트라토캐스터", r"(?=.*(펜더|fender))(?=.*(스트라토|스트랫|strat))", (30, 350)),
+    ("fender-tele", "펜더 텔레캐스터", "펜더 텔레캐스터", r"(?=.*(펜더|fender))(?=.*(텔레캐스터|텔레|tele))", (30, 350)),
+    ("squier-strat", "스콰이어 스트라토캐스터", "스콰이어 스트랫", r"스콰이어|스퀴어|squier", (10, 70)),
+    ("gibson-lespaul", "깁슨 레스폴", "깁슨 레스폴", r"(?=.*(깁슨|gibson))(?=.*(레스폴|les\s*paul))", (100, 600)),
+    ("epiphone-lespaul", "에피폰 레스폴", "에피폰 레스폴", r"(?=.*(에피폰|epiphone))(?=.*(레스폴|les\s*paul))", (20, 130)),
+    ("martin-d28", "마틴 D-28", "마틴 D28", r"(?=.*(마틴|martin))(?=.*d-?\s*28)", (150, 450)),
+    ("taylor-314", "테일러 314ce", "테일러 314", r"(?=.*(테일러|taylor))(?=.*314)", (100, 280)),
+    ("yamaha-fg", "야마하 FG 통기타", "야마하 FG", r"(?=.*(야마하|yamaha))(?=.*fg-?\d)", (5, 45)),
+]
+
+# ---------------------------------------------------------------- Keyboard instrument / synth
+PIANO_EXCLUDE = ["의자만", "스탠드만", "페달만", "커버만", "악보"]
+PIANOS = [
+    ("yamaha-p125", "야마하 P-125", "야마하 P125", r"p-?\s*125", (30, 75)),
+    ("yamaha-p225", "야마하 P-225", "야마하 P225", r"p-?\s*225", (40, 95)),
+    ("roland-fp30x", "롤랜드 FP-30X", "롤랜드 FP-30X", r"fp-?\s*30", (35, 85)),
+    ("casio-pxs1100", "카시오 PX-S1100", "카시오 PX-S1100", r"px-?\s*s?1100", (25, 65)),
+    ("korg-minilogue", "코르그 미니로그", "코르그 미니로그", r"미니로그|minilogue", (30, 85)),
+    ("korg-microkorg", "코르그 마이크로코르그", "마이크로코르그", r"마이크로\s*코르그|마이크로\s*콜그|microkorg", (20, 65)),
+    ("yamaha-u3", "야마하 U3 업라이트", "야마하 U3 피아노", r"(?=.*야마하)(?=.*u3)", (100, 450)),
+]
+
+# ---------------------------------------------------------------- Mac desktop
+MACDESK_EXCLUDE = ["모니터만", "키보드만", "마우스만"]
+MACDESKS = [
+    ("mac-mini-m1", "맥미니 M1", "맥미니 M1", r"(?=.*(맥\s*미니|맥미니|mac\s*mini))(?=.*m1)", (30, 75)),
+    ("mac-mini-m2", "맥미니 M2", "맥미니 M2", r"(?=.*(맥\s*미니|맥미니|mac\s*mini))(?=.*m2)", (45, 130)),
+    ("mac-mini-m4", "맥미니 M4", "맥미니 M4", r"(?=.*(맥\s*미니|맥미니|mac\s*mini))(?=.*m4)", (60, 170)),
+    ("mac-studio-m1max", "맥스튜디오 M1 Max", "맥스튜디오 M1", r"(?=.*(맥\s*스튜디오|맥스튜디오|mac\s*studio))(?=.*m1)", (100, 280)),
+    ("mac-studio-m2max", "맥스튜디오 M2 Max", "맥스튜디오 M2", r"(?=.*(맥\s*스튜디오|맥스튜디오|mac\s*studio))(?=.*m2)", (140, 380)),
+    ("imac-m1", "아이맥 M1", "아이맥 M1", r"(?=.*(아이맥|imac))(?=.*m1)", (55, 160)),
+    ("imac-m3", "아이맥 M3", "아이맥 M3", r"(?=.*(아이맥|imac))(?=.*m3)", (95, 230)),
+    ("imac-m4", "아이맥 M4", "아이맥 M4", r"(?=.*(아이맥|imac))(?=.*m4)", (115, 270)),
+]
+
+# ---------------------------------------------------------------- NAS / network
+NAS_EXCLUDE = ["하드만", "hdd만", "케이스만", "랜선", "케이블"]
+NASES = [
+    ("synology-ds220plus", "시놀로지 DS220+", "시놀로지 220", r"ds-?220\+|220\s*plus|220\s*플러스", (15, 90)),
+    ("synology-ds224plus", "시놀로지 DS224+", "시놀로지 224", r"ds-?224", (35, 75)),
+    ("synology-ds920plus", "시놀로지 DS920+", "시놀로지 920", r"ds-?920", (50, 115)),
+    ("synology-ds923plus", "시놀로지 DS923+", "시놀로지 923", r"ds-?923", (60, 135)),
+    ("asus-ax88u", "에이수스 AX88U 공유기", "에이수스 AX88U", r"ax88u", (10, 45)),
+]
+
+# ---------------------------------------------------------------- Power tools
+TOOL_EXCLUDE = ["배터리만", "충전기만", "비트", "날만", "케이스만"]
+TOOLS = [
+    ("makita-impact", "마끼다 임팩트드라이버", "마끼다 임팩트", r"(?=.*(마끼다|마키타|makita))(?=.*(임팩|td1))", (8, 40)),
+    ("makita-grinder", "마끼다 그라인더", "마끼다 그라인더", r"(?=.*(마끼다|마키타|makita))(?=.*그라인더)", (5, 30)),
+    ("dewalt-impact", "디월트 임팩트드라이버", "디월트 임팩트", r"(?=.*(디월트|dewalt))(?=.*임팩)", (8, 40)),
+    ("dewalt-drill", "디월트 드릴", "디월트 드릴", r"(?=.*(디월트|dewalt))(?=.*드릴)", (6, 35)),
+    ("milwaukee-m18", "밀워키 M18", "밀워키 M18", r"(?=.*(밀워키|milwaukee))(?=.*m18)", (8, 55)),
+    ("bosch-drill", "보쉬 드릴", "보쉬 드릴", r"(?=.*(보쉬|bosch))(?=.*드릴)", (5, 30)),
+]
+
+# ---------------------------------------------------------------- Golf rangefinder
+GOLFGADGET_EXCLUDE = ["케이스만", "스트랩", "필름", "거치대"]
+GOLFGADGETS = [
+    ("voicecaddie-sl2", "보이스캐디 SL2", "보이스캐디 SL2", r"sl2", (30, 75)),
+    ("voicecaddie-sl3", "보이스캐디 SL3", "보이스캐디 SL3", r"sl3", (40, 95)),
+    ("bushnell-rangefinder", "부쉬넬 거리측정기", "부쉬넬 거리측정기", r"부쉬넬|bushnell", (15, 70)),
+    ("nikon-coolshot", "니콘 쿨샷", "니콘 쿨샷", r"쿨샷|coolshot", (10, 45)),
+    ("garmin-z82", "가민 어프로치 Z82", "가민 Z82", r"z82", (40, 90)),
+]
+
+# ---------------------------------------------------------------- Sneakers
+SNEAKER_EXCLUDE = ["키링", "피규어", "나노블럭", "에어팟", "케이스"]
+SNEAKERS = [
+    ("dunk-panda", "나이키 덩크 로우 판다", "덩크 로우 판다", r"(?=.*덩크)(?=.*(판다|팬더|panda))", (4, 25)),
+    ("jordan1-mocha", "조던1 모카", "조던1 모카", r"(?=.*(조던|jordan))(?=.*모카)", (15, 70)),
+    ("jordan1-chicago", "조던1 시카고", "조던1 시카고", r"(?=.*(조던|jordan))(?=.*시카고)", (15, 90)),
+    ("yeezy-350", "이지부스트 350", "이지부스트 350", r"(?=.*(이지|yeezy))(?=.*350)", (10, 45)),
+    ("airforce1", "나이키 에어포스1", "나이키 에어포스1", r"에어\s*포스\s*1|air\s*force\s*1", (5, 18)),
+    ("nb-992", "뉴발란스 992·993", "뉴발란스 993", r"(?=.*(뉴발|new\s*balance))(?=.*99[23])", (10, 35)),
+    ("asics-kayano14", "아식스 젤카야노 14", "아식스 젤카야노 14", r"(?=.*(아식스|asics))(?=.*카야노)(?=.*14)", (8, 28)),
+    ("salomon-xt6", "살로몬 XT-6", "살로몬 XT-6", r"(?=.*(살로몬|salomon))(?=.*xt-?\s*6)", (10, 32)),
+]
+
+# ---------------------------------------------------------------- VR
+VR_EXCLUDE = ["케이스만", "스트랩", "페이셜", "컨트롤러만", "렌즈만", "악세사리"]
+VRS = [
+    ("quest2", "메타 퀘스트2", "메타 퀘스트2", r"(퀘스트|quest)\s*2", (15, 45)),
+    ("quest3", "메타 퀘스트3", "메타 퀘스트3", r"(퀘스트|quest)\s*3(?!\s*s)", (30, 90)),
+    ("quest3s", "메타 퀘스트3S", "메타 퀘스트3S", r"(퀘스트|quest)\s*3\s*s", (30, 65)),
+    ("psvr2", "PSVR2", "PSVR2", r"psvr-?\s*2|ps\s*vr2", (30, 85)),
+    ("vision-pro", "애플 비전프로", "애플 비전프로", r"비전\s*프로|vision\s*pro", (200, 550)),
+    ("pico4", "피코4", "피코4", r"(피코|pico)\s*4", (20, 55)),
+]
+
+# ---------------------------------------------------------------- Home gym
+HEALTH_EXCLUDE = ["의류", "레깅스", "매트만", "양말"]
+HEALTHS = [
+    ("concept2", "컨셉2 로잉머신", "컨셉2 로잉머신", r"(컨셉|concept)\s*2", (60, 150)),
+    ("bowflex-552", "보플렉스 셀렉트테크", "보플렉스 덤벨", r"보플렉스|bowflex", (20, 70)),
+    ("assault-bike", "어썰트 에어바이크", "어썰트 바이크", r"(?=.*(어썰트|assault))(?=.*(바이크|bike))", (40, 130)),
+    ("inbody-dial", "인바디 다이얼", "인바디 다이얼", r"(?=.*인바디)(?=.*다이얼)", (10, 40)),
 ]
 
 
@@ -714,9 +1005,218 @@ def build() -> dict:
                 "joongna_category": "229",
                 "label": "자전거",
                 "bunjang_category_prefix": "700350",
-                "sweep_ids": ["700350400"],
+                "sweep_ids": ["700350400", "700350500"],
                 "models": expand(BIKES, {"exclude": BIKE_EXCLUDE,
                                          "set_keywords": ["\\+", "세트", "일괄"]},
+                                 lambda s, l: _brand_group(l)),
+            },
+            # ---- 2026-06 확장: joongna_category 미지정(빈 값) 카테고리는
+            # ---- 번개장터 수집만 수행 (collector가 jn 잡을 건너뜀)
+            "projector": {
+                "joongna_category": "",
+                "label": "빔프로젝터",
+                "bunjang_category_prefix": "600500",
+                "sweep_ids": ["600500002"],
+                "models": expand(PROJECTORS, {"exclude": PROJECTOR_EXCLUDE,
+                                              "set_keywords": ["\\+", "세트", "일괄"]},
+                                 lambda s, l: _brand_group(l)),
+            },
+            "speaker": {
+                "joongna_category": "",
+                "label": "스피커·사운드바",
+                "bunjang_category_prefix": "600500",
+                "sweep_ids": ["600500006"],
+                "models": expand(SPEAKERS, {"exclude": SPEAKER_EXCLUDE,
+                                            "set_keywords": ["\\+", "세트", "일괄", "2개"]},
+                                 lambda s, l: _brand_group(l)),
+            },
+            "tv": {
+                "joongna_category": "",
+                "label": "TV",
+                "bunjang_category_prefix": "610100",
+                "sweep_ids": ["610100"],
+                "models": expand(TVS, {"exclude": TV_EXCLUDE,
+                                       "set_keywords": ["\\+", "세트", "일괄"]},
+                                 lambda s, l: _brand_group(l)),
+            },
+            "kitchen": {
+                "joongna_category": "",
+                "label": "주방·커피가전",
+                "bunjang_category_prefix": "610600",
+                "sweep_ids": ["610600002"],
+                "models": expand(KITCHENS, {"exclude": KITCHEN_EXCLUDE,
+                                            "set_keywords": ["\\+", "세트", "일괄"]},
+                                 lambda s, l: _brand_group(l)),
+            },
+            "beauty": {
+                "joongna_category": "",
+                "label": "미용가전",
+                "bunjang_category_prefix": "610700",
+                "sweep_ids": ["610700001", "610700003"],
+                "models": expand(BEAUTYS, {"exclude": BEAUTY_EXCLUDE,
+                                           "set_keywords": ["\\+", "세트", "일괄"]},
+                                 lambda s, l: _brand_group(l)),
+            },
+            "babygear": {
+                "joongna_category": "",
+                "label": "유모차·카시트",
+                "bunjang_category_prefix": "500117",
+                "sweep_ids": ["500117001", "500117002"],
+                "models": expand(BABYS, {"exclude": BABY_EXCLUDE,
+                                         "set_keywords": ["\\+", "세트", "일괄"]},
+                                 lambda s, l: _brand_group(l)),
+            },
+            "lego": {
+                "joongna_category": "",
+                "label": "레고",
+                "bunjang_category_prefix": "930200",
+                "sweep_ids": ["930200"],
+                "models": expand(LEGOS, {"exclude": LEGO_EXCLUDE,
+                                         "set_keywords": ["\\+", "일괄", "2개"]},
+                                 lambda s, l: _brand_group(l)),
+            },
+            "drone": {
+                "joongna_category": "",
+                "label": "드론",
+                "bunjang_category_prefix": "930500",
+                "sweep_ids": ["930500"],
+                "models": expand(DRONES, {"exclude": DRONE_EXCLUDE,
+                                          "set_keywords": ["\\+", "세트", "일괄", "콤보"]},
+                                 lambda s, l: _brand_group(l)),
+            },
+            "ebook": {
+                "joongna_category": "",
+                "label": "전자책 리더기",
+                "bunjang_category_prefix": "600710",
+                "sweep_ids": ["600710100"],
+                "models": expand(EBOOKS, {"exclude": EBOOK_EXCLUDE,
+                                          "set_keywords": ["\\+", "세트", "일괄"]},
+                                 lambda s, l: _brand_group(l)),
+            },
+            "kickboard": {
+                "joongna_category": "",
+                "label": "전동킥보드",
+                "bunjang_category_prefix": "700400",
+                "sweep_ids": ["700400"],
+                "models": expand(KICKBOARDS, {"exclude": KICKBOARD_EXCLUDE,
+                                              "set_keywords": ["\\+", "세트", "일괄"]},
+                                 lambda s, l: _brand_group(l)),
+            },
+            "fishing": {
+                "joongna_category": "",
+                "label": "낚시릴",
+                "bunjang_category_prefix": "700250",
+                "sweep_ids": [],
+                "models": expand(FISHINGS, {"exclude": FISHING_EXCLUDE,
+                                            "set_keywords": ["\\+", "세트", "일괄"]},
+                                 lambda s, l: _brand_group(l)),
+            },
+            "tennis": {
+                "joongna_category": "",
+                "label": "테니스 라켓",
+                "bunjang_category_prefix": "700150",
+                "sweep_ids": ["700150"],
+                "models": expand(TENNISES, {"exclude": TENNIS_EXCLUDE,
+                                            "set_keywords": ["\\+", "세트", "일괄", "2자루"]},
+                                 lambda s, l: _brand_group(l)),
+            },
+            "luxwatch": {
+                "joongna_category": "",
+                "label": "시계",
+                "bunjang_category_prefix": "421200",
+                "sweep_ids": ["421200300", "421200200"],
+                "models": expand(LUXWATCHES, {"exclude": LUXWATCH_EXCLUDE,
+                                              "set_keywords": ["\\+", "일괄"]},
+                                 lambda s, l: _brand_group(l)),
+            },
+            "luxbag": {
+                "joongna_category": "",
+                "label": "명품 가방",
+                "bunjang_category_prefix": "430100",
+                "sweep_ids": [],
+                "models": expand(LUXBAGS, {"exclude": LUXBAG_EXCLUDE,
+                                           "set_keywords": ["\\+", "일괄"]},
+                                 lambda s, l: _brand_group(l)),
+            },
+            "guitar": {
+                "joongna_category": "",
+                "label": "기타(악기)",
+                "bunjang_category_prefix": "920200",
+                "sweep_ids": ["920200200"],
+                "models": expand(GUITARS, {"exclude": GUITAR_EXCLUDE,
+                                           "set_keywords": ["\\+", "세트", "일괄", "앰프"]},
+                                 lambda s, l: _brand_group(l)),
+            },
+            "piano": {
+                "joongna_category": "",
+                "label": "건반·신디사이저",
+                "bunjang_category_prefix": "920200",
+                "sweep_ids": ["920200500", "920200400"],
+                "models": expand(PIANOS, {"exclude": PIANO_EXCLUDE,
+                                          "set_keywords": ["\\+", "세트", "일괄"]},
+                                 lambda s, l: _brand_group(l)),
+            },
+            "macdesktop": {
+                "joongna_category": "",
+                "label": "맥 데스크탑",
+                "bunjang_category_prefix": "600100",
+                "sweep_ids": [],   # cpu가 600100006(데스크탑)을 이미 스윕
+                "models": expand(MACDESKS, {"exclude": MACDESK_EXCLUDE,
+                                            "set_keywords": ["\\+", "세트", "풀셋"]},
+                                 lambda s, l: _brand_group(l)),
+            },
+            "nas": {
+                "joongna_category": "",
+                "label": "NAS·공유기",
+                "bunjang_category_prefix": "600200",
+                "sweep_ids": ["600200009"],
+                "models": expand(NASES, {"exclude": NAS_EXCLUDE,
+                                         "set_keywords": ["\\+", "세트", "하드포함"]},
+                                 lambda s, l: _brand_group(l)),
+            },
+            "tools": {
+                "joongna_category": "",
+                "label": "전동공구",
+                "bunjang_category_prefix": "830100",
+                "sweep_ids": ["830100"],
+                "models": expand(TOOLS, {"exclude": TOOL_EXCLUDE,
+                                         "set_keywords": ["\\+", "세트", "일괄"]},
+                                 lambda s, l: _brand_group(l)),
+            },
+            "golfgadget": {
+                "joongna_category": "",
+                "label": "골프 거리측정기",
+                "bunjang_category_prefix": "700600",
+                "sweep_ids": [],   # golf 스윕(700600300)과 별개 — 쿼리 수집
+                "models": expand(GOLFGADGETS, {"exclude": GOLFGADGET_EXCLUDE,
+                                               "set_keywords": ["\\+", "세트", "일괄"]},
+                                 lambda s, l: _brand_group(l)),
+            },
+            "sneakers": {
+                "joongna_category": "",
+                "label": "스니커즈",
+                "bunjang_category_prefix": "405",
+                "sweep_ids": [],   # 카테고리가 거대 — 쿼리 수집만
+                "models": expand(SNEAKERS, {"exclude": SNEAKER_EXCLUDE,
+                                            "set_keywords": ["\\+", "일괄", "2켤레"]},
+                                 lambda s, l: _brand_group(l)),
+            },
+            "vr": {
+                "joongna_category": "",
+                "label": "VR 기기",
+                "bunjang_category_prefix": "600",   # 매물이 600500/600600에 분산
+                "sweep_ids": [],
+                "models": expand(VRS, {"exclude": VR_EXCLUDE,
+                                       "set_keywords": ["\\+", "세트", "일괄"]},
+                                 lambda s, l: _brand_group(l)),
+            },
+            "healthgear": {
+                "joongna_category": "",
+                "label": "헬스·홈트레이닝",
+                "bunjang_category_prefix": "700650",
+                "sweep_ids": ["700650100"],
+                "models": expand(HEALTHS, {"exclude": HEALTH_EXCLUDE,
+                                           "set_keywords": ["\\+", "세트", "일괄"]},
                                  lambda s, l: _brand_group(l)),
             },
         },

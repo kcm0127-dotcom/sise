@@ -26,15 +26,34 @@ CATEGORY_LABELS = {"gpu": "그래픽카드", "camera": "카메라", "golf": "골
                    "peripheral": "키보드·마우스", "golfiron": "골프 아이언",
                    "golfputter": "퍼터·웨지", "lens": "카메라 렌즈",
                    "filmcam": "필름카메라", "actioncam": "액션캠·짐벌",
-                   "camping": "캠핑", "bike": "자전거"}
+                   "camping": "캠핑", "bike": "자전거",
+                   "projector": "빔프로젝터", "speaker": "스피커·사운드바",
+                   "tv": "TV", "kitchen": "주방·커피가전", "beauty": "미용가전",
+                   "babygear": "유모차·카시트", "lego": "레고", "drone": "드론",
+                   "ebook": "전자책 리더기", "kickboard": "전동킥보드",
+                   "fishing": "낚시릴", "tennis": "테니스 라켓",
+                   "luxwatch": "시계", "luxbag": "명품 가방",
+                   "guitar": "기타(악기)", "piano": "건반·신디사이저",
+                   "macdesktop": "맥 데스크탑", "nas": "NAS·공유기",
+                   "tools": "전동공구", "golfgadget": "골프 거리측정기",
+                   "sneakers": "스니커즈", "vr": "VR 기기",
+                   "healthgear": "헬스·홈트레이닝"}
 
-# 홈 화면 카테고리 카드 묶음 (표시 순서대로)
+# 대분류 — (slug, 제목, 아이콘, [카테고리]) 순서대로 노출.
+# 홈에는 대분류 카드만 보이고, 대분류 페이지(g-{slug}.html)에서 카테고리를 고른다.
 CATEGORY_GROUPS = [
-    ("모바일·웨어러블", ["phone", "tablet", "watch", "audio"]),
-    ("PC·게임", ["gpu", "cpu", "laptop", "monitor", "peripheral", "console"]),
-    ("카메라·영상", ["camera", "lens", "filmcam", "actioncam"]),
-    ("골프", ["golf", "golfiron", "golfputter"]),
-    ("생활·취미", ["appliance", "camping", "bike"]),
+    ("mobile", "모바일·웨어러블", "📱", ["phone", "tablet", "watch", "audio", "ebook"]),
+    ("pc", "PC·주변기기", "💻", ["gpu", "cpu", "laptop", "macdesktop", "monitor",
+                                "peripheral", "nas"]),
+    ("game", "게임·VR", "🎮", ["console", "vr"]),
+    ("camera", "카메라·드론", "📷", ["camera", "lens", "filmcam", "actioncam", "drone"]),
+    ("av", "오디오·영상가전", "🔊", ["speaker", "projector", "tv"]),
+    ("living", "생활·주방가전", "🏠", ["appliance", "kitchen", "beauty", "tools"]),
+    ("golf", "골프", "⛳", ["golf", "golfiron", "golfputter", "golfgadget"]),
+    ("sports", "스포츠·아웃도어", "🏕️", ["camping", "bike", "kickboard", "fishing",
+                                         "tennis", "healthgear"]),
+    ("fashion", "패션·명품", "👟", ["sneakers", "luxwatch", "luxbag"]),
+    ("hobby", "악기·키즈·취미", "🎸", ["guitar", "piano", "lego", "babygear"]),
 ]
 BASIS_LABELS = {
     "sold": ("실거래 기준", "badge-sold"),
@@ -486,25 +505,39 @@ document.addEventListener('click', e => {{ if (!e.target.closest('.search')) hit
 
     pages: dict[str, str] = {}
 
-    # --- home ---
+    # --- 대분류 매핑 (홈 → 대분류 페이지 → 카테고리 → 모델) ---
+    cat_to_group: dict[str, tuple[str, str]] = {}
+    for gslug, gtitle, _gicon, cks in CATEGORY_GROUPS:
+        for ck in cks:
+            cat_to_group[ck] = (gslug, gtitle)
+    leftover = [ck for ck in by_cat if ck not in cat_to_group]
+    all_groups = CATEGORY_GROUPS + ([("etc", "기타", "📦", leftover)] if leftover else [])
+    for ck in leftover:
+        cat_to_group[ck] = ("etc", "기타")
+
     def cat_card(ck: str) -> str:
         ids = by_cat[ck]
         return (f"<a class='card' href='cat-{ck}.html'><b>{CATEGORY_LABELS.get(ck, ck)}</b><br>"
                 f"<span class='meta'>{len(ids)}개 모델 · 활성 매물 "
                 f"{sum(models[i]['active_count'] for i in ids)}건</span></a>")
 
-    grouped_cks = {ck for _, cks in CATEGORY_GROUPS for ck in cks}
-    leftover = [ck for ck in by_cat if ck not in grouped_cks]
-    home_groups = CATEGORY_GROUPS + ([("기타", leftover)] if leftover else [])
-    cat_sections = []
-    for gtitle, cks in home_groups:
-        cks = sorted((ck for ck in cks if ck in by_cat),
-                     key=lambda ck: -sum(models[i]["active_count"] for i in by_cat[ck]))
-        if not cks:
-            continue
-        cat_sections.append(f"<h2>{gtitle}</h2>\n  <div class='cards'>"
-                            f"{''.join(cat_card(ck) for ck in cks)}</div>")
-    cards = "\n  ".join(cat_sections)
+    # --- home: 대분류 카드만 노출 ---
+    def group_card(gslug: str, gtitle: str, gicon: str, cks: list[str]) -> str:
+        cks = [ck for ck in cks if ck in by_cat]
+        n_models = sum(len(by_cat[ck]) for ck in cks)
+        n_active = sum(models[i]["active_count"] for ck in cks for i in by_cat[ck])
+        names = " · ".join(CATEGORY_LABELS.get(ck, ck) for ck in cks[:4])
+        more = f" 외 {len(cks) - 4}" if len(cks) > 4 else ""
+        return (f"<a class='card' href='g-{gslug}.html'>"
+                f"<span style='font-size:21px'>{gicon}</span> <b>{gtitle}</b><br>"
+                f"<span class='meta'>{names}{more}</span><br>"
+                f"<span class='meta'>카테고리 {len(cks)} · 모델 {n_models} · "
+                f"매물 {n_active:,}건</span></a>")
+
+    cards = ("<h2>카테고리</h2>\n  <div class='cards'>"
+             + "".join(group_card(*g) for g in all_groups
+                       if any(ck in by_cat for ck in g[3]))
+             + "</div>")
     recent_sales = sorted(
         (s | {"model_label": models[s['model_id']]['label'], "mid": s['model_id']}
          for m in models.values() for s in m["sold"]),
@@ -585,9 +618,27 @@ document.addEventListener('click', e => {{ if (!e.target.closest('.search')) hit
     pages["404.html"] = render("404.html", "페이지를 찾을 수 없습니다",
                                "요청하신 페이지를 찾을 수 없습니다", nf_body)
 
+    # --- 대분류 pages ---
+    for gslug, gtitle, gicon, cks in all_groups:
+        cks = sorted((ck for ck in cks if ck in by_cat),
+                     key=lambda ck: -sum(models[i]["active_count"] for i in by_cat[ck]))
+        if not cks:
+            continue
+        n_models = sum(len(by_cat[ck]) for ck in cks)
+        body = f"""
+  <div class="crumb"><a href="index.html">홈</a> › {gtitle}</div>
+  <h1>{gicon} {gtitle}</h1>
+  <p class="sub">카테고리 {len(cks)}개 · 모델 {n_models}개 — 카테고리를 선택하세요.</p>
+  <div class="cards">{''.join(cat_card(ck) for ck in cks)}</div>"""
+        pages[f"g-{gslug}.html"] = render(
+            f"g-{gslug}.html", f"{gtitle} 중고 시세",
+            f"{gtitle} — {', '.join(CATEGORY_LABELS.get(ck, ck) for ck in cks)} "
+            f"중고 실거래가 시세", body)
+
     # --- category pages ---
     for ck, ids in by_cat.items():
         label = CATEGORY_LABELS.get(ck, ck)
+        gslug, gtitle = cat_to_group[ck]
         # group by series/brand (catalog order of first appearance, "기타"는 맨 뒤);
         # inside a group: models with data first, 수집 대기 at the bottom
         groups: dict[str, list[str]] = {}
@@ -608,7 +659,7 @@ document.addEventListener('click', e => {{ if (!e.target.closest('.search')) hit
                 f"  <div class='tbl'><table>{TABLE_HEAD}"
                 f"<tbody>{model_rows(models, gids)}</tbody></table></div>")
         body = f"""
-  <div class="crumb"><a href="index.html">홈</a> › {label}</div>
+  <div class="crumb"><a href="index.html">홈</a> › <a href="g-{gslug}.html">{gtitle}</a> › {label}</div>
   <h1>{label} 시세표</h1>
   <p class="sub">모델 {len(ids)}개 · 모델을 클릭하면 거래 내역과 활성 매물을 볼 수 있습니다.</p>
   {chips_html}
@@ -620,9 +671,13 @@ document.addEventListener('click', e => {{ if (!e.target.closest('.search')) hit
     for mid, m in models.items():
         st = m["stats"]
         cat_label = CATEGORY_LABELS.get(m["category"], "")
+        gslug, gtitle = cat_to_group.get(m["category"], ("etc", "기타"))
+        crumb = (f'<div class="crumb"><a href="index.html">홈</a> › '
+                 f'<a href="g-{gslug}.html">{gtitle}</a> › '
+                 f'<a href="cat-{m["category"]}.html">{cat_label}</a> › {m["label"]}</div>')
         if not st:
             body = f"""
-  <div class="crumb"><a href="index.html">홈</a> › <a href="cat-{m['category']}.html">{cat_label}</a> › {m['label']}</div>
+  {crumb}
   <h1>{m['label']} <span class="badge badge-wait">수집 대기</span></h1>
   <p class="sub">아직 수집된 매물이 없습니다. 수집기가 돌기 시작하면 시세가 표시됩니다.</p>"""
             pages[f"m-{mid}.html"] = render(f"m-{mid}.html", f"{m['label']} 중고 시세",
@@ -646,7 +701,7 @@ document.addEventListener('click', e => {{ if (!e.target.closest('.search')) hit
             for r in m["active_sample"][:12]
         )
         body = f"""
-  <div class="crumb"><a href="index.html">홈</a> › <a href="cat-{m['category']}.html">{cat_label}</a> › {m['label']}</div>
+  {crumb}
   <h1>{m['label']} {badge(m['basis'])}</h1>
   <div class="price-card">
     <div class="price-label">실거래 추정가</div>
@@ -666,9 +721,11 @@ document.addEventListener('click', e => {{ if (!e.target.closest('.search')) hit
                                   "itemListElement": [
                                       {"@type": "ListItem", "position": 1, "name": "홈",
                                        "item": f"{BASE_URL}/index.html"},
-                                      {"@type": "ListItem", "position": 2, "name": cat_label,
+                                      {"@type": "ListItem", "position": 2, "name": gtitle,
+                                       "item": f"{BASE_URL}/g-{gslug}.html"},
+                                      {"@type": "ListItem", "position": 3, "name": cat_label,
                                        "item": f"{BASE_URL}/cat-{m['category']}.html"},
-                                      {"@type": "ListItem", "position": 3, "name": m["label"]}]},
+                                      {"@type": "ListItem", "position": 4, "name": m["label"]}]},
                                  ensure_ascii=False) + "</script>")
         pages[f"m-{mid}.html"] = render(f"m-{mid}.html", f"{m['label']} 중고 시세",
                                         f"{m['label']} 중고 실거래가 시세 — 추정 {won(m['estimate'])}, "
